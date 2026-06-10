@@ -11,6 +11,7 @@ export const NAV = [
 export const SERVICES = [
   {
     title: "Business Process Automation",
+    to: "/services/business-process-automation",
     desc: "Complete workflow transformation using AI-powered automation to eliminate manual, repetitive tasks across your entire operation.",
     chips: ["Onboarding workflows", "Document processing", "Intelligent routing", "Reporting automation"],
     impact: "Take on 30–40% more clients without hiring additional staff.",
@@ -18,6 +19,7 @@ export const SERVICES = [
   },
   {
     title: "AI Product Development",
+    to: "/services/ai-product-development",
     desc: "Custom AI solutions built for your business model, from intelligent chatbots and recommendation engines to predictive analytics that give you a competitive edge.",
     chips: ["Custom AI models", "Client-facing tools", "Predictive analytics", "NLP & document analysis"],
     impact: "Launch AI-enhanced offerings that command premium pricing.",
@@ -25,6 +27,7 @@ export const SERVICES = [
   },
   {
     title: "Vibe Coding",
+    to: "/services/vibe-coding",
     desc: "Rapid custom development that brings ideas to life fast, using no-code/low-code plus traditional development to ship in weeks, not months.",
     chips: ["2–4 week deploys", "Web apps", "Client portals", "Integration hubs"],
     impact: "Stop forcing your processes into off-the-shelf software.",
@@ -32,6 +35,7 @@ export const SERVICES = [
   },
   {
     title: "N8n Automation",
+    to: "/services/n8n-automation",
     desc: "Enterprise-grade workflow automation with N8n that connects your tools, moves data automatically, and eliminates repetitive tasks without code.",
     chips: ["Custom workflows", "Multi-platform", "Data sync", "Error handling"],
     impact: "Data flows automatically. Nothing falls through the cracks.",
@@ -39,10 +43,19 @@ export const SERVICES = [
   },
   {
     title: "AI Automation Consultancy",
+    to: "/services/ai-automation-consultancy",
     desc: "Strategic guidance to identify your highest-impact automation opportunities, design your roadmap, and ensure successful implementation aligned with your business goals.",
     chips: ["Operations audit", "ROI analysis", "Automation roadmap", "Tech stack recommendations", "Team training"],
     impact: "Achieve measurable results in 90 days or less, without costly mistakes or vendor lock-in.",
     icon: <path d="M12 2l3 7h7l-5.5 4 2 7L12 17l-6.5 5 2-7L2 9h7z" />,
+  },
+  {
+    title: "LLM & RAG Solutions",
+    to: "/services/llm-rag-solutions",
+    desc: "Language AI grounded in your own data using retrieval-augmented generation, delivering accurate, cited answers from the knowledge you already have.",
+    chips: ["Knowledge assistants", "RAG pipelines", "Document Q&A", "Semantic search"],
+    impact: "Trustworthy AI answers sourced from your data, not the open web.",
+    icon: (<><path d="M4 5h16v11H8l-4 4z" /><path d="M8 9h8M8 12h5" /></>),
   },
 ];
 
@@ -75,4 +88,27 @@ export const TOOLS = [
   ["Google Workspace", "#1A73E8", "G"], ["Salesforce", "#00A1E0", "S"], ["Airtable", "#18BFFF", "A"],
   ["QuickBooks", "#2CA01C", "Q"], ["Zapier", "#FF4F00", "Z"], ["Microsoft 365", "#D83B01", "M"],
   ["Stripe", "#635BFF", "S"], ["Asana", "#F06A6A", "A"], ["Zendesk", "#03363D", "Z"],
+];
+
+// Integration logos — images live in /public/integrations/
+// { name, src }
+export const LOGOS = [
+  { name: "OpenAI", src: "/integrations/openai.png" },
+  { name: "Gemini", src: "/integrations/gemini.png" },
+  { name: "n8n", src: "/integrations/n8n.png" },
+  { name: "Zapier", src: "/integrations/zapier.png" },
+  { name: "HubSpot", src: "/integrations/hubspot.png" },
+  { name: "Salesforce", src: "/integrations/salesforce.png" },
+  { name: "Notion", src: "/integrations/notion.png" },
+  { name: "Klaviyo", src: "/integrations/klaviyo.png" },
+  { name: "Shopify", src: "/integrations/shopify.png" },
+  { name: "WordPress", src: "/integrations/wordpress.png" },
+  { name: "WhatsApp", src: "/integrations/whatsapp.png" },
+  { name: "Facebook", src: "/integrations/facebook.png" },
+  { name: "GitHub", src: "/integrations/github.png" },
+  { name: "RSS", src: "/integrations/rss.png" },
+  { name: "Growth", src: "/integrations/growth.png" },
+  { name: "Parrot", src: "/integrations/parrot.png" },
+  { name: "Burst", src: "/integrations/burst.png" },
+  { name: "Abstract", src: "/integrations/abstract.png" },
 ];

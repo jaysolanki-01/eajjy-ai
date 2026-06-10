@@ -54,20 +54,39 @@
   .nav-links{display:flex;gap:30px;list-style:none;align-items:center}
   .nav-links a{color:var(--gray);font-size:14.5px;font-weight:500;transition:color .3s;display:flex;align-items:center;gap:5px}
   .nav-links a:hover{color:var(--white)}
-  .has-drop{position:relative}
-  .drop{position:absolute;top:130%;left:50%;transform:translateX(-50%) translateY(8px);
-    background:rgba(17,17,17,.92);backdrop-filter:blur(20px);border:1px solid var(--border);
-    border-radius:14px;padding:8px;width:248px;opacity:0;visibility:hidden;transition:.3s var(--ease);
-    box-shadow:0 30px 60px -20px rgba(0,0,0,.8)}
-  .has-drop:hover .drop{opacity:1;visibility:visible;transform:translateX(-50%) translateY(0)}
-  .drop a{padding:10px 12px;border-radius:9px;font-size:13.5px;color:var(--gray);transition:.25s}
-  .drop a:hover{background:rgba(255,43,43,.08);color:var(--white)}
+  .has-drop{position:static}
+
+  /* ---- MEGA MENU ---- */
+  .mega{position:absolute;left:0;right:0;top:72px;display:flex;justify-content:center;
+    opacity:0;visibility:hidden;transform:translateY(10px);pointer-events:none;
+    transition:opacity .3s var(--ease),transform .3s var(--ease),visibility .3s;z-index:50}
+  .has-drop:hover .mega,.mega:hover{opacity:1;visibility:visible;transform:translateY(0);pointer-events:auto}
+  .mega-inner{width:min(880px,calc(100vw - 32px));margin:0 16px;
+    background:rgba(13,13,13,.96);backdrop-filter:blur(24px);border:1px solid var(--border);
+    border-radius:20px;padding:22px;box-shadow:0 40px 90px -30px rgba(0,0,0,.9)}
+  .mega-head{display:flex;align-items:center;gap:16px;padding:4px 8px 18px}
+  .mega-head p{font-size:13px;color:var(--gray);line-height:1.4}
+  .mega-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+  .mega-card{display:flex;gap:14px;align-items:flex-start;padding:14px;border-radius:14px;
+    border:1px solid transparent;transition:.3s var(--ease)}
+  .mega-card:hover{background:rgba(255,43,43,.06);border-color:rgba(255,43,43,.25)}
+  .mega-ico{flex-shrink:0;width:40px;height:40px;border-radius:11px;display:grid;place-items:center;
+    background:rgba(255,43,43,.1);border:1px solid rgba(255,43,43,.22);transition:.3s var(--ease)}
+  .mega-ico svg{width:19px;height:19px;stroke:var(--red-hover);fill:none}
+  .mega-card:hover .mega-ico{background:rgba(255,43,43,.18)}
+  .mega-text{display:flex;flex-direction:column;gap:3px}
+  .mega-title{font-family:"Space Grotesk";font-weight:600;font-size:14.5px;color:#fff}
+  .mega-desc{font-size:12px;color:var(--gray);line-height:1.45}
+  .mega-foot{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;
+    margin-top:14px;padding:16px 14px 6px;border-top:1px solid var(--border)}
+  .mega-foot-t{display:block;font-family:"Space Grotesk";font-weight:600;font-size:14px;color:#fff}
+  .mega-foot-s{display:block;font-size:12.5px;color:var(--gray);margin-top:2px;max-width:440px}
   .nav-cta{padding:9px 18px;border:1px solid var(--border);border-radius:10px;
     background:rgba(255,255,255,.02);color:#fff;font-size:14px;font-weight:500;transition:.35s var(--ease)}
   .nav-cta:hover{border-color:#3a3a3a;background:rgba(255,255,255,.05)}
   .nav-actions{display:flex;gap:12px;align-items:center}
   .menu-btn{display:none;background:none;border:none;color:#fff;cursor:pointer;padding:6px;z-index:60}
-  @media(max-width:920px){.nav-links,.nav-actions{display:none}.menu-btn{display:block}}
+  @media(max-width:920px){.nav-links,.nav-actions{display:none}.menu-btn{display:block}.mega{display:none}}
 
   /* mobile drawer */
   .m-menu{position:fixed;inset:0;z-index:55;background:rgba(5,5,5,.96);backdrop-filter:blur(18px);
@@ -300,6 +319,8 @@
   .foot-grid ul{list-style:none;display:flex;flex-direction:column;gap:11px}
   .foot-grid a{font-size:14px;color:#c4c4c8;transition:.3s}.foot-grid a:hover{color:var(--red-hover)}
   .foot-about{font-size:14px;color:var(--gray);line-height:1.6;max-width:300px;margin-top:14px}
+  .foot-credit{color:var(--gray);transition:color .25s var(--ease)}
+  .foot-credit:hover{color:var(--red-hover)}
   .foot-bottom{display:flex;justify-content:space-between;align-items:center;margin-top:50px;
     padding-top:26px;border-top:1px solid var(--border);font-size:13px;color:var(--gray);flex-wrap:wrap;gap:14px}
 

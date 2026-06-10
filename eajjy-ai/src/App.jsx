@@ -11,6 +11,11 @@ import WorkPage from "./pages/Work.jsx";
 import HirePage from "./pages/HirePage.jsx";
 import ContactPage from "./pages/ContactPage.jsx";
 import BPAPage from "./pages/BPAPage.jsx";
+import AIProductPage from "./pages/AIProductPage.jsx";
+import VibeCodingPage from "./pages/VibeCodingPage.jsx";
+import N8nPage from "./pages/N8nPage.jsx";
+import ConsultancyPage from "./pages/ConsultancyPage.jsx";
+import LLMRagPage from "./pages/LLMRagPage.jsx";
 
 export default function App() {
   return (
@@ -23,9 +28,14 @@ export default function App() {
         <Route path="/faq" element={<FaqPage />} />
         <Route path="/product" element={<ProductPage />} />
         <Route path="/work" element={<WorkPage />} />
-        <Route path="/hire" element={<HirePage />} />
+        <Route path="/hire-ai-automation-expert" element={<HirePage />} />
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/services/business-process-automation" element={<BPAPage />} />
+        <Route path="/services/ai-product-development" element={<AIProductPage />} />
+        <Route path="/services/vibe-coding" element={<VibeCodingPage />} />
+        <Route path="/services/n8n-automation" element={<N8nPage />} />
+        <Route path="/services/ai-automation-consultancy" element={<ConsultancyPage />} />
+        <Route path="/services/llm-rag-solutions" element={<LLMRagPage />} />
         <Route path="*" element={<Home />} />
       </Route>
     </Routes>

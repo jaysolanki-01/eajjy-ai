@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Arrow from "../components/Arrow.jsx";
 import Logo from "../components/Logo.jsx";
+import BookButton from "../components/BookButton.jsx";
 
 export default function Hero() {
   return (
@@ -13,7 +14,7 @@ export default function Hero() {
           <h1 className="head">What Happens When Business Processes <span className="accent">Actually Automate?</span></h1>
           <p className="sub">We build AI and automation systems that <b>eliminate repetitive work</b> in professional services firms. Your team focuses on strategic client work, so you scale revenue without scaling headcount.</p>
           <div className="ctas">
-            <Link to="/contact" className="btn btn-primary">Get Your Free Automation Audit <Arrow /></Link>
+            <BookButton>Book a Free Consultation</BookButton>
             <Link to="/process" className="btn btn-ghost">See How It Works</Link>
           </div>
           <div className="trust">

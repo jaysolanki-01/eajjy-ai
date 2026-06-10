@@ -14,10 +14,10 @@ export default function MobileMenu({ open, onClose }) {
       </div>
       <Link to="/" onClick={onClose}>Home</Link>
       <div className="m-sub">Services</div>
-      {SERVICES.map((s) => (<Link key={s.title} to="/services" className="m-svc" onClick={onClose}>{s.title}</Link>))}
+      {SERVICES.map((s) => (<Link key={s.title} to={s.to || "/services"} className="m-svc" onClick={onClose}>{s.title}</Link>))}
       {NAV.map((n) => (<Link key={n.to} to={n.to} onClick={onClose}>{n.label}</Link>))}
       <div className="m-actions">
-        <Link to="/hire" className="btn btn-ghost" onClick={onClose}>Hire a Developer</Link>
+        <Link to="/hire-ai-automation-expert" className="btn btn-ghost" onClick={onClose}>Hire an Expert</Link>
         <Link to="/contact" className="btn btn-primary" onClick={onClose}>Get Your Free Audit</Link>
       </div>
     </div>

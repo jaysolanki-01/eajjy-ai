@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Outlet, useLocation } from "react-router-dom";
+import { getCalApi } from "@calcom/embed-react";
 import Background from "./Background.jsx";
 import CustomCursor from "./CustomCursor.jsx";
 import Navbar from "./Navbar.jsx";
@@ -11,6 +12,18 @@ export default function Layout() {
   const [menuOpen, setMenuOpen] = useState(false);
   const location = useLocation();
   useScrollReveal(location.pathname);
+
+  // Initialize Cal.com booking embed once, site-wide
+  useEffect(() => {
+    (async function () {
+      const cal = await getCalApi({ namespace: "ai-expert" });
+      cal("ui", {
+        cssVarsPerTheme: { light: { "cal-brand": "#FF2B2B" }, dark: { "cal-brand": "#FF2B2B" } },
+        hideEventTypeDetails: true,
+        layout: "month_view",
+      });
+    })();
+  }, []);
 
   // scroll to top + close menu on route change
   useEffect(() => {

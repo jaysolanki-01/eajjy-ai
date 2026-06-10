@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Arrow from "../components/Arrow.jsx";
 import Logo from "../components/Logo.jsx";
+import BookButton from "../components/BookButton.jsx";
 
 export default function ClosingCTA() {
   return (
@@ -12,7 +12,7 @@ export default function ClosingCTA() {
         <h2>Every Week You Delay Automation, Competitors Get Ahead.</h2>
         <p>Another week your best people waste on work AI should handle. Another week of missed revenue. EAJJY AI turns operational challenges into competitive advantages, helping firms save thousands of hours, scale without proportional hiring, and launch new revenue-generating capabilities.</p>
         <div className="ctas">
-          <Link to="/contact" className="btn btn-primary">Schedule Your Free Automation Audit <Arrow /></Link>
+          <BookButton>Book a Free Consultation</BookButton>
           <Link to="/services" className="btn btn-ghost">Explore Services</Link>
         </div>
       </div>
