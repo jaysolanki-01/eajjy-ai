@@ -319,6 +319,9 @@
   .foot-grid ul{list-style:none;display:flex;flex-direction:column;gap:11px}
   .foot-grid a{font-size:14px;color:#c4c4c8;transition:.3s}.foot-grid a:hover{color:var(--red-hover)}
   .foot-about{font-size:14px;color:var(--gray);line-height:1.6;max-width:300px;margin-top:14px}
+  .foot-office{margin-top:22px}
+  .foot-office h4{font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:var(--gray);margin-bottom:8px}
+  .foot-office address{font-style:normal;font-size:14px;color:#c4c4c8;line-height:1.6;max-width:280px}
   .foot-credit{color:var(--gray);transition:color .25s var(--ease)}
   .foot-credit:hover{color:var(--red-hover)}
   .foot-bottom{display:flex;justify-content:space-between;align-items:center;margin-top:50px;

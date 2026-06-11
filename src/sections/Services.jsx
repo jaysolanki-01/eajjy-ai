@@ -11,12 +11,12 @@ export default function Services() {
         <p className="lead">Whether you need end-to-end process redesign or targeted automation for specific pain points, EAJJY AI delivers solutions that integrate seamlessly with your existing operations.</p>
       </div>
       <div className="svc-grid stagger">
-        {SERVICES.map((s, i) => (
-          <div className="svc" key={s.title} style={i === 4 ? { gridColumn: "span 6" } : undefined}>
+        {SERVICES.map((s) => (
+          <div className="svc" key={s.title}>
             <div className="svc-glow" />
             <div className="ico"><svg viewBox="0 0 24 24">{s.icon}</svg></div>
             <h3>{s.title}</h3>
-            <p style={i === 4 ? { maxWidth: 680 } : undefined}>{s.desc}</p>
+            <p>{s.desc}</p>
             <div className="chips">{s.chips.map((c) => <span className="chip" key={c}>{c}</span>)}</div>
             <div className="impact"><b>Impact:</b> {s.impact}</div>
           </div>

@@ -10,6 +10,13 @@ export default function Footer() {
           <div>
             <Logo size="lg" />
             <p className="foot-about">Advanced AI &amp; automation systems built for modern professional services firms. Scale revenue without scaling headcount.</p>
+            <div className="foot-office">
+              <h4>Office — India</h4>
+              <address>
+                C-1102, PNTC, Times Of India Press Road,<br />
+                Vejalpur, Ahmedabad 380015
+              </address>
+            </div>
           </div>
           <div><h4>Services</h4><ul>
             <li><Link to="/services/business-process-automation">Business Process Automation</Link></li>
@@ -32,7 +39,10 @@ export default function Footer() {
             <li><Link to="/contact">Contact Us</Link></li>
           </ul></div>
         </div>
-        <div className="foot-bottom"><span>© 2026 EAJJY AI. All rights reserved.</span><span>Advanced AI systems built for modern businesses.</span></div>
+        <div className="foot-bottom">
+          <span>© 2026 EAJJY AI. All rights reserved.</span>
+          <span>Built by <a href="https://sarvopaya.com" target="_blank" rel="noopener noreferrer" className="foot-credit">Sarvopaya</a></span>
+        </div>
       </div>
     </footer>
   );
