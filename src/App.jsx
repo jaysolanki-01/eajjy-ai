@@ -16,6 +16,8 @@ import VibeCodingPage from "./pages/VibeCodingPage.jsx";
 import N8nPage from "./pages/N8nPage.jsx";
 import ConsultancyPage from "./pages/ConsultancyPage.jsx";
 import LLMRagPage from "./pages/LLMRagPage.jsx";
+import BlogPage from "./pages/BlogPage.jsx";
+import BlogPostPage from "./pages/BlogPostPage.jsx";
 
 export default function App() {
   return (
@@ -36,6 +38,8 @@ export default function App() {
         <Route path="/services/n8n-automation" element={<N8nPage />} />
         <Route path="/services/ai-automation-consultancy" element={<ConsultancyPage />} />
         <Route path="/services/llm-rag-solutions" element={<LLMRagPage />} />
+        <Route path="/blog" element={<BlogPage />} />
+        <Route path="/blog/:slug" element={<BlogPostPage />} />
         <Route path="*" element={<Home />} />
       </Route>
     </Routes>
