@@ -1,18 +1,33 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
 import { NAV, SERVICES } from "../data/siteData.jsx";
 import Logo from "./Logo.jsx";
 import Arrow from "./Arrow.jsx";
 
 export default function Navbar({ onMenu }) {
+  const [scrolled, setScrolled] = useState(false);
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 16);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  const isActive = (to) => (to === "/" ? pathname === "/" : pathname.startsWith(to));
+  const servicesActive = pathname.startsWith("/services");
+
   return (
-    <header>
-      <nav>
+    <header className={"site-header" + (scrolled ? " is-scrolled" : "")}>
+      <nav className="nav-shell">
         <Logo size="lg" className="nav-logo" />
+
         <ul className="nav-links">
-          <li className="has-drop">
-            <Link to="/services">Services
-              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M6 9l6 6 6-6" /></svg>
+          <li className={"has-drop" + (servicesActive ? " active" : "")}>
+            <Link to="/services" className="nav-link">
+              <span>Services</span>
+              <svg className="caret" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M6 9l6 6 6-6" /></svg>
             </Link>
 
             <div className="mega">
@@ -44,14 +59,21 @@ export default function Navbar({ onMenu }) {
               </div>
             </div>
           </li>
-          {NAV.map((n) => (<li key={n.to}><Link to={n.to}>{n.label}</Link></li>))}
+
+          {NAV.map((n) => (
+            <li key={n.to} className={isActive(n.to) ? "active" : ""}>
+              <Link to={n.to} className="nav-link"><span>{n.label}</span></Link>
+            </li>
+          ))}
         </ul>
+
         <div className="nav-actions">
           <Link to="/hire-ai-automation-expert" className="nav-cta">Hire an Expert</Link>
-          <Link to="/contact" className="btn btn-primary" style={{ padding: "9px 18px", fontSize: 14 }}>Free Audit</Link>
+          <Link to="/contact" className="btn btn-primary nav-cta-primary">Free Audit <Arrow /></Link>
         </div>
+
         <button className="menu-btn" aria-label="Open menu" onClick={onMenu}>
-          <svg width="26" height="26" fill="none" stroke="currentColor" strokeWidth="2"><path d="M3 6h18M3 12h18M3 18h18" /></svg>
+          <span /><span /><span />
         </button>
       </nav>
     </header>
