@@ -21,9 +21,11 @@ export default function Navbar({ onMenu }) {
   return (
     <header className={"site-header" + (scrolled ? " is-scrolled" : "")}>
       <nav className="nav-shell">
+        {/* Left zone — logo */}
         <Logo size="lg" className="nav-logo" />
 
-        <ul className="nav-links">
+        {/* Center zone — island nav */}
+        <ul className="nav-links nav-island">
           <li className={"has-drop" + (servicesActive ? " active" : "")}>
             <Link to="/services" className="nav-link">
               <span>Services</span>
@@ -67,6 +69,7 @@ export default function Navbar({ onMenu }) {
           ))}
         </ul>
 
+        {/* Right zone — actions */}
         <div className="nav-actions">
           <Link to="/hire-ai-automation-expert" className="nav-cta">Hire an Expert</Link>
           <Link to="/contact" className="btn btn-primary nav-cta-primary">Free Audit <Arrow /></Link>
