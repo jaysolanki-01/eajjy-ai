@@ -1,23 +1,17 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Arrow from "./Arrow.jsx";
 
-/* Cal.com booking button — opens the booking modal on click.
-   The Cal embed API is initialized once in Layout.jsx.
-   Reads these data attributes globally to open the popup. */
+/* "Book a Free Consultation" — sends visitors to the inline /book calendar. */
 export default function BookButton({
   children = "Book a Free Consultation",
   className = "btn btn-primary",
   arrow = true,
+  to = "/book",
 }) {
   return (
-    <button
-      type="button"
-      className={className}
-      data-cal-namespace="ai-expert"
-      data-cal-link="jay-solanki/ai-expert"
-      data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true","theme":"auto"}'
-    >
+    <Link to={to} className={className}>
       {children}{arrow && <Arrow />}
-    </button>
+    </Link>
   );
 }

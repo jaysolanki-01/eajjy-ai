@@ -18,6 +18,7 @@ import ConsultancyPage from "./pages/ConsultancyPage.jsx";
 import LLMRagPage from "./pages/LLMRagPage.jsx";
 import BlogPage from "./pages/BlogPage.jsx";
 import BlogPostPage from "./pages/BlogPostPage.jsx";
+import BookPage from "./pages/BookPage.jsx";
 
 export default function App() {
   return (
@@ -40,6 +41,7 @@ export default function App() {
         <Route path="/services/llm-rag-solutions" element={<LLMRagPage />} />
         <Route path="/blog" element={<BlogPage />} />
         <Route path="/blog/:slug" element={<BlogPostPage />} />
+        <Route path="/book" element={<BookPage />} />
         <Route path="*" element={<Home />} />
       </Route>
     </Routes>
