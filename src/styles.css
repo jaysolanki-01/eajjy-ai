@@ -38,11 +38,13 @@
   /* ---- NAV (floating glass pill) ---- */
   .site-header{position:sticky;top:0;z-index:50;padding:14px clamp(16px,3vw,40px);transition:padding .4s var(--ease)}
   .site-header.is-scrolled{padding:8px clamp(16px,3vw,40px)}
-  .nav-shell{position:relative;display:flex;align-items:center;justify-content:center;gap:24px;
-    height:62px;width:fit-content;max-width:100%;margin:0 auto;padding:0 12px 0 22px;
+  .nav-shell{position:relative;display:flex;align-items:center;justify-content:space-between;gap:20px;
+    height:62px;width:100%;max-width:1180px;margin:0 auto;padding:0 14px 0 24px;
     border:1px solid rgba(255,255,255,.08);border-radius:18px;
     background:rgba(10,10,10,.55);backdrop-filter:blur(20px) saturate(140%);
     box-shadow:0 10px 30px -16px rgba(0,0,0,.7);transition:.4s var(--ease)}
+  .nav-logo{flex-shrink:0}
+  .nav-island{margin:0 auto}
   .nav-shell::before{content:"";position:absolute;inset:0;border-radius:18px;padding:1px;
     background:linear-gradient(120deg,rgba(255,43,43,.35),rgba(255,255,255,.06) 30%,transparent 60%);
     -webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);
@@ -65,7 +67,7 @@
   .m-brand{margin-bottom:28px;padding-bottom:20px;border-bottom:1px solid var(--border)}
   @keyframes pulse{0%,100%{box-shadow:0 0 12px rgba(255,43,43,.6)}50%{box-shadow:0 0 26px rgba(255,77,77,.95)}}
   .nav-links{display:flex;gap:2px;list-style:none;align-items:center}
-  .nav-island{padding:4px 6px;border:1px solid rgba(255,255,255,.07);border-radius:999px;background:rgba(255,255,255,.025)}
+  .nav-island{margin:0 auto;padding:4px 6px;border:1px solid rgba(255,255,255,.07);border-radius:999px;background:rgba(255,255,255,.025)}
   .site-header.is-scrolled .nav-island{background:rgba(255,255,255,.04);border-color:rgba(255,255,255,.1)}
   .nav-link{position:relative;color:var(--gray);font-size:13.5px;font-weight:500;white-space:nowrap;
     display:flex;align-items:center;gap:4px;padding:7px 11px;border-radius:999px;
@@ -114,7 +116,7 @@
   .menu-btn span{display:block;height:2px;width:100%;background:#fff;border-radius:2px;transition:.3s var(--ease)}
   .menu-btn:hover{border-color:rgba(255,43,43,.4)}
   .menu-btn:hover span{background:var(--red-hover)}
-  @media(max-width:1080px){.nav-shell{justify-content:space-between;width:auto;max-width:var(--maxw)}.nav-links,.nav-actions{display:none}.menu-btn{display:flex}.mega{display:none}}
+  @media(max-width:1080px){.nav-shell{justify-content:space-between;width:auto;max-width:var(--maxw)}.nav-island{margin:0}.nav-links,.nav-actions{display:none}.menu-btn{display:flex}.mega{display:none}}
 
   /* mobile drawer */
   .m-menu{position:fixed;inset:0;z-index:55;background:rgba(5,5,5,.96);backdrop-filter:blur(18px);
