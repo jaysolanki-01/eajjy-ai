@@ -6,6 +6,7 @@ import CustomCursor from "./CustomCursor.jsx";
 import Navbar from "./Navbar.jsx";
 import MobileMenu from "./MobileMenu.jsx";
 import Footer from "./Footer.jsx";
+import ExpertCallFloat from "./ExpertCallFloat.jsx";
 import useScrollReveal from "../hooks/useScrollReveal.js";
 
 export default function Layout() {
@@ -49,6 +50,7 @@ export default function Layout() {
         <Outlet />
       </main>
       <Footer />
+      <ExpertCallFloat />
     </>
   );
 }
