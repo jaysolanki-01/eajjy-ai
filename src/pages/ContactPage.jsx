@@ -1,5 +1,5 @@
 import React, { useState, useMemo } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import PageHero from "../components/PageHero.jsx";
 import Arrow from "../components/Arrow.jsx";
 import BookButton from "../components/BookButton.jsx";
@@ -201,6 +201,7 @@ function Chip({ active, onClick, children }) {
 const STEP_TITLES = ["About you", "Your business", "Where time goes", "Your tools", "Your goals"];
 
 export default function ContactPage() {
+  const navigate = useNavigate();
   const [step, setStep] = useState(0);
   const [done, setDone] = useState(false);
   const [a, setA] = useState({
@@ -223,7 +224,7 @@ export default function ContactPage() {
     return true;
   };
 
-  const next = () => { if (step < STEP_TITLES.length - 1) setStep(step + 1); else { if (FORM_ENDPOINT) { try { fetch(FORM_ENDPOINT, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(a) }); } catch (e) {} } setDone(true); } };
+  const next = () => { if (step < STEP_TITLES.length - 1) setStep(step + 1); else { if (FORM_ENDPOINT) { try { fetch(FORM_ENDPOINT, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(a) }); } catch (e) {} navigate("/thank-you"); return; } setDone(true); } };
   const back = () => setStep(Math.max(0, step - 1));
 
   const money = (n) => "$" + n.toLocaleString();
@@ -341,7 +342,7 @@ export default function ContactPage() {
 
             <div className="ca-actions">
               <button type="button" className="btn btn-primary" onClick={() => downloadReport(a, audit)}>Download Audit Report <Arrow /></button>
-              <button type="button" className="btn btn-ghost" onClick={() => emailAudit(a, audit)}>Email My Audit to EAJJY AI</button>
+              <button type="button" className="btn btn-ghost" onClick={() => { emailAudit(a, audit); setTimeout(() => navigate("/thank-you"), 600); }}>Email My Audit to EAJJY AI</button>
             </div>
 
             <p className="ca-note" style={{ textAlign: "center", marginTop: 18 }}>

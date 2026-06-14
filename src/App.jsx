@@ -19,6 +19,7 @@ import LLMRagPage from "./pages/LLMRagPage.jsx";
 import BlogPage from "./pages/BlogPage.jsx";
 import BlogPostPage from "./pages/BlogPostPage.jsx";
 import BookPage from "./pages/BookPage.jsx";
+import ThankYouPage from "./pages/ThankYouPage.jsx";
 
 export default function App() {
   return (
@@ -42,6 +43,7 @@ export default function App() {
         <Route path="/blog" element={<BlogPage />} />
         <Route path="/blog/:slug" element={<BlogPostPage />} />
         <Route path="/book" element={<BookPage />} />
+        <Route path="/thank-you" element={<ThankYouPage />} />
         <Route path="*" element={<Home />} />
       </Route>
     </Routes>
