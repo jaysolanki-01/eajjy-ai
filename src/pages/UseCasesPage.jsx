@@ -81,11 +81,10 @@ const INDUSTRIES = [
   },
 ];
 
-function IndustryCard({ ind }) {
-  const [open, setOpen] = useState(false);
+function IndustryCard({ ind, open, onToggle }) {
   return (
     <article className={"ind-card" + (open ? " open" : "")}>
-      <button className="ind-head" onClick={() => setOpen((v) => !v)} aria-expanded={open}>
+      <button className="ind-head" onClick={onToggle} aria-expanded={open}>
         <span className="ind-icon" aria-hidden="true">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">{ind.icon}</svg>
         </span>
@@ -114,6 +113,7 @@ function IndustryCard({ ind }) {
 }
 
 export default function UseCasesPage() {
+  const [openId, setOpenId] = useState(null);
   return (
     <>
       <PageHero
@@ -135,7 +135,14 @@ export default function UseCasesPage() {
           <p className="lead">Every industry has its own bottlenecks. Here's where automation and AI make the biggest difference across the sectors we work with. Tap any to expand.</p>
         </div>
         <div className="ind-grid stagger">
-          {INDUSTRIES.map((ind) => <IndustryCard key={ind.id} ind={ind} />)}
+          {INDUSTRIES.map((ind) => (
+            <IndustryCard
+              key={ind.id}
+              ind={ind}
+              open={openId === ind.id}
+              onToggle={() => setOpenId((cur) => (cur === ind.id ? null : ind.id))}
+            />
+          ))}
         </div>
       </section>
 
@@ -147,7 +154,7 @@ export default function UseCasesPage() {
 }
 
 const INDUSTRY_CSS = `
-  .ind-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:42px}
+  .ind-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:42px;align-items:start}
   .ind-card{border:1px solid var(--border);border-radius:18px;overflow:hidden;background:var(--glass);backdrop-filter:blur(22px);transition:.4s var(--ease)}
   .ind-card.open{border-color:rgba(255,43,43,.35);box-shadow:0 26px 60px -28px rgba(255,43,43,.4)}
   .ind-head{display:flex;align-items:center;gap:16px;width:100%;text-align:left;cursor:pointer;background:none;border:none;color:inherit;font-family:inherit;padding:22px 24px}
