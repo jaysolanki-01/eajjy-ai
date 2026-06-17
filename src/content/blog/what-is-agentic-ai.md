@@ -1,4 +1,3 @@
-```
 ---
 title: "What is agentic AI? A plain-English guide for business owners"
 description: "Demystify agentic AI for your business. This plain-English guide explains what agentic AI is, how it works, and its practical benefits for business owners and non-technical founders."
@@ -206,4 +205,3 @@ The business world is spinning faster than ever, and truly understanding tech li
 Ready to see how agentic AI can transform *your* business? Don't just watch the future unfold; be an active part of shaping it for your organization.
 
 **Curious how agentic AI can smooth out your operations, elevate customer experiences, and spark incredible growth? Let's chat! Contact us today for a personalized consultation and kickstart your journey into intelligent automation.**
-```
