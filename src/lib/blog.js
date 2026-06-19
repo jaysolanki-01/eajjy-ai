@@ -68,30 +68,18 @@ export const posts = Object.entries(modules)
     const { data, content } = parseFrontmatter(raw);
     const { body, faq } = extractFaq(content);
     return {
-<<<<<<< HEAD
       slug: data.slug || slugFromPath(path),
       title: data.title || "Untitled",
       date: data.date || "",
       author: data.author || "EAJJY AI",
+      authorTitle: data.authorTitle || "",
+      authorImage: data.authorImage || "",
       excerpt: data.excerpt || "",
       cover: data.cover || "",
       tags: Array.isArray(data.tags) ? data.tags : data.tags ? [data.tags] : [],
       read: data.read || "",
       content: body,
       faq,
-=======
-  slug: data.slug || slugFromPath(path),
-  title: data.title || "Untitled",
-  date: data.date || "",
-  author: data.author || "EAJJY AI",
-  authorTitle: data.authorTitle || "",
-  authorImage: data.authorImage || "",
-  excerpt: data.excerpt || "",
-  cover: data.cover || "",
-  tags: Array.isArray(data.tags) ? data.tags : data.tags ? [data.tags] : [],
-  read: data.read || "",
-  content,
->>>>>>> 5cea97f6dc1a3ed367cbd353cf4902885e2787ee
     };
   })
   .sort((a, b) => (a.date < b.date ? 1 : -1));
