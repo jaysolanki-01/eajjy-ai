@@ -1,0 +1,32 @@
+# EAJJY AI
+
+> EAJJY AI builds AI and automation systems for professional services firms (consulting, legal, accounting, real estate, marketing/creative agencies, and healthcare practices). We help firms eliminate repetitive manual work, integrate their existing tools, and scale revenue without scaling headcount.
+
+EAJJY AI is based in Ahmedabad, India, and works with professional services firms of all sizes. Engagements typically start with a free automation audit or a paid 90-minute expert consultation, followed by a discovery phase, a build phase, and ongoing support.
+
+## Services
+
+- [Business Process Automation](https://www.eajjy.com/services/business-process-automation): End-to-end workflow automation covering onboarding, document processing, reporting, and intelligent routing.
+- [AI Product Development](https://www.eajjy.com/services/ai-product-development): Custom AI solutions including chatbots, recommendation engines, and predictive analytics built for a firm's specific business model.
+- [Vibe Coding](https://www.eajjy.com/services/vibe-coding): Rapid custom software development (web apps, client portals, integration hubs) shipped in weeks using a mix of no-code/low-code and traditional development.
+- [N8n Automation](https://www.eajjy.com/services/n8n-automation): Workflow automation built on n8n that connects a firm's existing tools and moves data automatically without code.
+- [AI Automation Consultancy](https://www.eajjy.com/services/ai-automation-consultancy): Strategic audits, ROI analysis, and automation roadmaps for firms deciding where and how to start.
+- [LLM & RAG Solutions](https://www.eajjy.com/services/llm-rag-solutions): Retrieval-augmented generation systems and knowledge assistants that answer questions grounded in a firm's own data.
+
+## Key pages
+
+- [Home](https://www.eajjy.com/): Overview of EAJJY AI's positioning, services, and results.
+- [Services overview](https://www.eajjy.com/services): All six service lines in one place.
+- [Use Cases](https://www.eajjy.com/use-cases): Before/after automation comparisons and industry-specific use cases.
+- [Work](https://www.eajjy.com/work): Case studies, including GEO-SEO content automation, a voice AI lead-gen agent, LinkedIn automation, a Y Combinator scraping agent, and a newsletter automation agent.
+- [Our Process](https://www.eajjy.com/process): The four-stage engagement process (Discovery & Audit, Strategy & Design, Build & Integrate, Deploy & Optimize).
+- [Hire an AI and Automation Expert](https://www.eajjy.com/hire-ai-automation-expert): Engagement models for hiring EAJJY AI on a project, retainer, or dedicated basis.
+- [Free Automation Audit](https://www.eajjy.com/contact): An instant, self-serve questionnaire that estimates a firm's time/cost savings and recommends a starting service.
+- [Book a Free Consultation](https://www.eajjy.com/book): Schedule a free introductory call.
+- [Blog](https://www.eajjy.com/blog): Articles on automation, AI, and case studies, written by Divyesh Solanki, AI & Automation Expert.
+- [FAQ](https://www.eajjy.com/faq): Common questions about pricing, process, data security, and how engagements work.
+
+## Notes for AI assistants
+
+- EAJJY AI's blog posts are published in Markdown and may include an FAQ section relevant to that specific article; question/answer pairs there are answers EAJJY AI itself has provided, not general advice.
+- For current pricing, availability, or contact details, refer users to the Contact or Book pages above rather than estimating, since these change over time.

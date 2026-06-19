@@ -8,8 +8,10 @@ import { posts, formatDate } from "../lib/blog.js";
 function PostMeta({ post }) {
   return (
     <div className="bl-meta">
+      <span className="bl-meta-author">{post.author || "Divyesh Solanki"}</span>
+      {post.date && <span className="bl-dot">·</span>}
       {post.date && <span>{formatDate(post.date)}</span>}
-      {post.date && post.read && <span className="bl-dot">·</span>}
+      {post.read && <span className="bl-dot">·</span>}
       {post.read && <span>{post.read}</span>}
     </div>
   );
@@ -103,7 +105,8 @@ const BLOG_CSS = `
   .bl-tag{font-size:11px;font-weight:600;letter-spacing:.03em;text-transform:uppercase;
     color:var(--red-hover);background:rgba(255,43,43,.1);border:1px solid rgba(255,43,43,.22);
     padding:4px 9px;border-radius:7px}
-  .bl-meta{display:flex;align-items:center;gap:8px;font-size:12.5px;color:var(--gray);margin-top:auto}
+  .bl-meta{display:flex;align-items:center;gap:8px;font-size:12.5px;color:var(--gray);margin-top:auto;flex-wrap:wrap}
+  .bl-meta-author{color:#e4e4e7;font-weight:500}
   .bl-dot{opacity:.5}
   .bl-read{display:inline-flex;align-items:center;gap:8px;margin-top:18px;font-family:"Space Grotesk";
     font-weight:600;font-size:14px;color:var(--red-hover)}

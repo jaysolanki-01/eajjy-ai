@@ -38,3 +38,14 @@ Every lead that slips through the cracks is lost revenue. Automated scoring and 
 ---
 
 Ready to find your own highest-ROI starting point? [Get a free automation audit](/contact) and we'll map it for you.
+
+## FAQ
+
+### How long does it take to automate a single workflow?
+Most single workflows (like onboarding or reporting) can be designed, built, and deployed in 2 to 4 weeks, depending on how many tools need to connect and how much approval/testing your team requires.
+
+### Do we need technical staff on our team to maintain this?
+No. We build and document everything so your existing team can run day to day operations without writing code. We also offer ongoing support if you'd rather we handle maintenance.
+
+### What if our workflow changes after it's automated?
+Automations are built to be adjusted, not rebuilt. Most changes (new fields, new conditions, new destinations) are small configuration updates rather than full rebuilds.
