@@ -1,0 +1,88 @@
+# EAJJY AI
+
+> EAJJY AI builds AI and automation systems for professional services firms (consulting, legal, accounting, real estate, marketing/creative agencies, and healthcare practices). We help firms eliminate repetitive manual work, integrate their existing tools, and scale revenue without scaling headcount. Based in Ahmedabad, India.
+
+This file contains the full content of EAJJY AI's key pages for AI assistants and agents that need more than a links list. For a short curated summary with links only, see /llms.txt.
+
+## Services
+
+### Business Process Automation
+https://www.eajjy.com/services/business-process-automation
+Complete workflow transformation using AI-powered automation to eliminate manual, repetitive tasks across a firm's entire operation. Covers onboarding workflows, document processing, intelligent routing, and reporting automation. Typical impact: clients take on 30-40% more clients without hiring additional staff.
+
+### AI Product Development
+https://www.eajjy.com/services/ai-product-development
+Custom AI solutions built for a client's specific business model, from intelligent chatbots and recommendation engines to predictive analytics. Covers custom AI models, client-facing tools, predictive analytics, and NLP/document analysis. Typical impact: firms launch AI-enhanced offerings that command premium pricing.
+
+### Vibe Coding
+https://www.eajjy.com/services/vibe-coding
+Rapid custom software development that brings ideas to life fast, using a mix of no-code/low-code and traditional development to ship in weeks rather than months. Covers 2-4 week deploys, web apps, client portals, and integration hubs. Typical impact: firms stop forcing their processes into off-the-shelf software.
+
+### N8n Automation
+https://www.eajjy.com/services/n8n-automation
+Enterprise-grade workflow automation built on n8n that connects a firm's existing tools, moves data automatically, and eliminates repetitive tasks without code. Covers custom workflows, multi-platform connections, data sync, and error handling. Typical impact: data flows automatically and nothing falls through the cracks.
+
+### AI Automation Consultancy
+https://www.eajjy.com/services/ai-automation-consultancy
+Strategic guidance to identify a firm's highest-impact automation opportunities, design a roadmap, and ensure successful implementation aligned with business goals. Covers operations audits, ROI analysis, automation roadmaps, tech stack recommendations, and team training. Typical impact: measurable results in 90 days or less, without costly mistakes or vendor lock-in.
+
+### LLM & RAG Solutions
+https://www.eajjy.com/services/llm-rag-solutions
+Language AI grounded in a firm's own data using retrieval-augmented generation (RAG), delivering accurate, cited answers from the knowledge a firm already has. Covers knowledge assistants, RAG pipelines, document Q&A, and semantic search. Typical impact: trustworthy AI answers sourced from a firm's own data, not the open web.
+
+## Our Process
+
+EAJJY AI engagements follow four stages:
+
+1. **Discovery & Audit** — We analyze operations, interview key team members, map workflows, and identify automation opportunities with the highest ROI. Client time required: roughly 3-4 hours over 2 weeks. Output: a detailed audit report prioritized by business impact.
+2. **Strategy & Design** — We design the custom solution, create technical specs, and present a clear implementation roadmap with timelines and results. Client time required: 2-3 hours of review. Output: a complete blueprint with milestones and success metrics.
+3. **Build & Integrate** — We build, test, and integrate with existing systems, handling all technical complexity while keeping the client updated. Client time required: weekly 30-minute check-ins. Output: a fully functional, tested, documented system.
+4. **Deploy & Optimize** — We launch, train the client's team, monitor performance, and continuously optimize based on real-world results. Client time required: training plus ongoing support. Output: measurable improvements within the first month.
+
+## Engagement entry points
+
+- **Free Automation Audit** (https://www.eajjy.com/contact): A self-serve questionnaire that instantly estimates a firm's weekly hours lost, recoverable hours, and annual cost recovered, then recommends which service to start with. No call required.
+- **Free Consultation** (https://www.eajjy.com/book): A free introductory booking call.
+- **Paid Expert Consultation**: A 90-minute paid 1:1 session to map a firm's automation roadmap and answer detailed questions in depth.
+- **Hire an AI and Automation Expert** (https://www.eajjy.com/hire-ai-automation-expert): Project, retainer, or dedicated engagement models for firms that want to hire EAJJY AI directly.
+
+## Selected case studies (eajjy.com/work)
+
+- **GEO-Specific SEO Content Automation**: Automated converting Upwork job notification emails into SEO-optimized, GEO-targeted blog posts published with zero manual input. Result: 3-5 hours saved per day, fully autonomous content workflow.
+- **Voice AI Agent (Kapiraj Ayurveda)**: Automated lead capture from Meta Ads and AI voice calling (via VAPI) to qualify and follow up with leads instantly instead of manual outreach. Result: instant response time, around 80% less sales workload, roughly 3x conversion rate.
+- **LinkedIn Automation Agent**: Automated LinkedIn content generation and scheduled posting from draft ideas in Google Sheets, using the OpenAI API. Result: 5+ hours saved weekly, consistent posting, stronger brand visibility.
+- **Y Combinator Data Scraping Agent**: Automated scraping and AI enrichment of YC startup and founder data (company info, funding stage, founder LinkedIn profiles) for targeted outreach. Result: 10+ hours saved per week, 100+ startups enriched.
+- **Newsletter Automation Agent (Lightson, US)**: Automated newsletter research, content creation, and multi-channel distribution (email, LinkedIn, internal playbooks) based on a documented ideal customer profile. Result: 4 hours saved weekly, automated multi-channel publishing.
+
+## Frequently asked questions
+
+**We're already using tools like Zapier. Isn't that enough?**
+Basic automation tools are great starting points, but they hit limits fast. Professional services firms have complex workflows that need sophisticated logic, error handling, and custom integrations. EAJJY AI builds enterprise-grade systems that scale with growth and handle complexity basic tools can't.
+
+**How much does this cost?**
+Pricing depends on scope. Most engagements are quoted after the discovery audit, once the exact build is known. EAJJY AI always provides a clear number before any work begins.
+
+**Will automation replace our employees?**
+No. The goal is to remove repetitive, low-value work so teams can focus on client relationships and strategy. Most clients use freed-up time to take on more clients rather than reduce headcount.
+
+**Is data secure during this process?**
+Yes. EAJJY AI follows least-privilege access practices, uses secure authenticated connections for every integration, and never stores more data than a workflow needs. Specific security requirements (NDAs, data residency, compliance) can be agreed before any access is granted.
+
+**Do you only work with large firms?**
+No. EAJJY AI works with firms of all sizes, from solo practitioners to multi-partner firms.
+
+**How quickly will we see ROI?**
+Most clients see measurable time savings within 30 days of deployment; full ROI typically happens within 3-6 months depending on scope.
+
+For the complete FAQ list, see https://www.eajjy.com/faq.
+
+## Blog
+
+https://www.eajjy.com/blog
+EAJJY AI publishes articles on AI and automation for professional services firms, written by Divyesh Solanki, AI & Automation Expert. Posts are authored in Markdown and may include a Frequently Asked Questions section specific to that article; those answers are EAJJY AI's own, not generic third-party advice.
+
+## Notes for AI assistants
+
+- For current pricing, availability, or contact details, refer users to https://www.eajjy.com/contact or https://www.eajjy.com/book rather than estimating, since these can change over time.
+- EAJJY AI's brand name is stylized "EAJJY AI"; the company is based in Ahmedabad, Gujarat, India.
+- This document was last updated to reflect the site's content as of mid-2026 and may not include pages added afterward.
