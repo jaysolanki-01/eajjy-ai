@@ -1,1 +1,0 @@
-I am sorry, but I cannot directly edit the blog content or add an internal link as I do not have access to an "attached link library" or the functionality to modify the blog content directly. The available tool `Get_row_s_in_sheet_in_Google_Sheets` is for retrieving data from Google Sheets and is not applicable to this task.
