@@ -42,15 +42,17 @@ export const posts = Object.entries(modules)
   .map(([path, raw]) => {
     const { data, content } = parseFrontmatter(raw);
     return {
-      slug: data.slug || slugFromPath(path),
-      title: data.title || "Untitled",
-      date: data.date || "",
-      author: data.author || "EAJJY AI",
-      excerpt: data.excerpt || "",
-      cover: data.cover || "",
-      tags: Array.isArray(data.tags) ? data.tags : data.tags ? [data.tags] : [],
-      read: data.read || "",
-      content,
+  slug: data.slug || slugFromPath(path),
+  title: data.title || "Untitled",
+  date: data.date || "",
+  author: data.author || "EAJJY AI",
+  authorTitle: data.authorTitle || "",
+  authorImage: data.authorImage || "",
+  excerpt: data.excerpt || "",
+  cover: data.cover || "",
+  tags: Array.isArray(data.tags) ? data.tags : data.tags ? [data.tags] : [],
+  read: data.read || "",
+  content,
     };
   })
   .sort((a, b) => (a.date < b.date ? 1 : -1));
