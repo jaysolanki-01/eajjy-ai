@@ -1,7 +1,7 @@
 ---
 title: "What is agentic AI? A plain-English guide for business owners"
 description: "Demystify agentic AI for your business. This plain-English guide explains what agentic AI is, how it works, and its practical benefits for business owners and non-technical founders."
-date: ""
+date: "23 June 2026"
 author: "Jay Solanki"
 time: 9
 meta_title: "What is Agentic AI? A Business Owner's Plain-English Guide"
