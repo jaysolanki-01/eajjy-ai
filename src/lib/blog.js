@@ -8,69 +8,46 @@ const modules = import.meta.glob("../content/blog/*.md", {
   eager: true,
 });
 
-// Minimal, browser-safe frontmatter parser (no gray-matter / Buffer needed).
-// Handles multi-line values like n8n's faq: [ { ... } ] blocks.
+// Minimal, browser-safe frontmatter parser.
+// Handles n8n's multi-line faq: [...] blocks robustly.
 function parseFrontmatter(raw) {
-  // Find the opening --- at the very start
   if (!raw.startsWith("---")) return { data: {}, content: raw };
 
-  // Find the CLOSING --- by scanning line by line, skipping multi-line blocks
-  const lines = raw.split("\n");
-  let inBlock = false; // inside a multi-line [ ] or { } value
-  let depth = 0;
-  let closingLine = -1;
-
-  for (let i = 1; i < lines.length; i++) {
-    const l = lines[i];
-    // Track bracket depth to skip multi-line JSON arrays/objects
-    for (const ch of l) {
-      if (ch === "[" || ch === "{") { depth++; inBlock = true; }
-      else if (ch === "]" || ch === "}") { depth = Math.max(0, depth - 1); if (depth === 0) inBlock = false; }
-    }
-    // Only treat a line as the closing --- when we're not inside a block
-    if (!inBlock && depth === 0 && l.trimEnd() === "---") {
-      closingLine = i;
-      break;
-    }
+  // Find second --- that closes frontmatter.
+  // Strategy: remove the faq:[...] block first (it's multi-line JSON and
+  // confuses any line-based or bracket-depth scanner due to brackets in strings).
+  // Then find closing --- safely.
+  const afterOpen = raw.slice(3); // skip opening ---
+  // Extract faq block if present (faq: [ ... ] spanning multiple lines)
+  let faqJson = null;
+  const faqBlockMatch = afterOpen.match(/\nfaq:\s*(\[[\s\S]*?\])/m);
+  const sanitized = faqBlockMatch
+    ? afterOpen.replace(faqBlockMatch[0], "\nfaq_extracted: true")
+    : afterOpen;
+  if (faqBlockMatch) {
+    try { faqJson = JSON.parse(faqBlockMatch[1]); } catch { faqJson = null; }
   }
 
-  if (closingLine === -1) return { data: {}, content: raw };
+  // Now find closing --- safely in sanitized string
+  const closeIdx = sanitized.indexOf("\n---");
+  if (closeIdx === -1) return { data: {}, content: raw };
 
-  const yamlLines = lines.slice(1, closingLine);
-  const content = lines.slice(closingLine + 1).join("\n");
+  const yamlBlock = sanitized.slice(0, closeIdx);
+  const content = sanitized.slice(closeIdx + 4); // skip \n---
 
-  // Parse the YAML lines into a data object
+  // Parse simple key: value lines
   const data = {};
-  let i = 0;
-  while (i < yamlLines.length) {
-    const line = yamlLines[i];
-    const colonIdx = line.indexOf(":");
-    if (colonIdx === -1) { i++; continue; }
-    const key = line.slice(0, colonIdx).trim();
-    if (!key) { i++; continue; }
-    const rest = line.slice(colonIdx + 1).trim();
-
-    // Multi-line array/object value
-    if (rest.startsWith("[") || rest.startsWith("{")) {
-      let block = rest;
-      let d = 0;
-      for (const ch of block) { if (ch === "[" || ch === "{") d++; else if (ch === "]" || ch === "}") d--; }
-      i++;
-      while (d > 0 && i < yamlLines.length) {
-        block += "\n" + yamlLines[i];
-        for (const ch of yamlLines[i]) { if (ch === "[" || ch === "{") d++; else if (ch === "]" || ch === "}") d--; }
-        i++;
-      }
-      // Try to parse as JSON
-      try { data[key] = JSON.parse(block); } catch { data[key] = block; }
-      continue;
-    }
-
-    // Simple single-line value
-    let val = rest.replace(/^["']|["']$/g, "");
+  for (const line of yamlBlock.split("\n")) {
+    const ci = line.indexOf(":");
+    if (ci === -1) continue;
+    const key = line.slice(0, ci).trim();
+    if (!key || key.startsWith("#")) continue;
+    const val = line.slice(ci + 1).trim().replace(/^["']|["']$/g, "");
     data[key] = val;
-    i++;
   }
+
+  // Restore faq as parsed array
+  if (faqJson) data.faq = faqJson;
 
   return { data, content };
 }
