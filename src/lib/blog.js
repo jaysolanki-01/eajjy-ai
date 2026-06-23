@@ -9,28 +9,69 @@ const modules = import.meta.glob("../content/blog/*.md", {
 });
 
 // Minimal, browser-safe frontmatter parser (no gray-matter / Buffer needed).
+// Handles multi-line values like n8n's faq: [ { ... } ] blocks.
 function parseFrontmatter(raw) {
-  const match = raw.match(/^---\s*\n([\s\S]*?)\n---\s*\n?([\s\S]*)$/);
-  if (!match) return { data: {}, content: raw };
-  const [, yaml, content] = match;
-  const data = {};
-  yaml.split("\n").forEach((line) => {
-    const idx = line.indexOf(":");
-    if (idx === -1) return;
-    const key = line.slice(0, idx).trim();
-    if (!key) return;
-    let val = line.slice(idx + 1).trim();
-    if (val.startsWith("[") && val.endsWith("]")) {
-      val = val
-        .slice(1, -1)
-        .split(",")
-        .map((s) => s.trim().replace(/^["']|["']$/g, ""))
-        .filter(Boolean);
-    } else {
-      val = val.replace(/^["']|["']$/g, "");
+  // Find the opening --- at the very start
+  if (!raw.startsWith("---")) return { data: {}, content: raw };
+
+  // Find the CLOSING --- by scanning line by line, skipping multi-line blocks
+  const lines = raw.split("\n");
+  let inBlock = false; // inside a multi-line [ ] or { } value
+  let depth = 0;
+  let closingLine = -1;
+
+  for (let i = 1; i < lines.length; i++) {
+    const l = lines[i];
+    // Track bracket depth to skip multi-line JSON arrays/objects
+    for (const ch of l) {
+      if (ch === "[" || ch === "{") { depth++; inBlock = true; }
+      else if (ch === "]" || ch === "}") { depth = Math.max(0, depth - 1); if (depth === 0) inBlock = false; }
     }
+    // Only treat a line as the closing --- when we're not inside a block
+    if (!inBlock && depth === 0 && l.trimEnd() === "---") {
+      closingLine = i;
+      break;
+    }
+  }
+
+  if (closingLine === -1) return { data: {}, content: raw };
+
+  const yamlLines = lines.slice(1, closingLine);
+  const content = lines.slice(closingLine + 1).join("\n");
+
+  // Parse the YAML lines into a data object
+  const data = {};
+  let i = 0;
+  while (i < yamlLines.length) {
+    const line = yamlLines[i];
+    const colonIdx = line.indexOf(":");
+    if (colonIdx === -1) { i++; continue; }
+    const key = line.slice(0, colonIdx).trim();
+    if (!key) { i++; continue; }
+    const rest = line.slice(colonIdx + 1).trim();
+
+    // Multi-line array/object value
+    if (rest.startsWith("[") || rest.startsWith("{")) {
+      let block = rest;
+      let d = 0;
+      for (const ch of block) { if (ch === "[" || ch === "{") d++; else if (ch === "]" || ch === "}") d--; }
+      i++;
+      while (d > 0 && i < yamlLines.length) {
+        block += "\n" + yamlLines[i];
+        for (const ch of yamlLines[i]) { if (ch === "[" || ch === "{") d++; else if (ch === "]" || ch === "}") d--; }
+        i++;
+      }
+      // Try to parse as JSON
+      try { data[key] = JSON.parse(block); } catch { data[key] = block; }
+      continue;
+    }
+
+    // Simple single-line value
+    let val = rest.replace(/^["']|["']$/g, "");
     data[key] = val;
-  });
+    i++;
+  }
+
   return { data, content };
 }
 
