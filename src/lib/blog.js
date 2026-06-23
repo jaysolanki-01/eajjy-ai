@@ -9,16 +9,13 @@ const modules = import.meta.glob("../content/blog/*.md", {
 });
 
 // Minimal, browser-safe frontmatter parser.
-// Handles n8n's multi-line faq: [...] blocks robustly.
+// Handles n8n's multi-line faq: [...] blocks and --- dividers in body.
 function parseFrontmatter(raw) {
   if (!raw.startsWith("---")) return { data: {}, content: raw };
 
-  // Find second --- that closes frontmatter.
-  // Strategy: remove the faq:[...] block first (it's multi-line JSON and
-  // confuses any line-based or bracket-depth scanner due to brackets in strings).
-  // Then find closing --- safely.
   const afterOpen = raw.slice(3); // skip opening ---
-  // Extract faq block if present (faq: [ ... ] spanning multiple lines)
+
+  // Extract faq block first (multi-line JSON confuses line scanners)
   let faqJson = null;
   const faqBlockMatch = afterOpen.match(/\nfaq:\s*(\[[\s\S]*?\])/m);
   const sanitized = faqBlockMatch
@@ -28,16 +25,43 @@ function parseFrontmatter(raw) {
     try { faqJson = JSON.parse(faqBlockMatch[1]); } catch { faqJson = null; }
   }
 
-  // Now find closing --- safely in sanitized string
-  const closeIdx = sanitized.indexOf("\n---");
-  if (closeIdx === -1) return { data: {}, content: raw };
+  // Find the FIRST line that is exactly "---" or "---\r"
+  // BUT skip it if it's a body divider: a real closing frontmatter ---
+  // always appears before any blank-line-then-content pattern.
+  // Strategy: find closing --- as the first --- that is followed by a
+  // key: value line OR end of frontmatter (no paragraph content before it).
+  const lines = sanitized.split("\n");
+  let closingLine = -1;
+  for (let i = 1; i < lines.length; i++) {
+    if (lines[i].trimEnd() !== "---") continue;
+    // Check if ANY of the lines before this are clearly body content
+    // (i.e., start with a letter/number and aren't key:value pairs)
+    let looksLikeFrontmatter = true;
+    for (let j = 1; j < i; j++) {
+      const l = lines[j].trim();
+      if (l === "" || l === "faq_extracted: true") continue;
+      // Body content: starts with a capital letter not followed by :
+      // or starts with markdown markers like *, #, >, -
+      const colonIdx = l.indexOf(":");
+      const isKeyValue = colonIdx > 0 && colonIdx < 40 && !l.startsWith("*") && !l.startsWith("#") && !l.startsWith(">") && !l.startsWith("-") && !l.startsWith("[");
+      if (!isKeyValue && l.length > 0) {
+        looksLikeFrontmatter = false;
+        break;
+      }
+    }
+    if (looksLikeFrontmatter) {
+      closingLine = i;
+      break;
+    }
+  }
 
-  const yamlBlock = sanitized.slice(0, closeIdx);
-  const content = sanitized.slice(closeIdx + 4); // skip \n---
+  if (closingLine === -1) return { data: {}, content: raw };
 
-  // Parse simple key: value lines
+  const yamlLines = lines.slice(1, closingLine);
+  const content = lines.slice(closingLine + 1).join("\n");
+
   const data = {};
-  for (const line of yamlBlock.split("\n")) {
+  for (const line of yamlLines) {
     const ci = line.indexOf(":");
     if (ci === -1) continue;
     const key = line.slice(0, ci).trim();
@@ -46,9 +70,7 @@ function parseFrontmatter(raw) {
     data[key] = val;
   }
 
-  // Restore faq as parsed array
   if (faqJson) data.faq = faqJson;
-
   return { data, content };
 }
 
