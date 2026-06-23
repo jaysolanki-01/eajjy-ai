@@ -66,20 +66,25 @@ export default function BlogPostPage() {
         <div className="bl-post-head reveal">
           <Logo size="sm" className="page-hero-logo" />
           <Link to="/blog" className="bl-back">← All articles</Link>
-          <div className="bl-tags" style={{ marginTop: 18 }}>{post.tags.map((t) => <span key={t} className="bl-tag">{t}</span>)}</div>
-          <h1 className="head" style={{ fontSize: "clamp(30px,4.4vw,56px)", maxWidth: "20ch", margin: "16px 0 16px" }}>{post.title}</h1>
+          <h1 className="head" style={{ fontSize: "clamp(30px,4.4vw,56px)", maxWidth: "20ch", margin: "22px 0 16px" }}>{post.title}</h1>
           <div className="bl-meta">
             <span className="bl-meta-author">{post.author || "Divyesh Solanki"}</span>
-            {post.date && <span className="bl-dot">·</span>}
+            <span className="bl-sep" />
             {post.date && <span>{formatDate(post.date)}</span>}
-            {post.read && <span className="bl-dot">·</span>}
-            {post.read && <span>{post.read}</span>}
+            {post.read && <><span className="bl-sep" /><span>{post.read}</span></>}
           </div>
         </div>
 
         <div className="prose reveal">
           <ReactMarkdown remarkPlugins={[remarkGfm]}>{post.content}</ReactMarkdown>
         </div>
+
+        {post.tags.length > 0 && (
+          <div className="bl-post-tags reveal">
+            <span className="bl-post-tags-label">Tagged in</span>
+            <div className="bl-tags">{post.tags.map((t) => <span key={t} className="bl-tag">{t}</span>)}</div>
+          </div>
+        )}
 
         {post.faq.length > 0 && (
           <div className="bl-faq reveal">
@@ -122,6 +127,9 @@ const POST_CSS = `
   .bl-post{padding-top:clamp(50px,8vh,90px);max-width:820px}
   .bl-post-head{margin-bottom:38px;padding-bottom:30px;border-bottom:1px solid var(--border)}
   .bl-meta-author{color:#e4e4e7;font-weight:500}
+  .bl-sep{display:inline-block;width:4px;height:4px;border-radius:50%;background:var(--gray);opacity:.5;margin:0 10px;vertical-align:middle}
+  .bl-post-tags{margin-top:36px;padding-top:28px;border-top:1px solid var(--border);display:flex;align-items:center;flex-wrap:wrap;gap:10px}
+  .bl-post-tags-label{font-size:12.5px;font-weight:500;color:var(--gray);text-transform:uppercase;letter-spacing:.05em}
   .bl-back{font-size:13.5px;color:var(--gray);transition:color .3s}
   .bl-back:hover{color:var(--red-hover)}
 

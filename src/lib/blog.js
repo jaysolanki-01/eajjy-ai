@@ -66,18 +66,35 @@ function extractFaq(content) {
 export const posts = Object.entries(modules)
   .map(([path, raw]) => {
     const { data, content } = parseFrontmatter(raw);
-    const { body, faq } = extractFaq(content);
+    const { body, faq: bodyFaq } = extractFaq(content);
+
+    // Also support frontmatter FAQ arrays (n8n format: [{question, answer}])
+    let frontmatterFaq = [];
+    if (Array.isArray(data.faq)) {
+      frontmatterFaq = data.faq
+        .filter((f) => f && f.question && f.answer)
+        .map((f) => ({ q: f.question, a: f.answer }));
+    }
+
+    // Body FAQ takes priority; fall back to frontmatter FAQ
+    const faq = bodyFaq.length > 0 ? bodyFaq : frontmatterFaq;
     return {
       slug: data.slug || slugFromPath(path),
       title: data.title || "Untitled",
-      date: data.date || "",
-      author: data.author || "EAJJY AI",
+      date: data.date || data.publishedAt || "",
+      author: data.author || "Divyesh Solanki",
       authorTitle: data.authorTitle || "",
       authorImage: data.authorImage || "",
-      excerpt: data.excerpt || "",
-      cover: data.cover || "",
-      tags: Array.isArray(data.tags) ? data.tags : data.tags ? [data.tags] : [],
-      read: data.read || "",
+      excerpt: data.excerpt || data.description || "",
+      cover: data.cover || data.image || "",
+      // handle both array tags AND comma-separated string tags (from n8n)
+      tags: Array.isArray(data.tags)
+        ? data.tags
+        : typeof data.tags === "string" && data.tags.trim()
+        ? data.tags.split(",").map((t) => t.trim()).filter(Boolean)
+        : [],
+      // handle both "read" and "time" (n8n uses time: 9 instead of read: "9 min read")
+      read: data.read || (data.time ? `${data.time} min read` : ""),
       content: body,
       faq,
     };
