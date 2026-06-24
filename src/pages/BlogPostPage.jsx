@@ -66,7 +66,7 @@ export default function BlogPostPage() {
         <div className="bl-post-head reveal">
           <Logo size="sm" className="page-hero-logo" />
           <Link to="/blog" className="bl-back">← All articles</Link>
-          <h1 className="head" style={{ fontSize: "clamp(30px,4.4vw,56px)", maxWidth: "20ch", margin: "22px 0 16px" }}>{post.title}</h1>
+          <h1 className="head" style={{ fontSize: "clamp(30px,4.4vw,56px)", maxWidth: "20ch", margin: "22px 0 24px" }}>{post.title}</h1>
           <div className="bl-meta">
             <span className="bl-meta-author">{post.author || "Divyesh Solanki"}</span>
             <span className="bl-sep" />
@@ -75,19 +75,19 @@ export default function BlogPostPage() {
           </div>
         </div>
 
-        <div className="prose reveal">
+        <div className="prose">
           <ReactMarkdown remarkPlugins={[remarkGfm]}>{post.content}</ReactMarkdown>
         </div>
 
         {post.tags.length > 0 && (
-          <div className="bl-post-tags reveal">
+          <div className="bl-post-tags">
             <span className="bl-post-tags-label">Tagged in</span>
             <div className="bl-tags">{post.tags.map((t) => <span key={t} className="bl-tag">{t}</span>)}</div>
           </div>
         )}
 
         {post.faq.length > 0 && (
-          <div className="bl-faq reveal">
+          <div className="bl-faq">
             <h2>Frequently Asked Questions</h2>
             <div className="faq" style={{ marginTop: 18 }}>
               {post.faq.map((item, i) => (
@@ -103,7 +103,7 @@ export default function BlogPostPage() {
           </div>
         )}
 
-        <div className="bl-author reveal">
+        <div className="bl-author">
           <span className="bl-author-avatar">DS</span>
           <div className="bl-author-info">
             <span className="bl-author-name">Divyesh Solanki</span>

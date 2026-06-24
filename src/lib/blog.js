@@ -9,65 +9,72 @@ const modules = import.meta.glob("../content/blog/*.md", {
 });
 
 // Minimal, browser-safe frontmatter parser.
-// Handles n8n's multi-line faq: [...] blocks and --- dividers in body.
+// Handles multi-line YAML arrays/objects and the closing --- divider in the body.
 function parseFrontmatter(raw) {
   if (!raw.startsWith("---")) return { data: {}, content: raw };
 
-  const afterOpen = raw.slice(3); // skip opening ---
-
-  // Extract faq block first (multi-line JSON confuses line scanners)
-  let faqJson = null;
-  const faqBlockMatch = afterOpen.match(/\nfaq:\s*(\[[\s\S]*?\])/m);
-  const sanitized = faqBlockMatch
-    ? afterOpen.replace(faqBlockMatch[0], "\nfaq_extracted: true")
-    : afterOpen;
-  if (faqBlockMatch) {
-    try { faqJson = JSON.parse(faqBlockMatch[1]); } catch { faqJson = null; }
-  }
-
-  // Find the FIRST line that is exactly "---" or "---\r"
-  // BUT skip it if it's a body divider: a real closing frontmatter ---
-  // always appears before any blank-line-then-content pattern.
-  // Strategy: find closing --- as the first --- that is followed by a
-  // key: value line OR end of frontmatter (no paragraph content before it).
-  const lines = sanitized.split("\n");
-  let closingLine = -1;
-  for (let i = 1; i < lines.length; i++) {
-    if (lines[i].trimEnd() !== "---") continue;
-    // Check if ANY of the lines before this are clearly body content
-    // (i.e., start with a letter/number and aren't key:value pairs)
-    let looksLikeFrontmatter = true;
-    for (let j = 1; j < i; j++) {
-      const l = lines[j].trim();
-      if (l === "" || l === "faq_extracted: true") continue;
-      // Body content: starts with a capital letter not followed by :
-      // or starts with markdown markers like *, #, >, -
-      const colonIdx = l.indexOf(":");
-      const isKeyValue = colonIdx > 0 && colonIdx < 40 && !l.startsWith("*") && !l.startsWith("#") && !l.startsWith(">") && !l.startsWith("-") && !l.startsWith("[");
-      if (!isKeyValue && l.length > 0) {
-        looksLikeFrontmatter = false;
-        break;
-      }
-    }
-    if (looksLikeFrontmatter) {
-      closingLine = i;
-      break;
-    }
-  }
-
-  if (closingLine === -1) return { data: {}, content: raw };
-
-  const yamlLines = lines.slice(1, closingLine);
-  const content = lines.slice(closingLine + 1).join("\n");
+  const lines = raw.split(/\r?\n/);
+  if (lines[0].trim() !== "---") return { data: {}, content: raw };
 
   const data = {};
-  for (const line of yamlLines) {
+  let content = raw;
+  let inFrontmatter = true;
+  let faqJson = null;
+
+  for (let i = 1; i < lines.length; i += 1) {
+    const line = lines[i];
+
+    if (inFrontmatter && line.trim() === "---") {
+      content = lines.slice(i + 1).join("\n").replace(/^\n/, "");
+      inFrontmatter = false;
+      break;
+    }
+
+    if (!inFrontmatter) break;
+
+    if (line.startsWith("faq:")) {
+      const blockLines = [];
+      let j = i + 1;
+      let depth = 0;
+      let found = false;
+
+      while (j < lines.length) {
+        const current = lines[j];
+        if (current.includes("[")) depth += (current.match(/\[/g) || []).length;
+        if (current.includes("]")) depth -= (current.match(/\]/g) || []).length;
+        blockLines.push(current);
+        if (depth <= 0 && current.includes("]")) {
+          found = true;
+          break;
+        }
+        j += 1;
+      }
+
+      if (found) {
+        const faqBlock = blockLines.join("\n");
+        try {
+          faqJson = JSON.parse(faqBlock.replace(/^faq:\s*/, ""));
+        } catch {
+          faqJson = null;
+        }
+        i = j;
+        continue;
+      }
+    }
+
     const ci = line.indexOf(":");
     if (ci === -1) continue;
     const key = line.slice(0, ci).trim();
     if (!key || key.startsWith("#")) continue;
-    const val = line.slice(ci + 1).trim().replace(/^["']|["']$/g, "");
-    data[key] = val;
+
+    const rawValue = line.slice(ci + 1).trim();
+    if (rawValue === "") {
+      data[key] = "";
+      continue;
+    }
+
+    const value = rawValue.replace(/^['\"]|['\"]$/g, "");
+    data[key] = value;
   }
 
   if (faqJson) data.faq = faqJson;
