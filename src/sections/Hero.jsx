@@ -1,4 +1,4 @@
-import React from "react";
+﻿import React from "react";
 import { Link } from "react-router-dom";
 import Arrow from "../components/Arrow.jsx";
 import BookButton from "../components/BookButton.jsx";
@@ -8,9 +8,9 @@ export default function Hero() {
     <section className="wrap">
       <div className="hero">
         <div className="reveal">
-          <div className="badge"><span className="live" />Trusted by <b>professional services firms</b></div>
+          <div className="badge"><span className="live" />India's <b>AI agency</b> for professional services firms</div>
           <h1 className="head">What Happens When Business Processes <span className="accent">Actually Automate?</span></h1>
-          <p className="sub">We build AI and automation systems that <b>eliminate repetitive work</b> in professional services firms. Your team focuses on strategic client work, so you scale revenue without scaling headcount.</p>
+          <p className="sub">EAJJY AI is the <b>AI agency</b> for professional services firms — we build automation systems that <b>eliminate repetitive work</b> so your team focuses on strategic client work and scales revenue without scaling headcount.</p>
           <div className="ctas">
             <BookButton>Book a Free Consultation</BookButton>
             <Link to="/process" className="btn btn-ghost">See How It Works</Link>
@@ -50,3 +50,4 @@ export default function Hero() {
     </section>
   );
 }
+

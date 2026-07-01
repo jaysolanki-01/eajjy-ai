@@ -2,8 +2,10 @@
 
 export default function useSEO({ title, description, canonical } = {}) {
   useEffect(() => {
-    document.title = title ? `${title} | EAJJY AI` : "EAJJY AI | AI & Automation for Professional Services";
-    setMeta("name", "description", description || "EAJJY AI builds AI and automation systems for professional services firms. Eliminate manual work and scale without hiring.");
+    document.title = title
+      ? `${title} | EAJJY AI`
+      : "EAJJY AI | AI Agency for Professional Services";
+    setMeta("name", "description", description || "EAJJY AI is a specialist AI agency helping professional services firms eliminate manual work and scale through intelligent automation.");
     setMeta("name", "robots", "index, follow");
     let can = document.querySelector("link[rel='canonical']");
     if (!can) { can = document.createElement("link"); can.setAttribute("rel", "canonical"); document.head.appendChild(can); }

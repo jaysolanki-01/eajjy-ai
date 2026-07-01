@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+﻿import React, { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import Logo from "../components/Logo.jsx";
 import BookButton from "../components/BookButton.jsx";
@@ -53,7 +53,7 @@ export default function ClosingCTA() {
 
         <Logo size="md" link={false} className="closing-logo" />
         <span className="eyebrow" style={{ justifyContent: "center" }}>Why EAJJY AI</span>
-        <h2>Every Week You Delay Automation, Competitors Get Ahead.</h2>
+        <h2>Every Week Without an AI Agency, Competitors Get Ahead.</h2>
         <p>Another week your best people waste on work AI should handle. Another week of missed revenue. EAJJY AI turns operational challenges into competitive advantages, helping firms save thousands of hours, scale without proportional hiring, and launch new revenue-generating capabilities.</p>
         <div className="ctas">
           <BookButton>Book a Free Consultation</BookButton>
@@ -94,3 +94,4 @@ const ORBIT_CSS = `
   @media(max-width:480px){.ob-badge{display:none}}
   @media(prefers-reduced-motion:reduce){.ob-badge{animation:none}}
 `;
+
