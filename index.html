@@ -9,6 +9,12 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <link rel="manifest" href="/site.webmanifest" />
     <meta name="theme-color" content="#050505" />
+    <meta name="description" content="EAJJY AI builds AI and automation systems for professional services firms. Eliminate manual work, integrate your tools, and scale without hiring." />
+    <meta name="robots" content="index, follow" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="EAJJY AI" />
+    <meta property="og:image" content="https://www.eajjy.com/logo.png" />
+    <meta name="twitter:card" content="summary_large_image" />
     <title>EAJJY AI | AI & Automation for Professional Services</title>
   </head>
   <body>
@@ -16,14 +22,3 @@
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
-
-$html = Get-Content "index.html" -Raw -Encoding UTF8
-$meta = '    <meta name="description" content="EAJJY AI builds AI and automation systems for professional services firms. Eliminate manual work, integrate your tools, and scale without hiring." />
-    <meta name="robots" content="index, follow" />
-    <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="EAJJY AI" />
-    <meta property="og:image" content="https://www.eajjy.com/logo.png" />
-    <meta name="twitter:card" content="summary_large_image" />'
-$html = $html -replace '(<title>)', "$meta`n    `$1"
-Set-Content "index.html" -Value $html -Encoding UTF8
-Write-Host "index.html updated"
