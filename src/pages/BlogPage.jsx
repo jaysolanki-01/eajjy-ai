@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import useSEO from "../hooks/useSEO.js";
 import PageHero from "../components/PageHero.jsx";
 import ClosingCTA from "../sections/ClosingCTA.jsx";
 import Arrow from "../components/Arrow.jsx";
@@ -18,6 +19,7 @@ function PostMeta({ post }) {
 }
 
 export default function BlogPage() {
+  useSEO({ title: "Blog – AI & Automation Insights", description: "Practical articles on automating professional services firms, written by Divyesh Solanki, AI & Automation Expert at EAJJY AI." });
   const [featured, ...rest] = posts;
 
   return (

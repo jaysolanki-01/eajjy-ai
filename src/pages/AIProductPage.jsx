@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import useSEO from "../hooks/useSEO.js";
 import PageHero from "../components/PageHero.jsx";
 import ClosingCTA from "../sections/ClosingCTA.jsx";
 import Arrow from "../components/Arrow.jsx";
@@ -126,6 +127,7 @@ function UseCaseCard({ uc, index }) {
  * Page
  * ------------------------------------------------------------------ */
 export default function AIProductPage() {
+  useSEO({ title: "AI Product Development", description: "Custom AI solutions including chatbots, recommendation engines, and predictive analytics built specifically for your business model and professional services firm." });
   return (
     <>
       <PageHero

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import useSEO from "../hooks/useSEO.js";
 import PageHero from "../components/PageHero.jsx";
 import ClosingCTA from "../sections/ClosingCTA.jsx";
 import Arrow from "../components/Arrow.jsx";
@@ -199,6 +200,7 @@ function CaseCard({ c, index }) {
  * Page
  * ------------------------------------------------------------------ */
 export default function Work() {
+  useSEO({ title: "Our Work – AI Automation Case Studies", description: "Real automation systems we have shipped: voice AI agents, GEO-SEO content pipelines, LinkedIn automation, YC scraping agents, and newsletter systems." });
   return (
     <>
       <PageHero

@@ -1,8 +1,10 @@
 import React from "react";
+import useSEO from "../hooks/useSEO.js";
 import PageHero from "../components/PageHero.jsx";
 import BookInline from "../components/BookInline.jsx";
 
 export default function BookPage() {
+  useSEO({ title: "Book a Free Consultation", description: "Schedule a free call with EAJJY AI. We will discuss where automation can save your team the most time and map your highest-ROI opportunities." });
   return (
     <>
       <PageHero

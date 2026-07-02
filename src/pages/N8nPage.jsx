@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import useSEO from "../hooks/useSEO.js";
 import PageHero from "../components/PageHero.jsx";
 import ClosingCTA from "../sections/ClosingCTA.jsx";
 import Arrow from "../components/Arrow.jsx";
@@ -113,6 +114,7 @@ function WorkflowCard({ wf, index }) {
  * Page
  * ------------------------------------------------------------------ */
 export default function N8nPage() {
+  useSEO({ title: "N8n Automation Services", description: "Enterprise-grade workflow automation built on n8n. Connect your existing tools, move data automatically, and eliminate repetitive tasks without code." });
   return (
     <>
       <PageHero

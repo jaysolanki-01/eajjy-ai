@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import useSEO from "../hooks/useSEO.js";
 import PageHero from "../components/PageHero.jsx";
 import ClosingCTA from "../sections/ClosingCTA.jsx";
 import Arrow from "../components/Arrow.jsx";
@@ -113,6 +114,7 @@ function UseCaseCard({ uc, index }) {
  * Page
  * ------------------------------------------------------------------ */
 export default function LLMRagPage() {
+  useSEO({ title: "LLM & RAG Solutions", description: "AI knowledge assistants and RAG pipelines grounded in your own data. Get accurate, cited answers from the information your firm already has." });
   return (
     <>
       <PageHero

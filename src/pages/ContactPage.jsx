@@ -1,5 +1,6 @@
 import React, { useState, useMemo } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import useSEO from "../hooks/useSEO.js";
 import PageHero from "../components/PageHero.jsx";
 import Arrow from "../components/Arrow.jsx";
 import BookButton from "../components/BookButton.jsx";
@@ -201,6 +202,7 @@ function Chip({ active, onClick, children }) {
 const STEP_TITLES = ["About you", "Your business", "Where time goes", "Your tools", "Your goals"];
 
 export default function ContactPage() {
+  useSEO({ title: "Free Automation Audit", description: "Get an instant estimate of the time and money your firm could recover through automation. Complete our 2-minute workflow audit — no commitment needed." });
   const navigate = useNavigate();
   const [step, setStep] = useState(0);
   const [done, setDone] = useState(false);

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import useSEO from "../hooks/useSEO.js";
 import PageHero from "../components/PageHero.jsx";
 import ClosingCTA from "../sections/ClosingCTA.jsx";
 import Arrow from "../components/Arrow.jsx";
@@ -109,6 +110,7 @@ function DeliverableCard({ d, index }) {
  * Page
  * ------------------------------------------------------------------ */
 export default function ConsultancyPage() {
+  useSEO({ title: "AI Automation Consultancy", description: "Strategic automation audits, ROI analysis, and roadmaps for professional services firms. Get measurable results in 90 days without costly mistakes or vendor lock-in." });
   return (
     <>
       <PageHero

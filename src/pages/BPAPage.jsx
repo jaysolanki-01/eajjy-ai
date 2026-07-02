@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import useSEO from "../hooks/useSEO.js";
 import PageHero from "../components/PageHero.jsx";
 import ClosingCTA from "../sections/ClosingCTA.jsx";
 import Arrow from "../components/Arrow.jsx";
@@ -178,6 +179,7 @@ function WorkflowCard({ wf, index }) {
  * Page
  * ------------------------------------------------------------------ */
 export default function BPAPage() {
+  useSEO({ title: "Business Process Automation", description: "End-to-end workflow automation for professional services firms. Automate onboarding, reporting, document processing, and routing. Take on 30-40% more clients without hiring." });
   return (
     <>
       <PageHero

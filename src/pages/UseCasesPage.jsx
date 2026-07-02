@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import useSEO from "../hooks/useSEO.js";
 import PageHero from "../components/PageHero.jsx";
 import Comparison from "../sections/Comparison.jsx";
 import ClosingCTA from "../sections/ClosingCTA.jsx";
@@ -113,6 +114,7 @@ function IndustryCard({ ind, open, onToggle }) {
 }
 
 export default function UseCasesPage() {
+  useSEO({ title: "Automation Use Cases by Industry", description: "Before-and-after automation examples for consulting, legal, accounting, real estate, marketing agencies, and healthcare practices." });
   const [openId, setOpenId] = useState(null);
   return (
     <>

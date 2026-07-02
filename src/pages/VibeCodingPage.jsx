@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import useSEO from "../hooks/useSEO.js";
 import PageHero from "../components/PageHero.jsx";
 import ClosingCTA from "../sections/ClosingCTA.jsx";
 import Arrow from "../components/Arrow.jsx";
@@ -55,6 +56,7 @@ const FAQS = [
  * Page
  * ------------------------------------------------------------------ */
 export default function VibeCodingPage() {
+  useSEO({ title: "Vibe Coding – Rapid Custom Software", description: "Ship custom web apps, client portals, and integration hubs in 2-4 weeks using a mix of no-code and traditional development for professional services firms." });
   return (
     <>
       <PageHero

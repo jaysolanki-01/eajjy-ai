@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import useSEO from "../hooks/useSEO.js";
 import PageHero from "../components/PageHero.jsx";
 import ClosingCTA from "../sections/ClosingCTA.jsx";
 import Arrow from "../components/Arrow.jsx";
@@ -106,6 +107,7 @@ function ModelCard({ m }) {
 }
 
 export default function HirePage() {
+  useSEO({ title: "Hire an AI & Automation Expert", description: "Engage EAJJY AI on a project, retainer, or dedicated basis. Full automation expertise on demand without the overhead of a full-time hire." });
   return (
     <>
       <PageHero
