@@ -41,7 +41,7 @@ export default function BlogPage() {
             {/* Featured (most recent) */}
             <Link to={`/blog/${featured.slug}`} className="bl-featured reveal">
               <div className="bl-featured-body">
-                <div className="bl-tags">{featured.tags.map((t) => <span key={t} className="bl-tag">{t}</span>)}</div>
+                <div className="bl-tags">{featured.tags.slice(0, 3).map((t) => <span key={t} className="bl-tag">{t}</span>)}</div>
                 <h2>{featured.title}</h2>
                 <p>{featured.excerpt}</p>
                 <PostMeta post={featured} />
@@ -57,7 +57,7 @@ export default function BlogPage() {
                   <Link key={post.slug} to={`/blog/${post.slug}`} className="bl-card">
                     <div className="bl-card-art" aria-hidden="true"><span>{post.title.charAt(0)}</span></div>
                     <div className="bl-card-body">
-                      <div className="bl-tags">{post.tags.map((t) => <span key={t} className="bl-tag">{t}</span>)}</div>
+                      <div className="bl-tags">{post.tags.slice(0, 3).map((t) => <span key={t} className="bl-tag">{t}</span>)}</div>
                       <h3>{post.title}</h3>
                       <p>{post.excerpt}</p>
                       <PostMeta post={post} />
