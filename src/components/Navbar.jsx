@@ -1,8 +1,37 @@
 import React, { useState, useEffect } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { NAV, SERVICES } from "../data/siteData.jsx";
 import Logo from "./Logo.jsx";
 import Arrow from "./Arrow.jsx";
+
+// Language switcher — swaps between /en and /de URL prefixes
+function LangSwitch() {
+  const { pathname } = useLocation();
+  const navigate = useNavigate();
+  const isDE = pathname.startsWith("/de");
+
+  const toggle = () => {
+    if (isDE) {
+      navigate(pathname.replace(/^\/de/, "") || "/");
+    } else {
+      navigate("/de" + pathname);
+    }
+  };
+
+  return (
+    <button
+      type="button"
+      onClick={toggle}
+      className="lang-switch"
+      title={isDE ? "Switch to English" : "Auf Deutsch wechseln"}
+      aria-label={isDE ? "Switch to English" : "Switch to German"}
+    >
+      <span className={!isDE ? "ls-active" : ""}>EN</span>
+      <span className="ls-div" />
+      <span className={isDE ? "ls-active" : ""}>DE</span>
+    </button>
+  );
+}
 
 export default function Navbar({ onMenu }) {
   const [scrolled, setScrolled] = useState(false);
@@ -72,6 +101,7 @@ export default function Navbar({ onMenu }) {
         {/* Right zone — actions */}
         <div className="nav-actions">
           <Link to="/hire-ai-automation-expert" className="nav-cta">Hire an Expert</Link>
+          <LangSwitch />
           <Link to="/contact" className="btn btn-primary nav-cta-primary">Free Audit <Arrow /></Link>
         </div>
 

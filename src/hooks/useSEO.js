@@ -15,6 +15,9 @@ export default function useSEO({ title, description, canonical } = {}) {
 
     // Canonical
     const pageUrl = canonical || `${BASE_URL}${window.location.pathname}`;
+    const isDE = window.location.pathname.startsWith("/de");
+    const enUrl = isDE ? pageUrl.replace(`${BASE_URL}/de`, BASE_URL) : pageUrl;
+    const deUrl = isDE ? pageUrl : pageUrl.replace(BASE_URL, `${BASE_URL}/de`);
     setLink("canonical", pageUrl);
 
     // OG + Twitter
@@ -30,15 +33,9 @@ export default function useSEO({ title, description, canonical } = {}) {
     setMeta("name", "twitter:image", `${BASE_URL}/logo.png`);
 
     // ---- Hreflang tags ----
-    // x-default + en: points to the current English URL
-    // de placeholder: when German pages are ready, change this to the real /de/ URL
-    // Google requires EVERY alternate to list ALL other alternates — so both tags
-    // reference each other. Right now de points to the same URL (English fallback),
-    // which is correct until German pages exist.
-    setHreflang("x-default", pageUrl);
-    setHreflang("en", pageUrl);
-    // Uncomment and update the line below when German pages are live:
-    // setHreflang("de", pageUrl.replace(BASE_URL, "https://www.eajjy.com/de"));
+    setHreflang("x-default", enUrl);
+    setHreflang("en", enUrl);
+    setHreflang("de", deUrl);
 
     // Cleanup hreflang on unmount so stale tags don't persist across routes
     return () => {
