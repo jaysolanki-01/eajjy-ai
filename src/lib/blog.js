@@ -68,13 +68,15 @@ function parseFrontmatter(raw) {
     if (!key || key.startsWith("#")) continue;
 
     const rawValue = line.slice(ci + 1).trim();
-    if (rawValue === "") {
-      data[key] = "";
+    if (rawValue === "") { data[key] = ""; continue; }
+
+    // Inline JSON array e.g. tags: ["N8n", "Automation", "Germany"]
+    if (rawValue.startsWith("[")) {
+      try { data[key] = JSON.parse(rawValue); } catch { data[key] = rawValue; }
       continue;
     }
 
-    const value = rawValue.replace(/^['\"]|['\"]$/g, "");
-    data[key] = value;
+    data[key] = rawValue.replace(/^['"]|['"]$/g, "");
   }
 
   if (faqJson) data.faq = faqJson;
