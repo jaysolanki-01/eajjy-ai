@@ -6,6 +6,20 @@ import ClosingCTA from "../sections/ClosingCTA.jsx";
 import Arrow from "../components/Arrow.jsx";
 import { posts, formatDate } from "../lib/blog.js";
 
+const COVER_MAP = {
+  "what-is-agentic-ai": "/generated/blog-what-is-agentic-ai.png",
+  "agentic-ai-readiness-assessment": "/generated/blog-agentic-ai-readiness.png",
+  "rag-vs-fine-tuning": "/generated/blog-rag-vs-fine-tuning.png",
+  "top-10-n8n-agencies-germany": "/generated/blog-n8n-germany.png",
+  "setup-n8n-azure-docker": "/generated/blog-n8n-azure-docker.png",
+  "reporting-9-hours-to-12-minutes": "/generated/blog-reporting-automation.png",
+  "5-workflows-to-automate-first": "/generated/blog-placeholder.png",
+};
+
+function coverFor(post) {
+  return COVER_MAP[post.slug] || post.cover || "/generated/blog-placeholder.png";
+}
+
 function PostMeta({ post }) {
   return (
     <div className="bl-meta">
@@ -47,7 +61,9 @@ export default function BlogPage() {
                 <PostMeta post={featured} />
                 <span className="bl-read">Read article <Arrow /></span>
               </div>
-              <div className="bl-featured-art" aria-hidden="true"><span>{featured.title.charAt(0)}</span></div>
+              <               <div className="bl-featured-art" aria-hidden="true">
+                 <img src={coverFor(featured)} alt="" loading="lazy" decoding="async" />
+               </div>
             </Link>
 
             {/* Grid of the rest */}
@@ -55,7 +71,9 @@ export default function BlogPage() {
               <div className="bl-grid stagger">
                 {rest.map((post) => (
                   <Link key={post.slug} to={`/blog/${post.slug}`} className="bl-card">
-                    <div className="bl-card-art" aria-hidden="true"><span>{post.title.charAt(0)}</span></div>
+                    <div className="bl-card-art" aria-hidden="true">
+                      <img src={coverFor(post)} alt="" loading="lazy" decoding="async" />
+                    </div>
                     <div className="bl-card-body">
                       <div className="bl-tags">{post.tags.slice(0, 3).map((t) => <span key={t} className="bl-tag">{t}</span>)}</div>
                       <h3>{post.title}</h3>
@@ -86,12 +104,13 @@ const BLOG_CSS = `
   .bl-featured p{color:var(--gray);font-size:16px;line-height:1.6;margin-bottom:20px;max-width:48ch}
   .bl-featured-art,.bl-card-art{position:relative;background:
       radial-gradient(120% 120% at 80% 0%,rgba(255,43,43,.28),transparent 60%),
-      linear-gradient(160deg,#1a1a1a,#0a0a0a);display:grid;place-items:center;overflow:hidden}
+      linear-gradient(160deg,#1a1a1a,#0a0a0a);display:block;overflow:hidden}
+  .bl-featured-art img,.bl-card-art img{width:100%;height:100%;object-fit:cover;display:block}
   .bl-featured-art{min-height:240px}
-  .bl-featured-art span,.bl-card-art span{font-family:"Space Grotesk";font-weight:700;
-    font-size:clamp(64px,10vw,120px);color:rgba(255,255,255,.07);line-height:1}
+  .bl-card-art{height:150px}
   .bl-featured-art::after,.bl-card-art::after{content:"";position:absolute;inset:0;
-    background-image:radial-gradient(rgba(255,255,255,.05) 1px,transparent 1px);background-size:18px 18px}
+    background-image:radial-gradient(rgba(255,255,255,.05) 1px,transparent 1px);background-size:18px 18px;
+    pointer-events:none}
 
   .bl-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:4px}
   .bl-card{display:flex;flex-direction:column;border:1px solid var(--border);border-radius:18px;

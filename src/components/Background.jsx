@@ -40,7 +40,7 @@ export default function Background() {
           const a = nodes[i], b = nodes[j];
           const dx = a.x - b.x, dy = a.y - b.y, d = Math.hypot(dx, dy);
           if (d < MAXD) {
-            ctx.strokeStyle = `rgba(255,43,43,${(1 - d / MAXD) * 0.2})`;
+            ctx.strokeStyle = `rgba(255,43,43,${(1 - d / MAXD) * 0.35})`;
             ctx.lineWidth = 1;
             ctx.beginPath(); ctx.moveTo(a.x, a.y); ctx.lineTo(b.x, b.y); ctx.stroke();
           }
@@ -49,14 +49,14 @@ export default function Background() {
       for (const p of nodes) {
         const dx = p.x - mouse.x, dy = p.y - mouse.y, d = Math.hypot(dx, dy);
         if (d < 180) {
-          ctx.strokeStyle = `rgba(255,90,90,${(1 - d / 180) * 0.28})`;
+          ctx.strokeStyle = `rgba(255,90,90,${(1 - d / 180) * 0.45})`;
           ctx.lineWidth = 1;
           ctx.beginPath(); ctx.moveTo(p.x, p.y); ctx.lineTo(mouse.x, mouse.y); ctx.stroke();
         }
       }
       for (const p of nodes) {
         ctx.beginPath(); ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
-        ctx.fillStyle = "rgba(255,100,100,.65)"; ctx.fill();
+        ctx.fillStyle = "rgba(255,100,100,.8)"; ctx.fill();
       }
       if (!reduce) raf = requestAnimationFrame(frame);
     };
