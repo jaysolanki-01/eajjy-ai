@@ -5,7 +5,7 @@
     --black:#050505;--charcoal:#111111;--white:#FFFFFF;--gray:#A1A1AA;
     --red:#FF2B2B;--red-hover:#FF4D4D;--border:#262626;
     --glass:rgba(17,17,17,.55);--ease:cubic-bezier(.16,.84,.44,1);
-    --maxw:1240px;--gutter:clamp(24px,7vw,112px);
+    --maxw:1280px;--gutter:clamp(20px,5vw,80px);
   }
   *{margin:0;padding:0;box-sizing:border-box}
   html{scroll-behavior:smooth;overflow-x:clip}
@@ -21,13 +21,13 @@
     mask-image:radial-gradient(130% 100% at 50% 25%,#000 45%,transparent 88%);
     -webkit-mask-image:radial-gradient(130% 100% at 50% 25%,#000 45%,transparent 88%)}
   .bg-glow{background:
-      radial-gradient(620px 500px at 72% 20%,rgba(255,43,43,.13),transparent 70%),
-      radial-gradient(840px 660px at 12% 88%,rgba(255,43,43,.055),transparent 72%);
+      radial-gradient(620px 500px at 72% 20%,rgba(255,43,43,.20),transparent 70%),
+      radial-gradient(840px 660px at 12% 88%,rgba(255,43,43,.09),transparent 72%);
     animation:bgbreathe 9s var(--ease) infinite alternate}
   @keyframes bgbreathe{from{opacity:.7;transform:scale(1)}to{opacity:1;transform:scale(1.05)}}
-  .bg-noise{opacity:.04;mix-blend-mode:overlay;
+  .bg-noise{opacity:.06;mix-blend-mode:overlay;
     background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
-  .bg-vig{box-shadow:inset 0 0 300px 70px rgba(0,0,0,.85)}
+  .bg-vig{box-shadow:inset 0 0 300px 70px rgba(0,0,0,.45)}
 
   .wrap{max-width:var(--maxw);margin:0 auto;padding:0 var(--gutter);position:relative;z-index:2}
   section{position:relative;z-index:2}
@@ -36,10 +36,10 @@
   .glow-spot{position:absolute;border-radius:50%;filter:blur(80px);pointer-events:none;z-index:0}
 
   /* ---- NAV (floating glass pill) ---- */
-  .site-header{position:sticky;top:0;z-index:50;padding:14px clamp(16px,3vw,40px);transition:padding .4s var(--ease)}
-  .site-header.is-scrolled{padding:8px clamp(16px,3vw,40px)}
+  .site-header{position:sticky;top:0;z-index:50;padding:14px clamp(10px,2.5vw,28px);transition:padding .4s var(--ease)}
+  .site-header.is-scrolled{padding:8px clamp(10px,2.5vw,28px)}
   .nav-shell{position:relative;display:flex;align-items:center;justify-content:space-between;gap:20px;
-    height:62px;width:100%;max-width:1180px;margin:0 auto;padding:0 14px 0 24px;
+    height:62px;width:100%;max-width:1180px;margin:0 auto;padding:0 12px 0 18px;
     border:1px solid rgba(255,255,255,.08);border-radius:18px;
     background:rgba(10,10,10,.55);backdrop-filter:blur(20px) saturate(140%);
     box-shadow:0 10px 30px -16px rgba(0,0,0,.7);transition:.4s var(--ease)}

@@ -133,9 +133,9 @@ export const posts = Object.entries(modules)
       date: data.date || data.publishedAt || "",
       author: data.author || "Divyesh Solanki",
       authorTitle: data.authorTitle || "",
-      authorImage: data.authorImage || "",
+      authorImage: data.authorImage || "/generated/author-ds.png",
       excerpt: data.excerpt || data.description || "",
-      cover: data.cover || data.image || "",
+      cover: data.cover || data.image || "/generated/blog-placeholder.png",
       // handle both array tags AND comma-separated string tags (from n8n)
       tags: Array.isArray(data.tags)
         ? data.tags

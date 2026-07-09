@@ -66,6 +66,7 @@ export default function BlogPostPage() {
         <div className="bl-post-head reveal">
           <Logo size="sm" className="page-hero-logo" />
           <Link to="/blog" className="bl-back">← All articles</Link>
+          {post.cover && <img src={post.cover} alt={post.title} className="bl-cover" loading="lazy" decoding="async" />}
           <h1 className="head" style={{ fontSize: "clamp(30px,4.4vw,56px)", maxWidth: "20ch", margin: "22px 0 24px" }}>{post.title}</h1>
           <div className="bl-meta">
             <span className="bl-meta-author">{post.author || "Divyesh Solanki"}</span>
@@ -104,7 +105,7 @@ export default function BlogPostPage() {
         )}
 
         <div className="bl-author">
-          <span className="bl-author-avatar">DS</span>
+          <img src="/generated/author-ds.png" alt="Divyesh Solanki" className="bl-author-avatar-img" loading="lazy" decoding="async" />
           <div className="bl-author-info">
             <span className="bl-author-name">Divyesh Solanki</span>
             <span className="bl-author-role">AI &amp; Automation Expert</span>
@@ -126,6 +127,8 @@ export default function BlogPostPage() {
 const POST_CSS = `
   .bl-post{padding-top:clamp(50px,8vh,90px);max-width:820px}
   .bl-post-head{margin-bottom:38px;padding-bottom:30px;border-bottom:1px solid var(--border)}
+  .bl-cover{width:100%;height:auto;max-height:420px;object-fit:cover;border-radius:16px;
+    border:1px solid var(--border);margin-bottom:28px;display:block;background:var(--charcoal)}
   .bl-meta-author{color:#e4e4e7;font-weight:500}
   .bl-sep{display:inline-block;width:4px;height:4px;border-radius:50%;background:var(--gray);opacity:.5;margin:0 10px;vertical-align:middle}
   .bl-post-tags{margin-top:36px;padding-top:28px;border-top:1px solid var(--border);display:flex;align-items:center;flex-wrap:wrap;gap:10px}
@@ -172,9 +175,7 @@ const POST_CSS = `
   .bl-author{display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-top:44px;
     border:1px solid var(--border);border-radius:18px;background:var(--glass);backdrop-filter:blur(18px);
     padding:22px 24px}
-  .bl-author-avatar{flex-shrink:0;width:50px;height:50px;border-radius:50%;display:grid;place-items:center;
-    font-family:"Space Grotesk";font-weight:600;font-size:16px;color:#fff;
-    background:linear-gradient(145deg,var(--red),var(--red-hover));box-shadow:0 8px 20px -8px rgba(255,43,43,.6)}
+  .bl-author-avatar{flex-shrink:0;width:50px;height:50px;border-radius:50%;display:block;object-fit:cover;box-shadow:0 8px 20px -8px rgba(255,43,43,.6)}
   .bl-author-info{display:flex;flex-direction:column;gap:3px;flex:1;min-width:160px}
   .bl-author-name{font-family:"Space Grotesk";font-weight:600;font-size:15.5px;color:#fff}
   .bl-author-role{font-size:13px;color:var(--gray)}
