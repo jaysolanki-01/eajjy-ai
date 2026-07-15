@@ -61,7 +61,7 @@ export default function BlogPage() {
                 <PostMeta post={featured} />
                 <span className="bl-read">Read article <Arrow /></span>
               </div>
-              <               <div className="bl-featured-art" aria-hidden="true">
+              <div className="bl-featured-art" aria-hidden="true">
                  <img src={coverFor(featured)} alt="" loading="lazy" decoding="async" />
                </div>
             </Link>
