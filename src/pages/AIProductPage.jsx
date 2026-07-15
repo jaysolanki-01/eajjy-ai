@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import useSEO from "../hooks/useSEO.js";
 import PageHero from "../components/PageHero.jsx";
@@ -127,12 +127,48 @@ function UseCaseCard({ uc, index }) {
  * Page
  * ------------------------------------------------------------------ */
 export default function AIProductPage() {
-  useSEO({ title: "AI Product Development", description: "Custom AI solutions including chatbots, recommendation engines, and predictive analytics built specifically for your business model and professional services firm." });
+  useSEO({
+    title: "AI Product Development Agency for Professional Services",
+    description: "EAJJY AI is a specialist AI product development agency building custom chatbots, predictive analytics, and intelligent automation for professional services firms. Get a free audit.",
+    canonical: "https://www.eajjy.com/services/ai-product-development",
+  });
+
+  useEffect(() => {
+    const schema = {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Service",
+          "name": "AI Product Development",
+          "description": "EAJJY AI is a specialist AI product development agency that builds custom AI solutions — chatbots, predictive analytics, recommendation engines, and document intelligence — for professional services firms.",
+          "provider": { "@type": "Organization", "name": "EAJJY AI", "url": "https://www.eajjy.com" },
+          "serviceType": "AI Product Development",
+          "areaServed": "Worldwide",
+          "url": "https://www.eajjy.com/services/ai-product-development",
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": FAQS.map(([q, a]) => ({
+            "@type": "Question",
+            "name": q,
+            "acceptedAnswer": { "@type": "Answer", "text": a },
+          })),
+        },
+      ],
+    };
+    const script = document.createElement("script");
+    script.type = "application/ld+json";
+    script.id = "aipd-schema";
+    script.text = JSON.stringify(schema);
+    document.head.appendChild(script);
+    return () => document.getElementById("aipd-schema")?.remove();
+  }, []);
+
   return (
     <>
       <PageHero
-        eyebrow="AI Product Development"
-        title="Custom AI, Built for Your Business Model"
+        eyebrow="AI Product Development Agency"
+        title="The AI Product Development Agency for Professional Services Firms"
         lead="From intelligent chatbots and recommendation engines to predictive analytics, we build proprietary AI capabilities that differentiate your services and create new revenue streams."
       />
 
@@ -147,8 +183,8 @@ export default function AIProductPage() {
       <section className="sec wrap" id="build">
         <div className="reveal">
           <span className="eyebrow">What We Build</span>
-          <h2>Proprietary AI, Tailored to How You Work</h2>
-          <p className="lead">We don't bolt on a generic chatbot and call it a day. We build custom AI solutions trained on your data and wired into your existing systems.</p>
+          <h2>What We Build as Your AI Product Development Agency</h2>
+          <p className="lead">We don't bolt on a generic chatbot and call it a day. As a specialist AI product development agency, we build custom AI solutions trained on your data and wired into your existing systems.</p>
         </div>
         <div className="aipd-grid stagger">
           {WHAT_WE_BUILD.map(([t, d]) => (
@@ -182,7 +218,7 @@ export default function AIProductPage() {
         <div className="aipd-bestfor reveal">
           <div>
             <span className="eyebrow">Best For</span>
-            <h2>Is AI Product Development Right for You?</h2>
+            <h2>Is Our AI Product Development Agency Right for You?</h2>
             <p className="lead">This service is built for forward-thinking firms ready to turn AI into a genuine competitive advantage.</p>
           </div>
           <ul className="aipd-bestfor-list">
@@ -202,7 +238,7 @@ export default function AIProductPage() {
       <section className="sec wrap" id="process">
         <div className="reveal">
           <span className="eyebrow">How We Build It</span>
-          <h2>From Idea to Deployed AI Product</h2>
+          <h2>How Our AI Product Development Agency Builds Your Product</h2>
           <p className="lead">A disciplined process that de-risks AI development and gets you to a working, integrated product fast.</p>
         </div>
         <div className="aipd-phases stagger">
@@ -225,7 +261,7 @@ export default function AIProductPage() {
       <section className="sec wrap" id="faq">
         <div className="reveal">
           <span className="eyebrow">FAQ</span>
-          <h2>Questions About AI Product Development</h2>
+          <h2>Questions About Our AI Product Development Agency</h2>
         </div>
         <div className="faq stagger">
           {FAQS.map(([q, a]) => (
