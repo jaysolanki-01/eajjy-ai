@@ -224,7 +224,6 @@
   /* ---- SECTION SHELL ---- */
   .eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:12.5px;font-weight:600;
     letter-spacing:.08em;text-transform:uppercase;color:var(--red-hover);margin-bottom:18px}
-  .eyebrow::before{content:"";width:22px;height:1px;background:var(--red)}
   h2{font-family:"Space Grotesk";font-weight:600;font-size:clamp(28px,3.5vw,46px);
     line-height:1.04;letter-spacing:-.025em;max-width:18ch}
   .lead{color:var(--gray);font-size:clamp(15px,1.2vw,17px);line-height:1.62;max-width:620px;margin-top:18px}
