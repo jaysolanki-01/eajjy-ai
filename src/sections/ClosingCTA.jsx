@@ -2,6 +2,7 @@
 import { Link } from "react-router-dom";
 import Logo from "../components/Logo.jsx";
 import BookButton from "../components/BookButton.jsx";
+import useTranslation from "../hooks/useTranslation.js";
 
 const ORBIT_ICONS = [
   { cls: "ob-1", path: <path d="M13 2L4 14h7l-1 8 9-12h-7l1-8z" /> }, // bolt
@@ -11,6 +12,8 @@ const ORBIT_ICONS = [
 ];
 
 export default function ClosingCTA() {
+  const t = useTranslation();
+  const c = t.cta;
   const sectionRef = useRef(null);
   const layerRef = useRef(null);
 
@@ -52,12 +55,12 @@ export default function ClosingCTA() {
         ))}
 
         <Logo size="md" link={false} className="closing-logo" />
-        <span className="eyebrow" style={{ justifyContent: "center" }}>Why EAJJY AI</span>
-        <h2>Every Week Without an AI Agency, Competitors Get Ahead.</h2>
-        <p>Another week your best people waste on work AI should handle. Another week of missed revenue. EAJJY AI turns operational challenges into competitive advantages, helping firms save thousands of hours, scale without proportional hiring, and launch new revenue-generating capabilities.</p>
+        <span className="eyebrow" style={{ justifyContent: "center" }}>{c.eyebrow}</span>
+        <h2>{c.headline}</h2>
+        <p>{c.body}</p>
         <div className="ctas">
-          <BookButton>Book a Free Consultation</BookButton>
-          <Link to="/services" className="btn btn-ghost">Explore Services</Link>
+          <BookButton>{c.cta1}</BookButton>
+          <Link to="/services" className="btn btn-ghost">{c.cta2}</Link>
         </div>
       </div>
 

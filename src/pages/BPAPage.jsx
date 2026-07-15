@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import useSEO from "../hooks/useSEO.js";
 import PageHero from "../components/PageHero.jsx";
@@ -179,12 +179,47 @@ function WorkflowCard({ wf, index }) {
  * Page
  * ------------------------------------------------------------------ */
 export default function BPAPage() {
-  useSEO({ title: "Business Process Automation", description: "End-to-end workflow automation for professional services firms. Automate onboarding, reporting, document processing, and routing. Take on 30-40% more clients without hiring." });
+  useSEO({
+    title: "Business Process Automation for Professional Services Firms",
+    description: "EAJJY AI delivers Business Process Automation for consulting, legal, accounting, and marketing firms. Eliminate manual workflows, reduce errors, and scale without hiring. Get a free audit.",
+    canonical: "https://www.eajjy.com/services/business-process-automation",
+  });
+
+  useEffect(() => {
+    const schema = {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Service",
+          "name": "Business Process Automation",
+          "description": "EAJJY AI delivers Business Process Automation for professional services firms. We design custom workflows that connect your tools, eliminate manual tasks, and let your team focus on strategic work.",
+          "provider": { "@type": "Organization", "name": "EAJJY AI", "url": "https://www.eajjy.com" },
+          "areaServed": "Worldwide",
+          "url": "https://www.eajjy.com/services/business-process-automation",
+          "serviceType": "Business Process Automation",
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": FAQS.map(([q, a]) => ({
+            "@type": "Question",
+            "name": q,
+            "acceptedAnswer": { "@type": "Answer", "text": a },
+          })),
+        },
+      ],
+    };
+    const script = document.createElement("script");
+    script.type = "application/ld+json";
+    script.id = "bpa-schema";
+    script.text = JSON.stringify(schema);
+    document.head.appendChild(script);
+    return () => document.getElementById("bpa-schema")?.remove();
+  }, []);
   return (
     <>
       <PageHero
         eyebrow="Business Process Automation"
-        title="Stop Wasting Hours on Work That Machines Should Do"
+        title="Business Process Automation That Frees Your Team to Do Real Work"
         lead="Business Process Automation removes the repetitive, manual tasks that slow your team and drain your budget. We design custom workflows that connect your tools, eliminate bottlenecks, and let your people focus on what actually moves the needle."
       />
 
@@ -199,8 +234,8 @@ export default function BPAPage() {
       <section className="sec wrap" id="what">
         <div className="reveal">
           <span className="eyebrow">What It Is</span>
-          <h2>What Exactly Is Business Process Automation?</h2>
-          <p className="lead">Right now, your team is the middle person passing information back and forth. With BPA, the tools talk to each other directly. Work flows automatically. Nothing gets stuck. Nothing gets forgotten.</p>
+          <h2>What Is Business Process Automation?</h2>
+          <p className="lead">Right now, your team is the middle person passing information back and forth. With Business Process Automation, the tools talk to each other directly. Work flows automatically. Nothing gets stuck. Nothing gets forgotten.</p>
         </div>
         <div className="bpa-auto stagger">
           {WHAT_GETS_AUTOMATED.map(([t, d]) => (
@@ -233,7 +268,7 @@ export default function BPAPage() {
         <div className="glow-spot" style={{ width: 480, height: 480, background: "rgba(255,43,43,.08)", top: 0, right: -160 }} />
         <div className="reveal">
           <span className="eyebrow">The Payoff</span>
-          <h2>What Business Process Automation Actually Delivers</h2>
+          <h2>What Business Process Automation Delivers for Your Firm</h2>
         </div>
         <div className="bpa-benefits stagger">
           {BENEFITS.map((b) => (

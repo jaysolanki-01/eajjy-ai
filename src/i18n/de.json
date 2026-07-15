@@ -1,0 +1,129 @@
+{
+  "nav": {
+    "services": "Leistungen",
+    "product": "Produkt",
+    "work": "Referenzen",
+    "useCases": "Anwendungsfälle",
+    "blog": "Blog",
+    "process": "Unser Prozess",
+    "faq": "FAQ",
+    "hireExpert": "Experten engagieren",
+    "freeAudit": "Kostenloses Audit"
+  },
+  "hero": {
+    "badge": "Vertraut von professionellen Dienstleistungsunternehmen",
+    "headline": "Was passiert, wenn Geschäftsprozesse wirklich automatisiert werden?",
+    "sub": "EAJJY AI ist die AI agency für professionelle Dienstleistungsunternehmen — wir entwickeln Automatisierungssysteme, die repetitive Arbeit eliminieren, damit sich Ihr Team auf strategische Kundenarbeit konzentriert und den Umsatz steigert, ohne mehr Personal einzustellen.",
+    "cta1": "Kostenloses Beratungsgespräch buchen",
+    "cta2": "So funktioniert es",
+    "stat1Value": "30-40%",
+    "stat1Label": "Mehr Kunden ohne Neueinstellungen",
+    "stat2Value": "90 Tage",
+    "stat2Label": "Bis zum messbaren ROI"
+  },
+  "integrations": {
+    "eyebrow": "Integrationen",
+    "headline": "Verbunden mit den Tools, die Sie bereits nutzen",
+    "lead": "Wir integrieren uns in die Plattformen, mit denen Ihr Team bereits arbeitet, sodass Daten automatisch durch Ihren gesamten Stack fließen."
+  },
+  "cta": {
+    "eyebrow": "Warum EAJJY AI",
+    "headline": "Jede Woche ohne eine AI agency holen Wettbewerber auf.",
+    "body": "Noch eine Woche, in der Ihre besten Mitarbeiter an Aufgaben arbeiten, die AI übernehmen sollte. Noch eine Woche verpasster Umsatz. EAJJY AI verwandelt operative Herausforderungen in Wettbewerbsvorteile und hilft Unternehmen, tausende von Stunden zu sparen, ohne proportional mehr Personal einzustellen.",
+    "cta1": "Kostenloses Beratungsgespräch buchen",
+    "cta2": "Leistungen erkunden"
+  },
+  "footer": {
+    "about": "Moderne AI- und Automatisierungssysteme für professionelle Dienstleistungsunternehmen. Steigern Sie den Umsatz, ohne mehr Personal einzustellen.",
+    "officeLabel": "Büro — Indien",
+    "address": "C-1102, PNTC, Times Of India Press Road, Vejalpur, Ahmedabad 380015",
+    "servicesHeading": "Leistungen",
+    "companyHeading": "Unternehmen",
+    "getStartedHeading": "Loslegen",
+    "copyright": "© 2026 EAJJY AI. Alle Rechte vorbehalten.",
+    "builtBy": "Entwickelt von"
+  },
+  "pages": {
+    "home": {
+      "metaTitle": "AI Agency für professionelle Dienstleistungsunternehmen",
+      "metaDesc": "EAJJY AI ist eine spezialisierte AI agency, die Beratungs-, Rechts-, Buchhaltungs- und Marketingunternehmen hilft, manuelle Arbeit zu eliminieren und durch intelligente Automatisierung zu wachsen."
+    },
+    "services": {
+      "metaTitle": "AI & Automatisierungsleistungen",
+      "metaDesc": "Sechs Spezialdienste: Geschäftsprozessautomatisierung, AI-Produktentwicklung, Vibe Coding, N8n-Automatisierung, AI-Beratung und LLM & RAG-Lösungen.",
+      "eyebrow": "Leistungen",
+      "headline": "AI & Automatisierung, entwickelt für Ihre Arbeitsweise",
+      "lead": "Von der vollständigen Prozessüberarbeitung bis zur gezielten Automatisierung — wählen Sie das Engagement, das zu Ihrem aktuellen Stand passt."
+    },
+    "faq": {
+      "metaTitle": "Häufig gestellte Fragen",
+      "metaDesc": "Antworten auf häufige Fragen zur Zusammenarbeit mit EAJJY AI — Preise, Prozess, Datensicherheit, Timeline und mehr.",
+      "eyebrow": "FAQ",
+      "headline": "Fragen, beantwortet",
+      "lead": "Die Fragen, die Führungskräfte professioneller Dienstleistungsunternehmen uns am häufigsten stellen."
+    },
+    "blog": {
+      "metaTitle": "Blog – AI & Automatisierungseinblicke",
+      "metaDesc": "Praxisnahe Artikel zur Automatisierung professioneller Dienstleistungsunternehmen.",
+      "eyebrow": "Blog",
+      "headline": "Einblicke in AI & Automatisierung",
+      "lead": "Praxisnahe Anleitungen zur Automatisierung professioneller Dienstleistungsunternehmen."
+    },
+    "contact": {
+      "metaTitle": "Kostenloses Automatisierungs-Audit",
+      "metaDesc": "Erhalten Sie eine sofortige Schätzung der Zeit und des Geldes, die Ihr Unternehmen durch Automatisierung zurückgewinnen könnte.",
+      "eyebrow": "Kostenloses Automatisierungs-Audit",
+      "headline": "Ihr Workflow-Audit in 2 Minuten",
+      "lead": "Beantworten Sie einige Fragen und wir schätzen sofort die Zeit und das Geld, die Sie zurückgewinnen könnten."
+    },
+    "hire": {
+      "metaTitle": "Einen AI & Automatisierungsexperten engagieren",
+      "metaDesc": "Beauftragen Sie EAJJY AI projektbasiert, im Retainer oder als dedizierter Experte.",
+      "eyebrow": "Experten engagieren",
+      "headline": "Einen AI- und Automatisierungsexperten engagieren",
+      "lead": "Holen Sie sich einen erfahrenen AI- und Automatisierungsexperten als Erweiterung Ihres Teams."
+    },
+    "product": {
+      "metaTitle": "Produkt – AI Automatisierungsplattform",
+      "metaDesc": "Ein zentrales Dashboard für jeden Workflow, Agenten und jede Integration in Ihrem Unternehmen.",
+      "eyebrow": "Produkt",
+      "headline": "Eine Plattform für Ihren Automatisierungs-Stack",
+      "lead": "Ein einheitlicher Überblick über jeden Workflow, Agenten und jede Integration in Ihrem Unternehmen.",
+      "launchingSoon": "Demnächst verfügbar",
+      "buildingBig": "Wir entwickeln etwas Großartiges.",
+      "buildingDesc": "Unsere Automatisierungsplattform befindet sich in aktiver Entwicklung. Bald können Sie jeden Workflow in Ihrem Unternehmen von einem zentralen Ort aus überwachen und verwalten.",
+      "earlyAccess": "Frühen Zugang erhalten",
+      "exploreServices": "Leistungen erkunden"
+    },
+    "book": {
+      "metaTitle": "Kostenloses Beratungsgespräch buchen",
+      "metaDesc": "Vereinbaren Sie ein kostenloses Gespräch mit EAJJY AI.",
+      "eyebrow": "Gespräch buchen",
+      "headline": "Kostenloses Beratungsgespräch buchen",
+      "lead": "Wählen Sie einen Termin, der Ihnen passt. Wir besprechen, wo Automatisierung Ihrem Team die meiste Zeit spart — kein Druck, keine Verpflichtung."
+    },
+    "thankYou": {
+      "headline": "Vielen Dank. Ihr Audit ist unterwegs.",
+      "lead": "Wir haben Ihre Daten erhalten. Wir melden uns in Kürze mit Ihrer persönlichen Automatisierungs-Roadmap.",
+      "cta1": "Kostenloses Beratungsgespräch buchen",
+      "cta2": "Blog lesen",
+      "backHome": "← Zurück zur Startseite"
+    }
+  },
+  "faq": {
+    "items": [
+      ["Wir nutzen bereits Tools wie Zapier. Reicht das nicht?", "Einfache Automatisierungstools sind ein guter Einstieg, stoßen aber schnell an ihre Grenzen. Professionelle Dienstleistungsunternehmen haben komplexe Workflows, die ausgefeilte Logik, Fehlerbehandlung und individuelle Integrationen erfordern. Wir entwickeln Enterprise-grade-Systeme, die mit Ihrem Wachstum skalieren."],
+      ["Woher weiß ich, dass das für unsere spezifische Situation funktioniert?", "Genau deshalb beginnen wir mit einem umfassenden Audit. Wir schlagen keine Lösungen vor, bevor wir Ihre Abläufe nicht gründlich verstanden haben. Unser Discovery-Prozess stellt sicher, dass wir Ihre tatsächlichen Probleme lösen, nicht vorgefertigte Produkte verkaufen."],
+      ["Was, wenn unser Team die Veränderung ablehnt?", "Wir haben Automatisierung in Dutzenden von professionellen Dienstleistungsunternehmen implementiert. Change Management ist in unsere Methodik eingebaut. Wir binden Ihr Team früh ein und schulen es umfassend."],
+      ["Ist individuelle AI-Entwicklung nicht teuer und zeitaufwändig?", "Traditionelle AI-Projekte können das sein. Unser Ansatz ist anders. Wir nutzen bewährte Frameworks und schnelle Entwicklungstechniken, um individuelle Lösungen in Wochen zu einem Bruchteil der traditionellen Kosten zu liefern."],
+      ["Wie schnell werden wir ROI sehen?", "Die meisten Kunden sehen messbare Zeiteinsparungen innerhalb von 30 Tagen nach der Bereitstellung. Vollständiger ROI tritt in der Regel innerhalb von 3–6 Monaten ein, je nach Umfang."],
+      ["Was kostet das?", "Der Preis hängt vom Umfang ab. Die meisten Projekte werden nach dem Discovery-Audit kalkuliert, sobald wir genau wissen, was entwickelt werden muss. Wir geben Ihnen immer eine klare Zahl, bevor die Arbeit beginnt."],
+      ["Wird Automatisierung unsere Mitarbeiter ersetzen?", "Nein. Unser Ziel ist es, repetitive, wertarme Arbeit zu beseitigen, damit sich Ihr Team auf Kundenbeziehungen, Strategie und die Aufgaben konzentrieren kann, die wirklich einen Menschen erfordern."],
+      ["Sind unsere Daten während des Prozesses sicher?", "Ja. Wir folgen dem Prinzip der minimalen Rechte, verwenden sichere authentifizierte Verbindungen für jede Integration und speichern nie mehr Daten, als ein Workflow benötigt."],
+      ["Arbeiten Sie nur mit großen Unternehmen?", "Nein. Wir arbeiten mit Unternehmen aller Größen zusammen, von Einzelpraktikern bis zu Kanzleien mit mehreren Partnern."],
+      ["Was passiert nach der Fertigstellung der Automatisierung?", "Nein, wir verschwinden nicht. Jedes Projekt beinhaltet Dokumentation und Teamschulung. Wir bieten auch fortlaufenden Support und Retainer-Optionen an."],
+      ["Können Sie mit unserem bestehenden Tech-Stack arbeiten?", "In fast allen Fällen bauen wir auf dem auf, was Sie bereits nutzen. Ein Plattformwechsel ist selten notwendig und verursacht Kosten und Störungen ohne Mehrwert."],
+      ["Worin unterscheidet sich das von der Einstellung einer internen Person?", "Eine interne Einstellung ist eine Person mit einem Skill-Set und vollen Lohnnebenkosten. Wir bringen die Expertise eines ganzen Teams on demand, ohne den Overhead eines Vollzeitgehalts, Sozialleistungen oder einer langen Einarbeitungszeit."]
+    ]
+  }
+}

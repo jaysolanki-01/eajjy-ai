@@ -1,24 +1,28 @@
-﻿import React from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import Arrow from "../components/Arrow.jsx";
 import BookButton from "../components/BookButton.jsx";
+import useTranslation from "../hooks/useTranslation.js";
 
 export default function Hero() {
+  const t = useTranslation();
+  const h = t.hero;
+
   return (
     <section className="wrap">
       <div className="hero">
         <div className="reveal">
-          <div className="badge"><span className="live" />India's <b>AI agency</b> for professional services firms</div>
-          <h1 className="head">What Happens When Business Processes <span className="accent">Actually Automate?</span></h1>
-          <p className="sub">EAJJY AI is the <b>AI agency</b> for professional services firms — we build automation systems that <b>eliminate repetitive work</b> so your team focuses on strategic client work and scales revenue without scaling headcount.</p>
+          <div className="badge"><span className="live" />{h.badge}</div>
+          <h1 className="head"><span className="accent">{h.headline}</span></h1>
+          <p className="sub">{h.sub}</p>
           <div className="ctas">
-            <BookButton>Book a Free Consultation</BookButton>
-            <Link to="/process" className="btn btn-ghost">See How It Works</Link>
+            <BookButton>{h.cta1}</BookButton>
+            <Link to="/process" className="btn btn-ghost">{h.cta2}</Link>
           </div>
           <div className="trust">
-            <div><div className="ti">30-40%</div><div className="tl">More clients<br />without hiring</div></div>
+            <div><div className="ti">{h.stat1Value}</div><div className="tl">{h.stat1Label}</div></div>
             <div className="div" />
-            <div><div className="ti">90 days</div><div className="tl">To measurable<br />ROI</div></div>
+            <div><div className="ti">{h.stat2Value}</div><div className="tl">{h.stat2Label}</div></div>
           </div>
         </div>
         <div className="stage reveal-r">
@@ -50,4 +54,3 @@ export default function Hero() {
     </section>
   );
 }
-

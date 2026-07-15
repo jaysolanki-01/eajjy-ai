@@ -1,5 +1,6 @@
 import React from "react";
 import { LOGOS } from "../data/siteData.jsx";
+import useTranslation from "../hooks/useTranslation.js";
 
 // Logos that were processed as WHITE silhouettes (for the old dark tiles).
 // On white tiles we invert them back to dark so they're visible.
@@ -14,7 +15,8 @@ function LogoTile({ name, src }) {
 }
 
 export default function Integrations() {
-  // split into two rows for the dual-direction marquee
+  const t = useTranslation();
+  const i = t.integrations;
   const half = Math.ceil(LOGOS.length / 2);
   const rowA = LOGOS.slice(0, half);
   const rowB = LOGOS.slice(half);
@@ -22,9 +24,9 @@ export default function Integrations() {
   return (
     <section className="sec wrap" style={{ textAlign: "center" }} id="integrations">
       <div className="reveal" style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
-        <span className="eyebrow" style={{ justifyContent: "center" }}>Integrations</span>
-        <h2 style={{ margin: "0 auto" }}>Connected to the Tools You Already Use</h2>
-        <p className="lead" style={{ maxWidth: 560, margin: "14px auto 0" }}>We plug into the platforms your team already works in, so data flows automatically across your whole stack.</p>
+        <span className="eyebrow" style={{ justifyContent: "center" }}>{i.eyebrow}</span>
+        <h2 style={{ margin: "0 auto" }}>{i.headline}</h2>
+        <p className="lead" style={{ maxWidth: 560, margin: "14px auto 0" }}>{i.lead}</p>
       </div>
 
       <div className="int-marquee mq-rtl reveal">

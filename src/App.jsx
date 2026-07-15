@@ -44,6 +44,27 @@ export default function App() {
         <Route path="/blog/:slug" element={<BlogPostPage />} />
         <Route path="/book" element={<BookPage />} />
         <Route path="/thank-you" element={<ThankYouPage />} />
+
+        {/* German /de/* routes — same components, useTranslation hook returns de.json */}
+        <Route path="/de" element={<Home />} />
+        <Route path="/de/services" element={<ServicesPage />} />
+        <Route path="/de/use-cases" element={<UseCasesPage />} />
+        <Route path="/de/process" element={<ProcessPage />} />
+        <Route path="/de/faq" element={<FaqPage />} />
+        <Route path="/de/product" element={<ProductPage />} />
+        <Route path="/de/work" element={<WorkPage />} />
+        <Route path="/de/hire-ai-automation-expert" element={<HirePage />} />
+        <Route path="/de/contact" element={<ContactPage />} />
+        <Route path="/de/services/business-process-automation" element={<BPAPage />} />
+        <Route path="/de/services/ai-product-development" element={<AIProductPage />} />
+        <Route path="/de/services/vibe-coding" element={<VibeCodingPage />} />
+        <Route path="/de/services/n8n-automation" element={<N8nPage />} />
+        <Route path="/de/services/ai-automation-consultancy" element={<ConsultancyPage />} />
+        <Route path="/de/services/llm-rag-solutions" element={<LLMRagPage />} />
+        <Route path="/de/blog" element={<BlogPage />} />
+        <Route path="/de/blog/:slug" element={<BlogPostPage />} />
+        <Route path="/de/book" element={<BookPage />} />
+        <Route path="/de/thank-you" element={<ThankYouPage />} />
         <Route path="*" element={<Home />} />
       </Route>
     </Routes>
