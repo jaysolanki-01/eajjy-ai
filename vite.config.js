@@ -32,7 +32,7 @@ const staticRoutes = [
   "/faq",
   "/blog",
   "/contact",
-  "/book",
+  "/book-free-consultation",
   "/hire-ai-automation-expert",
   "/de",
   "/de/services",
@@ -43,7 +43,7 @@ const staticRoutes = [
   "/de/work",
   "/de/blog",
   "/de/contact",
-  "/de/book",
+  "/de/book-free-consultation",
   "/de/hire-ai-automation-expert",
 ];
 

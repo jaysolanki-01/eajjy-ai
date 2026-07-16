@@ -42,7 +42,8 @@ export default function App() {
         <Route path="/services/llm-rag-solutions" element={<LLMRagPage />} />
         <Route path="/blog" element={<BlogPage />} />
         <Route path="/blog/:slug" element={<BlogPostPage />} />
-        <Route path="/book" element={<BookPage />} />
+        <Route path="/book-free-consultation" element={<BookPage />} />
+        <Route path="/book" element={<BookPage />} />{/* redirect legacy URL */}
         <Route path="/thank-you" element={<ThankYouPage />} />
 
         {/* German /de/* routes — same components, useTranslation hook returns de.json */}
@@ -63,6 +64,7 @@ export default function App() {
         <Route path="/de/services/llm-rag-solutions" element={<LLMRagPage />} />
         <Route path="/de/blog" element={<BlogPage />} />
         <Route path="/de/blog/:slug" element={<BlogPostPage />} />
+        <Route path="/de/book-free-consultation" element={<BookPage />} />
         <Route path="/de/book" element={<BookPage />} />
         <Route path="/de/thank-you" element={<ThankYouPage />} />
         <Route path="*" element={<Home />} />
