@@ -1,17 +1,15 @@
 import React from "react";
 import useSEO from "../hooks/useSEO.js";
+import useTranslation from "../hooks/useTranslation.js";
 import PageHero from "../components/PageHero.jsx";
 import BookInline from "../components/BookInline.jsx";
 
 export default function BookPage() {
-  useSEO({ title: "Book a Free Consultation", description: "Schedule a free call with EAJJY AI. We will discuss where automation can save your team the most time and map your highest-ROI opportunities.", canonical: "https://www.eajjy.com/book-free-consultation" });
+  const t = useTranslation();
+  useSEO({ title: t.pages.book.metaTitle, description: t.pages.book.metaDesc, canonical: "https://www.eajjy.com/book-free-consultation" });
   return (
     <>
-      <PageHero
-        eyebrow="Book a Call"
-        title="Book a Free Consultation"
-        lead="Pick a time that works for you. We'll discuss where automation can save your team the most time, no pressure, no commitment."
-      />
+      <PageHero eyebrow={t.pages.book.eyebrow} title={t.pages.book.headline} lead={t.pages.book.lead} />
       <section className="sec wrap" style={{ paddingTop: 24 }}>
         <div className="book-wrap reveal">
           <BookInline />

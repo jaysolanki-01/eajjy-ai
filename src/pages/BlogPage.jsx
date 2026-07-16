@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import useSEO from "../hooks/useSEO.js";
+import useTranslation from "../hooks/useTranslation.js";
 import PageHero from "../components/PageHero.jsx";
 import ClosingCTA from "../sections/ClosingCTA.jsx";
 import Arrow from "../components/Arrow.jsx";
@@ -33,16 +34,13 @@ function PostMeta({ post }) {
 }
 
 export default function BlogPage() {
-  useSEO({ title: "Blog – AI & Automation Insights", description: "Practical articles on automating professional services firms, written by Divyesh Solanki, AI & Automation Expert at EAJJY AI.", canonical: "https://www.eajjy.com/blog" });
+  const t = useTranslation();
+  useSEO({ title: t.pages.blog.metaTitle, description: t.pages.blog.metaDesc, canonical: "https://www.eajjy.com/blog" });
   const [featured, ...rest] = posts;
 
   return (
     <>
-      <PageHero
-        eyebrow="Blog"
-        title="Insights on AI & Automation"
-        lead="Practical guidance on automating professional services firms, drawn from the systems we build every day."
-      />
+      <PageHero eyebrow={t.pages.blog.eyebrow} title={t.pages.blog.headline} lead={t.pages.blog.lead} />
 
       <section className="sec wrap">
         {posts.length === 0 ? (

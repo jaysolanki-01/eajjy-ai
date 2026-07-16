@@ -1,18 +1,20 @@
 import React from "react";
 import useSEO from "../hooks/useSEO.js";
+import useTranslation from "../hooks/useTranslation.js";
 import PageHero from "../components/PageHero.jsx";
 import Services from "../sections/Services.jsx";
 import Integrations from "../sections/Integrations.jsx";
 import ClosingCTA from "../sections/ClosingCTA.jsx";
 
 export default function ServicesPage() {
-  useSEO({ title: "AI & Automation Services", description: "Six specialist services: Business Process Automation, AI Product Development, Vibe Coding, N8n Automation, AI Consultancy, and LLM & RAG Solutions.", canonical: "https://www.eajjy.com/services" });
+  const t = useTranslation();
+  useSEO({ title: t.pages.services.metaTitle, description: t.pages.services.metaDesc, canonical: "https://www.eajjy.com/services" });
   return (
     <>
       <PageHero
-        eyebrow="Services"
-        title="AI & Automation, Built for the Way You Work"
-        lead="From full process redesign to targeted automation, choose the engagement that matches where you are today."
+        eyebrow={t.pages.services.eyebrow}
+        title={t.pages.services.headline}
+        lead={t.pages.services.lead}
       />
       <Services />
       <div className="divider" />

@@ -1,21 +1,30 @@
 import React from "react";
 import { STEPS } from "../data/siteData.jsx";
+import useTranslation from "../hooks/useTranslation.js";
 
 export default function Process() {
+  const t = useTranslation();
+  const p = t.process;
+  const steps = p.steps;
   return (
     <section className="sec wrap" id="process">
       <div className="reveal">
-        <span className="eyebrow">Our Process</span>
-        <h2>How Do We Get You From Chaos to Automated in 90 Days?</h2>
-        <p className="lead">We don't believe in one-size-fits-all solutions. Our proven methodology ensures every automation system we build directly addresses your specific revenue and operational challenges.</p>
+        <span className="eyebrow">{p.eyebrow}</span>
+        <h2>{p.headline}</h2>
+        <p className="lead">{p.lead}</p>
       </div>
       <div className="steps stagger">
-        {STEPS.map((s) => (
-          <div className="step" key={s.n}>
-            <div className="num">{s.n}</div><h3>{s.t}</h3><p className="w">{s.w}</p>
-            <div className="meta"><b>{s.meta}</b>{s.out}</div>
-          </div>
-        ))}
+        {STEPS.map((s) => {
+          const ts = steps[s.n] || {};
+          return (
+            <div className="step" key={s.n}>
+              <div className="num">{s.n}</div>
+              <h3>{ts.title || s.t}</h3>
+              <p className="w">{ts.desc || s.w}</p>
+              <div className="meta"><b>{ts.meta || s.meta}</b>{ts.out || s.out}</div>
+            </div>
+          );
+        })}
       </div>
     </section>
   );

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import useSEO from "../hooks/useSEO.js";
+import useTranslation from "../hooks/useTranslation.js";
 import PageHero from "../components/PageHero.jsx";
 import ClosingCTA from "../sections/ClosingCTA.jsx";
 import Arrow from "../components/Arrow.jsx";
@@ -107,14 +108,11 @@ function ModelCard({ m }) {
 }
 
 export default function HirePage() {
-  useSEO({ title: "Hire an AI & Automation Expert", description: "Engage EAJJY AI on a project, retainer, or dedicated basis. Full automation expertise on demand without the overhead of a full-time hire.", canonical: "https://www.eajjy.com/hire-ai-automation-expert" });
+  const t = useTranslation();
+  useSEO({ title: t.pages.hire.metaTitle, description: t.pages.hire.metaDesc, canonical: "https://www.eajjy.com/hire-ai-automation-expert" });
   return (
     <>
-      <PageHero
-        eyebrow="Hire an Expert"
-        title="Hire an AI and Automation Expert"
-        lead="Get an experienced AI and automation expert working as an extension of your team, on flexible terms, without the cost and delay of traditional hiring."
-      />
+      <PageHero eyebrow={t.pages.hire.eyebrow} title={t.pages.hire.headline} lead={t.pages.hire.lead} />
 
       <section className="wrap" style={{ paddingBottom: 10 }}>
         <div className="ctas reveal">

@@ -1,15 +1,18 @@
 import React from "react";
-import { FAQS } from "../data/siteData.jsx";
+import useTranslation from "../hooks/useTranslation.js";
 
 export default function Faq() {
+  const t = useTranslation();
+  const f = t.faqSection;
+  const items = t.faq.items;
   return (
     <section className="sec wrap" id="faq">
       <div className="reveal">
-        <span className="eyebrow">FAQ</span>
-        <h2>Will This Actually Work for Your Agency?</h2>
+        <span className="eyebrow">{f.eyebrow}</span>
+        <h2>{f.headline}</h2>
       </div>
       <div className="faq stagger">
-        {FAQS.map(([q, a]) => (
+        {items.map(([q, a]) => (
           <details key={q}>
             <summary>{q}<span className="pm">+</span></summary>
             <p>{a}</p>

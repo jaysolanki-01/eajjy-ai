@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import useSEO from "../hooks/useSEO.js";
+import useTranslation from "../hooks/useTranslation.js";
 import PageHero from "../components/PageHero.jsx";
 import Faq from "../sections/Faq.jsx";
 import ClosingCTA from "../sections/ClosingCTA.jsx";
@@ -8,9 +9,10 @@ import { FAQS } from "../data/siteData.jsx";
 const SCHEMA_ID = "faq-page-schema";
 
 export default function FaqPage() {
+  const t = useTranslation();
   useSEO({
-    title: "Frequently Asked Questions",
-    description: "Answers to common questions about working with EAJJY AI — pricing, process, data security, timeline, tool compatibility, and more.",
+    title: t.pages.faq.metaTitle,
+    description: t.pages.faq.metaDesc,
     canonical: "https://www.eajjy.com/faq",
   });
 
@@ -41,11 +43,7 @@ export default function FaqPage() {
 
   return (
     <>
-      <PageHero
-        eyebrow="FAQ"
-        title="Questions, Answered"
-        lead="The things professional services leaders ask us most before getting started."
-      />
+      <PageHero eyebrow={t.pages.faq.eyebrow} title={t.pages.faq.headline} lead={t.pages.faq.lead} />
       <Faq />
       <ClosingCTA />
     </>

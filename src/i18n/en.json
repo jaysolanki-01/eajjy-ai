@@ -21,6 +21,19 @@
     "stat2Value": "90 days",
     "stat2Label": "To measurable ROI"
   },
+  "problem": {
+    "eyebrow": "The Problem",
+    "headline": "Where Are Your Billable Hours Actually Going?",
+    "lead": "Your agency is growing. Client demands are increasing. But your team is maxed out. Every day, your highest-paid professionals spend hours on work that doesn't require human intelligence.",
+    "pain": ["Manual data entry and report generation", "Repetitive client communications", "Administrative tasks that don't require human intelligence", "Context-switching between multiple tools and platforms"],
+    "gainHeadline": "The real problem? While your team is buried in busywork, you're missing opportunities to:",
+    "gain": ["Take on more high-value clients", "Launch new service offerings", "Scale without proportionally increasing headcount", "Compete with larger firms who've already automated"],
+    "closer": "This isn't just an efficiency problem. It's a revenue problem. And it's costing you more than you think."
+  },
+  "faqSection": {
+    "eyebrow": "FAQ",
+    "headline": "Will This Actually Work for Your Agency?"
+  },
   "services": {
     "eyebrow": "Services",
     "headline": "How We Help You Automate and Scale",

@@ -3,6 +3,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { NAV, SERVICES } from "../data/siteData.jsx";
 import Logo from "./Logo.jsx";
 import Arrow from "./Arrow.jsx";
+import useTranslation from "../hooks/useTranslation.js";
 
 // Language switcher — swaps between /en and /de URL prefixes
 function LangSwitch() {
@@ -36,6 +37,8 @@ function LangSwitch() {
 export default function Navbar({ onMenu }) {
   const [scrolled, setScrolled] = useState(false);
   const { pathname } = useLocation();
+  const t = useTranslation();
+  const n = t.nav;
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 16);
@@ -57,7 +60,7 @@ export default function Navbar({ onMenu }) {
         <ul className="nav-links nav-island">
           <li className={"has-drop" + (servicesActive ? " active" : "")}>
             <Link to="/services" className="nav-link">
-              <span>Services</span>
+              <span>{n.services}</span>
               <svg className="caret" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M6 9l6 6 6-6" /></svg>
             </Link>
 
@@ -100,9 +103,9 @@ export default function Navbar({ onMenu }) {
 
         {/* Right zone — actions */}
         <div className="nav-actions">
-          <Link to="/hire-ai-automation-expert" className="nav-cta">Hire an Expert</Link>
+          <Link to="/hire-ai-automation-expert" className="nav-cta">{n.hireExpert}</Link>
           <LangSwitch />
-          <Link to="/contact" className="btn btn-primary nav-cta-primary">Free Audit <Arrow /></Link>
+          <Link to="/contact" className="btn btn-primary nav-cta-primary">{n.freeAudit} <Arrow /></Link>
         </div>
 
         <button className="menu-btn" aria-label="Open menu" onClick={onMenu}>
