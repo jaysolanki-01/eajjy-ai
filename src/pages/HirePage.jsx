@@ -107,7 +107,7 @@ function ModelCard({ m }) {
 }
 
 export default function HirePage() {
-  useSEO({ title: "Hire an AI & Automation Expert", description: "Engage EAJJY AI on a project, retainer, or dedicated basis. Full automation expertise on demand without the overhead of a full-time hire." });
+  useSEO({ title: "Hire an AI & Automation Expert", description: "Engage EAJJY AI on a project, retainer, or dedicated basis. Full automation expertise on demand without the overhead of a full-time hire.", canonical: "https://www.eajjy.com/hire-ai-automation-expert" });
   return (
     <>
       <PageHero

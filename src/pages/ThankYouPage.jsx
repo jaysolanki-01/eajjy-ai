@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import ClosingCTA from "../sections/ClosingCTA.jsx";
 import BookButton from "../components/BookButton.jsx";
@@ -11,6 +11,16 @@ const STEPS = [
 ];
 
 export default function ThankYouPage() {
+  useEffect(() => {
+    document.title = "Thank You | EAJJY AI";
+    let can = document.querySelector("link[rel='canonical']");
+    if (!can) { can = document.createElement("link"); can.setAttribute("rel", "canonical"); document.head.appendChild(can); }
+    can.setAttribute("href", "https://www.eajjy.com/thank-you");
+    let robots = document.querySelector("meta[name='robots']");
+    if (!robots) { robots = document.createElement("meta"); robots.setAttribute("name", "robots"); document.head.appendChild(robots); }
+    robots.setAttribute("content", "noindex, follow");
+  }, []);
+
   return (
     <>
       <section className="wrap ty-hero">

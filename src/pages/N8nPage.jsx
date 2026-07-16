@@ -114,7 +114,7 @@ function WorkflowCard({ wf, index }) {
  * Page
  * ------------------------------------------------------------------ */
 export default function N8nPage() {
-  useSEO({ title: "N8n Automation Services", description: "Enterprise-grade workflow automation built on n8n. Connect your existing tools, move data automatically, and eliminate repetitive tasks without code." });
+  useSEO({ title: "N8n Automation Services", description: "Enterprise-grade workflow automation built on n8n. Connect your existing tools, move data automatically, and eliminate repetitive tasks without code.", canonical: "https://www.eajjy.com/services/n8n-automation" });
   return (
     <>
       <PageHero

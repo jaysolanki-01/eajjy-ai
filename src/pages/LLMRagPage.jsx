@@ -114,7 +114,7 @@ function UseCaseCard({ uc, index }) {
  * Page
  * ------------------------------------------------------------------ */
 export default function LLMRagPage() {
-  useSEO({ title: "LLM & RAG Solutions", description: "AI knowledge assistants and RAG pipelines grounded in your own data. Get accurate, cited answers from the information your firm already has." });
+  useSEO({ title: "LLM & RAG Solutions", description: "AI knowledge assistants and RAG pipelines grounded in your own data. Get accurate, cited answers from the information your firm already has.", canonical: "https://www.eajjy.com/services/llm-rag-solutions" });
   return (
     <>
       <PageHero

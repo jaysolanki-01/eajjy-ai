@@ -114,7 +114,7 @@ function IndustryCard({ ind, open, onToggle }) {
 }
 
 export default function UseCasesPage() {
-  useSEO({ title: "Automation Use Cases by Industry", description: "Before-and-after automation examples for consulting, legal, accounting, real estate, marketing agencies, and healthcare practices." });
+  useSEO({ title: "Automation Use Cases by Industry", description: "Before-and-after automation examples for consulting, legal, accounting, real estate, marketing agencies, and healthcare practices.", canonical: "https://www.eajjy.com/use-cases" });
   const [openId, setOpenId] = useState(null);
   return (
     <>

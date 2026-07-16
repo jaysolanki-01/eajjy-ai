@@ -200,7 +200,7 @@ function CaseCard({ c, index }) {
  * Page
  * ------------------------------------------------------------------ */
 export default function Work() {
-  useSEO({ title: "Our Work – AI Automation Case Studies", description: "Real automation systems we have shipped: voice AI agents, GEO-SEO content pipelines, LinkedIn automation, YC scraping agents, and newsletter systems." });
+  useSEO({ title: "Our Work – AI Automation Case Studies", description: "Real automation systems we have shipped: voice AI agents, GEO-SEO content pipelines, LinkedIn automation, YC scraping agents, and newsletter systems.", canonical: "https://www.eajjy.com/work" });
   return (
     <>
       <PageHero

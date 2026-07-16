@@ -6,7 +6,7 @@ import Integrations from "../sections/Integrations.jsx";
 import ClosingCTA from "../sections/ClosingCTA.jsx";
 
 export default function ServicesPage() {
-  useSEO({ title: "AI & Automation Services", description: "Six specialist services: Business Process Automation, AI Product Development, Vibe Coding, N8n Automation, AI Consultancy, and LLM & RAG Solutions." });
+  useSEO({ title: "AI & Automation Services", description: "Six specialist services: Business Process Automation, AI Product Development, Vibe Coding, N8n Automation, AI Consultancy, and LLM & RAG Solutions.", canonical: "https://www.eajjy.com/services" });
   return (
     <>
       <PageHero

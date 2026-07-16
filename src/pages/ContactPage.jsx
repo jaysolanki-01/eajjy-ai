@@ -202,7 +202,7 @@ function Chip({ active, onClick, children }) {
 const STEP_TITLES = ["About you", "Your business", "Where time goes", "Your tools", "Your goals"];
 
 export default function ContactPage() {
-  useSEO({ title: "Free Automation Audit", description: "Get an instant estimate of the time and money your firm could recover through automation. Complete our 2-minute workflow audit — no commitment needed." });
+  useSEO({ title: "Free Automation Audit", description: "Get an instant estimate of the time and money your firm could recover through automation. Complete our 2-minute workflow audit — no commitment needed.", canonical: "https://www.eajjy.com/contact" });
   const navigate = useNavigate();
   const [step, setStep] = useState(0);
   const [done, setDone] = useState(false);

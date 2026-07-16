@@ -33,7 +33,7 @@ function PostMeta({ post }) {
 }
 
 export default function BlogPage() {
-  useSEO({ title: "Blog – AI & Automation Insights", description: "Practical articles on automating professional services firms, written by Divyesh Solanki, AI & Automation Expert at EAJJY AI." });
+  useSEO({ title: "Blog – AI & Automation Insights", description: "Practical articles on automating professional services firms, written by Divyesh Solanki, AI & Automation Expert at EAJJY AI.", canonical: "https://www.eajjy.com/blog" });
   const [featured, ...rest] = posts;
 
   return (
