@@ -22,9 +22,9 @@ const INDUSTRIES = [
   },
   {
     id: "consulting",
-    name: "Consulting & Professional Services",
+    name: "Ecommerce & D2C",
     icon: (<><circle cx="12" cy="8" r="4" /><path d="M4 20c0-4 4-6 8-6s8 2 8 6" /></>),
-    line: "Scale expertise without scaling headcount.",
+    line: "Scale order volume without scaling headcount.",
     cases: [
       ["Proposal & SOW generation", "Assemble tailored proposals from a knowledge base in minutes, not hours."],
       ["Research & data enrichment", "Automatically gather and structure company and contact intelligence for engagements."],
@@ -121,7 +121,7 @@ export default function UseCasesPage() {
       <PageHero
         eyebrow="Use Cases"
         title="What Changes When Operations Run Themselves"
-        lead="A side-by-side look at the everyday tasks we automate for professional services firms."
+        lead="A side-by-side look at the everyday tasks we automate for ecommerce brands."
       />
 
       <Comparison />

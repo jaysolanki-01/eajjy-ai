@@ -180,7 +180,7 @@ function WorkflowCard({ wf, index }) {
  * ------------------------------------------------------------------ */
 export default function BPAPage() {
   useSEO({
-    title: "Business Process Automation for Professional Services Firms",
+    title: "Ecommerce Process Automation | EAJJY AI",
     description: "EAJJY AI delivers Business Process Automation for consulting, legal, accounting, and marketing firms. Eliminate manual workflows, reduce errors, and scale without hiring. Get a free audit.",
     canonical: "https://www.eajjy.com/services/business-process-automation",
   });
@@ -192,7 +192,7 @@ export default function BPAPage() {
         {
           "@type": "Service",
           "name": "Business Process Automation",
-          "description": "EAJJY AI delivers Business Process Automation for professional services firms. We design custom workflows that connect your tools, eliminate manual tasks, and let your team focus on strategic work.",
+          "description": "EAJJY AI delivers ecommerce process automation. We design custom workflows that connect your tools, eliminate manual ops tasks, and let your team focus on growth.",
           "provider": { "@type": "Organization", "name": "EAJJY AI", "url": "https://www.eajjy.com" },
           "areaServed": "Worldwide",
           "url": "https://www.eajjy.com/services/business-process-automation",
@@ -254,7 +254,7 @@ export default function BPAPage() {
         <div className="reveal">
           <span className="eyebrow">Real Workflows</span>
           <h2>Real Workflows We Build Every Day</h2>
-          <p className="lead">Actual automations we've built for professional services firms. Tap any to compare the manual way with the automated way.</p>
+          <p className="lead">Actual automations we've built for ecommerce brands. Tap any to compare the manual way with the automated way.</p>
         </div>
         <div className="wf-list stagger">
           {WORKFLOWS.map((wf, i) => <WorkflowCard key={wf.id} wf={wf} index={i} />)}

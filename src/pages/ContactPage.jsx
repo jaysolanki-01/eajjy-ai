@@ -10,13 +10,14 @@ import BookButton from "../components/BookButton.jsx";
  * ================================================================== */
 // Where audit submissions should go. Used by the "Email my audit" button.
 const EAJJY_EMAIL = "sales@eajjy.com";
-// Vercel serverless function that forwards submissions to Brevo.
-const FORM_ENDPOINT = "/api/contact";
+// Optional: paste a form backend endpoint (Formspree / Web3Forms / Getform)
+// to capture submissions automatically. Left empty = mailto fallback only.
+const FORM_ENDPOINT = "";
 
 /* ================================================================== *
  * Data + scoring model
  * ================================================================== */
-const INDUSTRIES = ["Marketing / Creative Agency", "Consulting / Professional Services", "Legal / Compliance", "Accounting / Finance", "Real Estate", "Healthcare / Wellness", "Other"];
+const INDUSTRIES = ["Ecommerce / D2C Brand", "Marketplace Seller", "Marketing / Creative Agency", "Consulting / Professional Services", "Other"];
 const TEAM_SIZES = ["Just me", "2–10", "11–25", "26–50", "50+"];
 
 // Each manual area: weekly team hours (mid estimate) + which services it maps to
@@ -143,7 +144,7 @@ function buildReportHTML(a, r) {
   </div>
 
   <p class="disclaim">*Estimates assume automation recovers ~${Math.round(RECOVERY * 100)}% of identified manual time at $${r.rate}/hour across ${WEEKS} working weeks. Figures are directional and refined during a full audit.</p>
-  <div class="foot">© ${new Date().getFullYear()} EAJJY AI · Automation systems for professional services firms</div>
+  <div class="foot">© ${new Date().getFullYear()} EAJJY AI · Ecommerce automation agency</div>
 </div></body></html>`;
 }
 
@@ -225,19 +226,7 @@ export default function ContactPage() {
     return true;
   };
 
-  const next = async () => {
-    if (step < STEP_TITLES.length - 1) { setStep(step + 1); return; }
-    if (FORM_ENDPOINT) {
-      try {
-        await fetch(FORM_ENDPOINT, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(a) });
-      } catch (e) {
-        console.error("Contact submission error:", e);
-      }
-      navigate("/thank-you");
-      return;
-    }
-    setDone(true);
-  };
+  const next = () => { if (step < STEP_TITLES.length - 1) setStep(step + 1); else { if (FORM_ENDPOINT) { try { fetch(FORM_ENDPOINT, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(a) }); } catch (e) {} navigate("/thank-you"); return; } setDone(true); } };
   const back = () => setStep(Math.max(0, step - 1));
 
   const money = (n) => "$" + n.toLocaleString();

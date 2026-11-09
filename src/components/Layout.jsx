@@ -8,8 +8,6 @@ import MobileMenu from "./MobileMenu.jsx";
 import Footer from "./Footer.jsx";
 import ExpertCallFloat from "./ExpertCallFloat.jsx";
 import WhatsAppButton from "./WhatsAppButton.jsx";
-import LeadPopup from "./LeadPopup.jsx";
-import CookieBanner from "./CookieBanner.jsx";
 import useScrollReveal from "../hooks/useScrollReveal.js";
 
 export default function Layout() {
@@ -55,8 +53,6 @@ export default function Layout() {
       <Footer />
       <ExpertCallFloat />
       <WhatsAppButton />
-      <LeadPopup />
-      <CookieBanner />
     </>
   );
 }
