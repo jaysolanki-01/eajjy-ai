@@ -11,68 +11,68 @@
     "freeAudit": "Free Audit"
   },
   "hero": {
-    "badge": "Trusted by professional services firms",
-    "headline": "What Happens When Business Processes Actually Automate?",
-    "sub": "EAJJY AI is the AI agency for professional services firms — we build automation systems that eliminate repetitive work so your team focuses on strategic client work and scales revenue without scaling headcount.",
+    "badge": "Trusted by ecommerce brands",
+    "headline": "Scale Your Ecommerce Brand Without Scaling Your Team",
+    "sub": "EAJJY AI is the ecommerce automation agency — we build systems that automate order processing, inventory, customer lifecycle, and operations so you grow revenue without growing headcount.",
     "cta1": "Book a Free Consultation",
     "cta2": "See How It Works",
     "stat1Value": "30-40%",
-    "stat1Label": "More clients without hiring",
+    "stat1Label": "More orders, same team size",
     "stat2Value": "90 days",
     "stat2Label": "To measurable ROI"
   },
   "problem": {
     "eyebrow": "The Problem",
-    "headline": "Where Are Your Billable Hours Actually Going?",
-    "lead": "Your agency is growing. Client demands are increasing. But your team is maxed out. Every day, your highest-paid professionals spend hours on work that doesn't require human intelligence.",
-    "pain": ["Manual data entry and report generation", "Repetitive client communications", "Administrative tasks that don't require human intelligence", "Context-switching between multiple tools and platforms"],
-    "gainHeadline": "The real problem? While your team is buried in busywork, you're missing opportunities to:",
-    "gain": ["Take on more high-value clients", "Launch new service offerings", "Scale without proportionally increasing headcount", "Compete with larger firms who've already automated"],
-    "closer": "This isn't just an efficiency problem. It's a revenue problem. And it's costing you more than you think."
+    "headline": "Where Is Your Team's Time Actually Going?",
+    "lead": "Your store is growing. Orders are piling up. But your team is buried in manual work — processing orders, updating inventory, chasing suppliers, and sending the same customer emails every single day.",
+    "pain": ["Manual order processing and fulfilment steps", "Inventory updates across every channel and marketplace", "Repetitive customer support and returns handling", "Disconnected tools that require constant manual data entry"],
+    "gainHeadline": "The real problem? While your team is buried in ops work, you're missing opportunities to:",
+    "gain": ["Add new sales channels without hiring more staff", "Recover abandoned carts and reduce churn automatically", "Scale order volume without proportional headcount costs", "Compete with larger brands who've already automated"],
+    "closer": "This isn't just an efficiency problem. It's a growth ceiling. And automation is what breaks through it."
   },
   "faqSection": {
     "eyebrow": "FAQ",
-    "headline": "Will This Actually Work for Your Agency?"
+    "headline": "Will This Actually Work for Your Store?"
   },
   "services": {
     "eyebrow": "Services",
     "headline": "How We Help You Automate and Scale",
-    "lead": "Whether you need end-to-end process redesign or targeted automation for specific pain points, EAJJY AI delivers solutions that integrate seamlessly with your existing operations.",
+    "lead": "Whether you need end-to-end operations automation or targeted fixes for specific bottlenecks, EAJJY AI delivers ecommerce automation systems that integrate seamlessly with your existing stack.",
     "learnMore": "Learn more",
     "items": {
-      "bpa": { "title": "Business Process Automation", "desc": "Complete workflow transformation using AI-powered automation to eliminate manual, repetitive tasks across your entire operation.", "impact": "Take on 30–40% more clients without hiring additional staff." },
-      "aiProduct": { "title": "AI Product Development", "desc": "Custom AI solutions built for your business model, from intelligent chatbots and recommendation engines to predictive analytics that give you a competitive edge.", "impact": "Launch AI-enhanced offerings that command premium pricing." },
-      "vibeCoding": { "title": "Vibe Coding", "desc": "Rapid custom development that brings ideas to life fast, using no-code/low-code plus traditional development to ship in weeks, not months.", "impact": "Stop forcing your processes into off-the-shelf software." },
-      "n8n": { "title": "N8n Automation", "desc": "Enterprise-grade workflow automation with N8n that connects your tools, moves data automatically, and eliminates repetitive tasks without code.", "impact": "Data flows automatically. Nothing falls through the cracks." },
-      "consultancy": { "title": "AI Automation Consultancy", "desc": "Strategic guidance to identify your highest-impact automation opportunities, design your roadmap, and ensure successful implementation aligned with your business goals.", "impact": "Achieve measurable results in 90 days or less, without costly mistakes or vendor lock-in." },
-      "rag": { "title": "LLM & RAG Solutions", "desc": "Language AI grounded in your own data using retrieval-augmented generation, delivering accurate, cited answers from the knowledge you already have.", "impact": "Trustworthy AI answers sourced from your data, not the open web." }
+      "bpa": { "title": "Ecommerce Process Automation", "desc": "Complete operations automation for your store — order processing, inventory management, fulfilment routing, returns, and reporting, all running without manual intervention.", "impact": "Process 30–40% more orders without adding headcount." },
+      "aiProduct": { "title": "AI Product Development", "desc": "Custom AI built for your ecommerce model — product recommendation engines, demand forecasting, personalisation systems, and predictive analytics that give you a measurable edge.", "impact": "Launch AI-powered features that increase AOV and repeat purchase rates." },
+      "vibeCoding": { "title": "Custom Integration Development", "desc": "Bespoke connectors, dashboards, and internal tools built fast — bridging your ecommerce platform, 3PL, marketplaces, and ERP without forcing your operations into off-the-shelf software.", "impact": "Stop the copy-paste. Data flows exactly where it needs to go." },
+      "n8n": { "title": "N8n Automation", "desc": "Enterprise-grade workflow automation that connects Shopify, WooCommerce, marketplaces, 3PLs, and every tool in your stack — moving data automatically without code.", "impact": "Every order, inventory update, and customer event flows automatically." },
+      "consultancy": { "title": "Ecommerce Automation Consultancy", "desc": "Strategic guidance to identify your highest-impact automation opportunities, design your roadmap, and ensure implementation delivers measurable results aligned with your growth goals.", "impact": "Achieve measurable ROI in 90 days without costly mistakes or vendor lock-in." },
+      "rag": { "title": "LLM & AI Solutions", "desc": "AI grounded in your own catalogue and customer data — intelligent product search, automated support, content generation, and AI-powered merchandising decisions.", "impact": "Faster answers, smarter recommendations, less manual content work." }
     }
   },
   "integrations": {
     "eyebrow": "Integrations",
     "headline": "Connected to the Tools You Already Use",
-    "lead": "We plug into the platforms your team already works in, so data flows automatically across your whole stack."
+    "lead": "We plug into your ecommerce platform, 3PL, marketplaces, and every tool in your stack — so data flows automatically without manual exports or copy-paste."
   },
   "process": {
     "eyebrow": "Our Process",
-    "headline": "From Chaos to Automated in 90 Days",
+    "headline": "From Manual Ops to Automated in 90 Days",
     "lead": "A proven, low-lift methodology that ships measurable results without disrupting your team.",
     "steps": {
-      "01": { "title": "Discovery & Audit", "desc": "We analyze operations, interview key team members, map workflows, and identify automation opportunities with the highest ROI.", "meta": "Your time · 3–4 hrs / 2 weeks", "out": "A detailed audit report prioritized by business impact." },
-      "02": { "title": "Strategy & Design", "desc": "We design your custom solution, create technical specs, and present a clear implementation roadmap with timelines and results.", "meta": "Your time · 2–3 hrs review", "out": "A complete blueprint with milestones and success metrics." },
-      "03": { "title": "Build & Integrate", "desc": "We build, test, and integrate with your existing systems, handling all technical complexity while keeping you updated.", "meta": "Your time · weekly 30-min check-ins", "out": "A fully functional, tested, documented system." },
-      "04": { "title": "Deploy & Optimize", "desc": "We launch, train your team, monitor performance, and continuously optimize based on real-world results.", "meta": "Your time · training + support", "out": "Measurable improvements within the first month." }
+      "01": { "title": "Discovery & Audit", "desc": "We analyse your operations, map your workflows, interview key team members, and identify the automation opportunities with the highest ROI for your store.", "meta": "Your time · 3–4 hrs / 2 weeks", "out": "A detailed audit report prioritized by business impact." },
+      "02": { "title": "Strategy & Design", "desc": "We design your custom automation system, create technical specs, and present a clear implementation roadmap with timelines and expected results.", "meta": "Your time · 2–3 hrs review", "out": "A complete blueprint with milestones and success metrics." },
+      "03": { "title": "Build & Integrate", "desc": "We build, test, and integrate with your existing ecommerce stack — handling all technical complexity while keeping you updated at every stage.", "meta": "Your time · weekly 30-min check-ins", "out": "A fully functional, tested, documented automation system." },
+      "04": { "title": "Deploy & Optimize", "desc": "We launch, train your team, monitor performance, and continuously optimize based on real-world order volumes and business outcomes.", "meta": "Your time · training + support", "out": "Measurable improvements within the first month." }
     }
   },
   "cta": {
     "eyebrow": "Why EAJJY AI",
-    "headline": "Every Week Without an AI Agency, Competitors Get Ahead.",
-    "body": "Another week your best people waste on work AI should handle. Another week of missed revenue. EAJJY AI turns operational challenges into competitive advantages, helping firms save thousands of hours, scale without proportional hiring, and launch new revenue-generating capabilities.",
+    "headline": "Every Week Without Automation, Competitors Pull Ahead.",
+    "body": "Another week your team manually processes orders, updates inventory, and handles the same support queries. Another week of abandoned carts you didn't recover. EAJJY AI turns ecommerce operations into a competitive advantage — helping brands automate fulfilment, scale without headcount, and build systems that compound.",
     "cta1": "Book a Free Consultation",
     "cta2": "Explore Services"
   },
   "footer": {
-    "about": "Advanced AI & automation systems built for modern professional services firms. Scale revenue without scaling headcount.",
+    "about": "Ecommerce automation systems for online brands. Scale order volume without scaling headcount.",
     "officeLabel": "Office — India",
     "address": "C-1102, PNTC, Times Of India Press Road, Vejalpur, Ahmedabad 380015",
     "servicesHeading": "Services",
@@ -82,33 +82,33 @@
     "builtBy": "Built by"
   },
   "pages": {
-    "home": { "metaTitle": "AI Agency for Professional Services Firms", "metaDesc": "EAJJY AI is a specialist AI agency helping consulting, legal, accounting, and marketing firms eliminate manual work and scale through intelligent automation. Get a free audit." },
-    "services": { "metaTitle": "AI & Automation Services", "metaDesc": "Six specialist services: Business Process Automation, AI Product Development, Vibe Coding, N8n Automation, AI Consultancy, and LLM & RAG Solutions.", "eyebrow": "Services", "headline": "AI & Automation, Built for the Way You Work", "lead": "From full process redesign to targeted automation, choose the engagement that matches where you are today." },
-    "work": { "metaTitle": "Our Work – AI Automation Case Studies", "metaDesc": "Real automation systems we have shipped: voice AI agents, GEO-SEO content pipelines, LinkedIn automation, YC scraping agents, and newsletter systems.", "eyebrow": "Work", "headline": "AI Automation Success Stories", "lead": "Real systems we've built for real firms. Each project replaced hours of manual work with autonomous, measurable automation." },
-    "useCases": { "metaTitle": "Automation Use Cases by Industry", "metaDesc": "Before-and-after automation examples for consulting, legal, accounting, real estate, marketing agencies, and healthcare practices.", "eyebrow": "Use Cases", "headline": "See Automation in Action", "lead": "Before-and-after examples from the workflows we automate most often." },
-    "process": { "metaTitle": "Our Process – How We Work", "metaDesc": "Four-stage engagement: Discovery & Audit, Strategy & Design, Build & Integrate, Deploy & Optimize. Measurable results within 90 days.", "eyebrow": "Our Process", "headline": "From Chaos to Automated in 90 Days", "lead": "A proven, low-lift methodology that ships measurable results without disrupting your team." },
-    "faq": { "metaTitle": "Frequently Asked Questions", "metaDesc": "Answers to common questions about working with EAJJY AI — pricing, process, data security, timeline, tool compatibility, and more.", "eyebrow": "FAQ", "headline": "Questions, Answered", "lead": "The things professional services leaders ask us most before getting started." },
-    "blog": { "metaTitle": "Blog – AI & Automation Insights", "metaDesc": "Practical articles on automating professional services firms, written by Divyesh Solanki, AI & Automation Expert at EAJJY AI.", "eyebrow": "Blog", "headline": "Insights on AI & Automation", "lead": "Practical guidance on automating professional services firms, drawn from the systems we build every day." },
-    "contact": { "metaTitle": "Free Automation Audit", "metaDesc": "Get an instant estimate of the time and money your firm could recover through automation. Complete our 2-minute workflow audit.", "eyebrow": "Free Automation Audit", "headline": "Get Your Workflow Audit in 2 Minutes", "lead": "Answer a few questions and we'll instantly estimate the time and money you could recover, recommend where to start, and generate an audit report you can download." },
-    "hire": { "metaTitle": "Hire an AI & Automation Expert", "metaDesc": "Engage EAJJY AI on a project, retainer, or dedicated basis. Full automation expertise on demand without the overhead of a full-time hire.", "eyebrow": "Hire an Expert", "headline": "Hire an AI and Automation Expert", "lead": "Get an experienced AI and automation expert working as an extension of your team, on flexible terms, without the cost and delay of traditional hiring." },
-    "product": { "metaTitle": "Product – AI Automation Platform", "metaDesc": "A unified dashboard for every workflow, agent, and integration running across your firm. Launching soon — get early access.", "eyebrow": "Product", "headline": "One Platform for Your Automation Stack", "lead": "A unified view of every workflow, agent, and integration running across your firm.", "launchingSoon": "Launching soon", "buildingBig": "We're building something big.", "buildingDesc": "Our automation platform is in active development. Soon you'll be able to monitor, manage, and measure every workflow across your firm from a single place. Want early access? Book a call and we'll add you to the early-access list.", "earlyAccess": "Get Early Access", "exploreServices": "Explore Our Services" },
-    "book": { "metaTitle": "Book a Free Consultation", "metaDesc": "Schedule a free call with EAJJY AI.", "eyebrow": "Book a Call", "headline": "Book a Free Consultation", "lead": "Pick a time that works for you. We'll discuss where automation can save your team the most time, no pressure, no commitment." },
-    "thankYou": { "headline": "Thank You. Your Audit Is On Its Way.", "lead": "We've got your details. We'll be in touch shortly with your personalized automation roadmap.", "cta1": "Book a Free Consultation", "cta2": "Read the Blog", "backHome": "← Back to home" }
+    "home": { "metaTitle": "Ecommerce Automation Agency | EAJJY AI", "metaDesc": "EAJJY AI is a specialist ecommerce automation agency. We automate order processing, inventory, customer lifecycle, and operations so ecommerce brands scale without scaling headcount." },
+    "services": { "metaTitle": "Ecommerce Automation Services | EAJJY AI", "metaDesc": "Six specialist services: Ecommerce Process Automation, AI Product Development, Custom Integration Development, N8n Automation, Ecommerce Automation Consultancy, and LLM & AI Solutions.", "eyebrow": "Services", "headline": "Ecommerce Automation, Built for the Way You Operate", "lead": "From full operations automation to targeted workflow fixes, choose the engagement that matches where your store is today." },
+    "work": { "metaTitle": "Our Work – Ecommerce Automation Case Studies", "metaDesc": "Real automation systems we have shipped for ecommerce brands: order automation, inventory systems, customer lifecycle flows, support triage, and analytics pipelines.", "eyebrow": "Work", "headline": "Ecommerce Automation in Action", "lead": "Real systems we've built for real stores. Each project replaced hours of manual ops work with autonomous, measurable automation." },
+    "useCases": { "metaTitle": "Ecommerce Automation Use Cases", "metaDesc": "Before-and-after automation examples for ecommerce brands: order processing, inventory management, customer lifecycle, returns, support triage, and reporting.", "eyebrow": "Use Cases", "headline": "See Ecommerce Automation in Action", "lead": "Before-and-after examples from the workflows we automate most often for ecommerce brands." },
+    "process": { "metaTitle": "Our Process – How We Work", "metaDesc": "Four-stage engagement: Discovery & Audit, Strategy & Design, Build & Integrate, Deploy & Optimize. Measurable ecommerce automation results within 90 days.", "eyebrow": "Our Process", "headline": "From Manual Ops to Automated in 90 Days", "lead": "A proven, low-lift methodology that ships measurable results without disrupting your team." },
+    "faq": { "metaTitle": "Frequently Asked Questions | EAJJY AI", "metaDesc": "Answers to common questions about working with EAJJY AI — pricing, process, data security, timeline, ecommerce platform compatibility, and more.", "eyebrow": "FAQ", "headline": "Questions, Answered", "lead": "The things ecommerce founders and ops leads ask us most before getting started." },
+    "blog": { "metaTitle": "Blog – Ecommerce Automation Insights", "metaDesc": "Practical articles on automating ecommerce operations, written by Divyesh Solanki, Ecommerce Automation Expert at EAJJY AI.", "eyebrow": "Blog", "headline": "Insights on Ecommerce Automation", "lead": "Practical guidance on automating ecommerce operations, drawn from the systems we build every day." },
+    "contact": { "metaTitle": "Free Automation Audit", "metaDesc": "Get an instant estimate of the time and revenue your store could recover through automation. Complete our 2-minute workflow audit.", "eyebrow": "Free Automation Audit", "headline": "Get Your Workflow Audit in 2 Minutes", "lead": "Answer a few questions and we'll instantly estimate the time and revenue you could recover, recommend where to start, and generate an audit report you can download." },
+    "hire": { "metaTitle": "Hire an Ecommerce Automation Expert | EAJJY AI", "metaDesc": "Engage EAJJY AI on a project, retainer, or dedicated basis. Full ecommerce automation expertise on demand without the overhead of a full-time hire.", "eyebrow": "Hire an Expert", "headline": "Hire an Ecommerce Automation Expert", "lead": "Get an experienced ecommerce automation expert working as an extension of your team, on flexible terms, without the cost and delay of traditional hiring." },
+    "product": { "metaTitle": "Product – Ecommerce Automation Platform", "metaDesc": "A unified dashboard for every workflow, automation, and integration running across your ecommerce operation. Launching soon — get early access.", "eyebrow": "Product", "headline": "One Platform for Your Ecommerce Automation Stack", "lead": "A unified view of every workflow, automation, and integration running across your store.", "launchingSoon": "Launching soon", "buildingBig": "We're building something big.", "buildingDesc": "Our ecommerce automation platform is in active development. Soon you'll be able to monitor, manage, and measure every workflow across your store from a single place. Want early access? Book a call and we'll add you to the early-access list.", "earlyAccess": "Get Early Access", "exploreServices": "Explore Our Services" },
+    "book": { "metaTitle": "Book a Free Consultation", "metaDesc": "Schedule a free call with EAJJY AI.", "eyebrow": "Book a Call", "headline": "Book a Free Consultation", "lead": "Pick a time that works for you. We'll discuss where automation can save your team the most time and recover the most revenue — no pressure, no commitment." },
+    "thankYou": { "headline": "Thank You. Your Audit Is On Its Way.", "lead": "We've got your details. We'll be in touch shortly with your personalised ecommerce automation roadmap.", "cta1": "Book a Free Consultation", "cta2": "Read the Blog", "backHome": "← Back to home" }
   },
   "faq": {
     "items": [
-      ["We're already using tools like Zapier. Isn't that enough?", "Basic automation tools are great starting points, but they hit limits fast. Professional services firms have complex workflows that need sophisticated logic, error handling, and custom integrations. We build enterprise-grade systems that scale with your growth and handle the complexity basic tools can't."],
-      ["How do I know this will work for our specific situation?", "That's exactly why we start with a comprehensive audit. We don't propose solutions until we deeply understand your operations. Our discovery process ensures we're solving your actual problems, not selling pre-packaged products. You see the roadmap and expected results before you commit to implementation."],
-      ["What if our team resists the change?", "We've implemented automation across dozens of professional services firms. Change management is built into our methodology. We involve your team early, design solutions that make their jobs easier (not obsolete), and provide comprehensive training. When people see automation eliminating their most frustrating tasks, adoption happens naturally."],
-      ["Isn't custom AI development expensive and time-consuming?", "Traditional AI projects can be. Our approach is different. We use proven frameworks, pre-trained models, and rapid development techniques to deliver custom solutions in weeks, at a fraction of traditional costs. You get enterprise-level capabilities without enterprise-level budgets or timelines."],
-      ["How quickly will we see ROI?", "Most clients see measurable time savings within 30 days of deployment. Full ROI typically happens within 3–6 months, depending on scope. During discovery we calculate expected ROI based on your specific costs and opportunities, so you know exactly what to expect."],
-      ["How much does this cost?", "Pricing depends on scope: a single workflow automation is very different from a full operations overhaul. Most engagements are quoted after the discovery audit, once we know exactly what needs to be built. We'll always give you a clear number before any work begins, no surprise invoices."],
-      ["Will automation replace our employees?", "No. Our goal is to remove repetitive, low-value work so your team can focus on client relationships, strategy, and the parts of the job that actually need a human. Most clients use the freed-up time to take on more clients rather than reduce headcount."],
+      ["We already use Shopify automations and Zapier. Isn't that enough?", "Shopify Flow and basic automation tools are great starting points, but they hit limits fast. Ecommerce operations have complex workflows that need sophisticated logic, error handling, multi-system orchestration, and custom integrations with 3PLs, marketplaces, and ERPs. We build enterprise-grade systems that scale with your order volume and handle the complexity basic tools can't."],
+      ["How do I know this will work for our specific store?", "That's exactly why we start with a comprehensive audit. We don't propose solutions until we deeply understand your operations, your stack, and your biggest bottlenecks. Our discovery process ensures we're solving your actual problems. You see the roadmap and expected results before you commit to any implementation."],
+      ["What if our team resists the change?", "We've implemented automation across dozens of ecommerce brands. Change management is built into our methodology. We involve your team early, design solutions that make their jobs easier rather than threatening them, and provide comprehensive training. When people see automation eliminating their most frustrating manual tasks, adoption happens naturally."],
+      ["Isn't custom automation expensive and time-consuming?", "Traditional automation projects can be. Our approach is different. We use proven frameworks, pre-built integrations, and rapid development techniques to deliver custom systems in weeks, at a fraction of traditional costs. You get enterprise-level automation without enterprise-level budgets or timelines."],
+      ["How quickly will we see ROI?", "Most clients see measurable time savings within 30 days of deployment. Full ROI typically happens within 3–6 months, depending on scope and order volume. During discovery we calculate expected ROI based on your specific costs and opportunities, so you know exactly what to expect before work begins."],
+      ["How much does this cost?", "Pricing depends on scope: automating a single workflow like abandoned cart recovery is very different from a full operations overhaul. Most engagements are quoted after the discovery audit, once we know exactly what needs to be built. We'll always give you a clear fixed price before any work begins — no surprise invoices."],
+      ["Will automation replace our team?", "No. Our goal is to remove the repetitive, low-value ops work so your team can focus on the parts of the job that require real judgement — customer relationships, buying decisions, brand strategy. Most clients use the freed-up capacity to handle higher order volumes or launch new channels rather than reduce headcount."],
       ["Is our data secure during this process?", "Yes. We follow least-privilege access practices, use secure authenticated connections for every integration, and never store more data than a workflow needs to function. Specific security requirements can be discussed and agreed upon before any access is granted."],
-      ["Do you only work with large firms?", "No. We work with firms of all sizes, from solo practitioners to multi-partner firms. The audit and roadmap scale to your size."],
-      ["What happens after the automation is built?", "No. Every project includes documentation and team training so you're never locked in. We also offer ongoing support and retainer options if you'd like us to monitor, maintain, and extend the system over time."],
-      ["Can you work with our existing tech stack?", "In almost every case we build on top of what you already use. Switching platforms is rarely necessary and adds cost and disruption without improving the outcome."],
-      ["How is this different from hiring an in-house automation person?", "An in-house hire is one person with one skill set, fully loaded cost included. We bring a full team's worth of automation, AI, and integration expertise on demand, without the overhead of a full-time salary, benefits, or ramp-up time."]
+      ["Do you only work with large ecommerce brands?", "No. We work with brands of all sizes, from founder-led DTC stores to multi-brand ecommerce operations. The audit and roadmap scale to your current order volume and complexity."],
+      ["What happens after the automation is built?", "Every project includes documentation and team training so you're never locked in. We also offer ongoing support and retainer options if you'd like us to monitor, maintain, and extend the system as your store grows."],
+      ["Can you work with our existing ecommerce tech stack?", "In almost every case, yes. Whether you're on Shopify, WooCommerce, BigCommerce, or a custom setup — with Klaviyo, Gorgias, a 3PL, multiple marketplaces, or your own ERP — we build on top of what you already have. Switching platforms is rarely necessary and adds cost and disruption without improving the outcome."],
+      ["How is this different from hiring an in-house automation person?", "An in-house hire is one person with one skill set. We bring a full team's worth of ecommerce automation, AI, and integration expertise on demand — without the overhead of a full-time salary, benefits, or ramp-up time. And when your needs change, our engagement scales with them."]
     ]
   }
 }
