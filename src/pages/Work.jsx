@@ -6,122 +6,121 @@ import ClosingCTA from "../sections/ClosingCTA.jsx";
 import Arrow from "../components/Arrow.jsx";
 
 /* ------------------------------------------------------------------ *
- * Real client case studies (from the EAJJY AI brief)
+ * Ecommerce automation case studies
  * ------------------------------------------------------------------ */
 const CASES = [
   {
-    id: "geo-seo",
-    title: "GEO-Specific SEO Content Automation",
-    client: "Content & SEO",
-    category: "Content Automation",
+    id: "order-automation",
+    title: "Multi-Channel Order Processing Automation",
+    client: "Fashion D2C Brand",
+    category: "Order Processing & Fulfilment",
     challenge:
-      "The client wanted GEO-specific SEO strategies while automating content creation from Upwork job notifications. Manually converting job alerts into optimized blog posts was slow, repetitive, and impossible to scale.",
+      "A fast-growing fashion brand was processing 500+ daily orders manually across Shopify, Amazon, and their own website. Each order needed manual checking, routing to the right 3PL, and customer notification — a 3-hour daily bottleneck that caused delays and frequent fulfilment errors at peak volume.",
     steps: [
-      { title: "Automated Upwork Job Monitoring", detail: "Captured and monitored Upwork job notification emails automatically through workflow automation." },
-      { title: "SEO Metadata Generation", detail: "Extracted key job details to generate SEO-optimized meta titles, keywords, and descriptions." },
-      { title: "AI-Powered Content Optimization", detail: "Used AI to optimize content and auto-determine publishing status from predefined criteria." },
-      { title: "Automated Blog Creation & Publishing", detail: "Generated human-like, SEO-friendly posts and published them to the site with zero manual input." },
+      { title: "Order Aggregation Pipeline", detail: "Built a unified order ingestion workflow that pulls from Shopify, Amazon, and the brand's own site into a single processing queue in real time." },
+      { title: "Automated Inventory Verification", detail: "Each order triggers an instant stock check across the warehouse and 3PL, flagging splits and backorders before they become customer complaints." },
+      { title: "Intelligent 3PL Routing", detail: "Orders are automatically routed to the correct fulfilment centre based on SKU, delivery zone, carrier SLA, and stock location — no manual decision required." },
+      { title: "Customer Notification Triggers", detail: "Confirmation, dispatch, and tracking emails fire automatically via Klaviyo at each fulfilment milestone, eliminating manual sends." },
     ],
-    tech: ["n8n Workflow Automation", "AI Agents", "Email API", "WordPress/CMS API", "SEO Tools"],
+    tech: ["n8n Workflow Automation", "Shopify API", "Amazon SP-API", "3PL Webhooks", "Klaviyo API"],
     results: [
-      { value: "3-5 hrs", label: "Saved per day" },
-      { value: "24/7", label: "Autonomous workflow" },
-      { value: "100%", label: "GEO-targeted SEO" },
-      { value: "Full-stack", label: "Content automation" },
+      { value: "<2 min", label: "Avg order processing" },
+      { value: "40%", label: "More orders, same team" },
+      { value: "Zero", label: "Manual routing steps" },
+      { value: "99.4%", label: "Fulfilment accuracy" },
     ],
   },
   {
-    id: "voice-ai",
-    title: "Voice AI Agent",
-    client: "Kapiraj Ayurveda",
-    category: "Voice AI · Lead Gen",
+    id: "cart-recovery",
+    title: "Abandoned Cart Recovery Engine",
+    client: "Homeware Ecommerce Brand",
+    category: "Customer Lifecycle & Retention",
     challenge:
-      "Kapiraj Ayurveda generated high lead volume through Meta Ads, but manually calling every lead wasn't scalable. The sales team couldn't reach prospects while interest was high, losing conversions and burning time on unqualified leads.",
+      "The brand had a 68% cart abandonment rate and was relying on a single generic recovery email sent 24 hours after abandonment. With no segmentation, no SMS, and no dynamic offers, the majority of recoverable revenue was simply being left on the table.",
     steps: [
-      { title: "Automated Lead Capture", detail: "Integrated Meta Ads directly with Google Sheets to capture and organize leads in real time." },
-      { title: "AI Calling Automation with VAPI", detail: "Implemented VAPI AI to automate intelligent voice calling for incoming leads." },
-      { title: "Two-Phase AI Agent Workflow", detail: "A pre-call agent qualified leads; a post-call agent handled follow-ups and engagement." },
-      { title: "Automated Response Collection", detail: "Built a tracking system to capture customer feedback, responses, and interest levels." },
+      { title: "Real-Time Cart Event Capture", detail: "Shopify webhooks feed abandoned cart events into the automation instantly — no delays, no polling, no missed carts." },
+      { title: "Customer Segmentation Logic", detail: "Each abandonment is classified by cart value, purchase history, and customer segment to determine which recovery sequence and offer tier applies." },
+      { title: "Multi-Step SMS & Email Sequences", detail: "A three-touch sequence fires over 48 hours — a reminder email at 1hr, a personalised SMS at 6hrs, and a final discount email at 24hrs — with each message customised to the cart contents." },
+      { title: "Dynamic Discount & Conversion Tracking", detail: "Discount codes are generated and injected per customer, with full attribution tracking to measure revenue recovered per sequence step." },
     ],
-    tech: ["VAPI AI", "Meta Ads API", "Google Sheets API", "Voice AI", "Lead Qualification"],
+    tech: ["n8n Workflow Automation", "Shopify Webhooks", "Klaviyo API", "Twilio SMS", "OpenAI API"],
     results: [
-      { value: "Instant", label: "Response time" },
-      { value: "Auto", label: "Lead qualification" },
-      { value: "80%", label: "Less sales workload" },
-      { value: "3x", label: "Conversion rate" },
+      { value: "14%", label: "Cart recovery rate" },
+      { value: "£42k", label: "Recovered in 60 days" },
+      { value: "24/7", label: "Automated sequences" },
+      { value: "3x", label: "vs single-email baseline" },
     ],
   },
   {
-    id: "linkedin",
-    title: "LinkedIn Automation Agent",
-    client: "Personal Brand",
-    category: "Social Automation",
+    id: "inventory-sync",
+    title: "Real-Time Inventory Sync Across 4 Channels",
+    client: "Electronics Reseller",
+    category: "Inventory Management",
     challenge:
-      "The client wanted a consistent LinkedIn presence but struggled to create engaging content and post regularly. Manual content management ate into core business time, leading to inconsistent posting and lost visibility.",
+      "Selling the same SKUs across Shopify, Amazon, eBay, and a wholesale portal with manual inventory updates twice a day was causing regular oversells, strained supplier relationships, and hours of daily admin. A single viral product moment could wipe out the team for a full day.",
     steps: [
-      { title: "Automated Posting Workflow", detail: "Built an n8n LinkedIn automation with scheduled daily or weekly triggers." },
-      { title: "Google Sheets Integration", detail: "Pulled draft topics, ideas, and content inputs automatically from Sheets." },
-      { title: "AI-Powered Content Generation", detail: "Used the OpenAI API to turn raw ideas into well-structured, engaging posts." },
-      { title: "Publishing & Content Logging", detail: "Auto-published with an optional approval queue for manual review before posting." },
+      { title: "Webhook-Driven Inventory Engine", detail: "Every sale, return, or stock adjustment on any channel fires a webhook that updates the central inventory ledger within seconds." },
+      { title: "Bi-Directional Channel Sync", detail: "The updated inventory count is immediately pushed to all other channels — Shopify, Amazon, eBay, and the wholesale portal — in a single automated cascade." },
+      { title: "Low-Stock Threshold Alerts & Auto-PO", detail: "When a SKU drops below its reorder threshold, the system drafts a purchase order and emails it to the relevant supplier for one-click approval." },
+      { title: "Supplier Communication Automation", detail: "PO confirmations, delivery ETAs, and lead-time updates are exchanged with suppliers automatically, logged in a central tracker." },
     ],
-    tech: ["n8n Workflow Automation", "OpenAI API", "Google Sheets API", "LinkedIn API", "Scheduling"],
+    tech: ["n8n Workflow Automation", "Shopify API", "Amazon SP-API", "eBay API", "Google Sheets API"],
     results: [
-      { value: "5+ hrs", label: "Saved weekly" },
-      { value: "100%", label: "Content consistency" },
-      { value: "Higher", label: "Engagement" },
-      { value: "Stronger", label: "Brand visibility" },
+      { value: "Zero", label: "Oversells since launch" },
+      { value: "8 hrs", label: "Admin saved per week" },
+      { value: "4", label: "Channels synced live" },
+      { value: "2 days", label: "Faster reorder cycle" },
     ],
   },
   {
-    id: "yc-scraping",
-    title: "Y Combinator Data Scraping Agent",
-    client: "IT Consultant",
-    category: "Data Enrichment",
+    id: "support-returns",
+    title: "AI Customer Support & Returns Automation",
+    client: "Sportswear Brand",
+    category: "Returns & Customer Support",
     challenge:
-      "An IT consultant wanted to connect with high-potential YC startups but had no streamlined way to gather enriched company and founder data. Manual research took hours per prospect and outreach stayed generic.",
+      "200+ daily support tickets, 80% asking the same questions about shipping, returns, and sizing. A team of three was spending entire days inside Gorgias handling queries that rarely needed a human — leaving no time for the complex cases that actually did.",
     steps: [
-      { title: "Automated YC Data Scraping", detail: "Built a scraping workflow with Apify, HTTP requests, and custom parsers to collect startup data." },
-      { title: "Structured Data Storage", detail: "Stored and organized raw startup data in Google Sheets for easy tracking." },
-      { title: "URL Extraction & Structuring", detail: "Extracted company URLs and generated structured links via custom JavaScript." },
-      { title: "Founder Profile Retrieval", detail: "Used OpenAI workflows to identify and retrieve founder LinkedIn profiles automatically." },
-      { title: "AI Company Data Enrichment", detail: "Enriched data with services, funding stage, ideal tech stack, and business positioning." },
+      { title: "AI Ticket Classification", detail: "Incoming Gorgias tickets are instantly classified by intent — shipping query, return request, sizing question, complaint, or escalation — using an OpenAI classifier trained on historical tickets." },
+      { title: "Automated FAQ Resolution", detail: "Common queries are answered automatically from the brand's knowledge base with personalised, on-brand responses. No human needed for the 80% of tickets that follow predictable patterns." },
+      { title: "Self-Serve Returns Portal", detail: "Return requests trigger a branded portal link. Customers select their reason, the system generates a prepaid label, updates inventory, and queues the refund or exchange automatically." },
+      { title: "Smart Escalation Routing", detail: "Anything outside the classifier's confidence threshold, or flagged as a complaint, is routed to the right agent with full context — so the team only handles what genuinely needs them." },
     ],
-    tech: ["n8n Workflow Automation", "Apify Scraping", "OpenAI API", "Google Sheets API", "Custom JS"],
+    tech: ["OpenAI API", "Gorgias API", "Shopify API", "n8n Workflow Automation", "Returns Portal"],
     results: [
-      { value: "10+ hrs", label: "Saved per week" },
-      { value: "100+", label: "Startups enriched" },
-      { value: "AI", label: "Enhanced accuracy" },
-      { value: "Targeted", label: "Outreach precision" },
+      { value: "73%", label: "Tickets auto-resolved" },
+      { value: "2 hrs", label: "Freed per agent daily" },
+      { value: "4 min", label: "Avg returns processing" },
+      { value: "Higher", label: "CSAT score" },
     ],
   },
   {
-    id: "newsletter",
-    title: "Newsletter Automation Agent",
-    client: "Lightson (US)",
-    category: "Content Distribution",
+    id: "analytics-pipeline",
+    title: "Automated Ecommerce Analytics Pipeline",
+    client: "Health & Beauty Brand",
+    category: "Financial Operations & Reporting",
     challenge:
-      "Lightson manually created and distributed their newsletter across email, LinkedIn, and internal playbooks. The CEO spent nearly four hours weekly on research and content, and the strategy lacked proper ICP targeting.",
+      "The founder was spending six hours every Monday pulling numbers from Shopify, Meta Ads, Google Ads, and Klaviyo manually into a spreadsheet. By the time the report was ready, the data was days old, and decisions were being made on last week's picture — not today's.",
     steps: [
-      { title: "Workflow Analysis & Planning", detail: "Analyzed the existing manual process to map requirements and automation opportunities." },
-      { title: "Ideal Customer Profile Research", detail: "Documented the ICP to sharpen content targeting, messaging, and relevance." },
-      { title: "AI-Powered Newsletter Automation", detail: "Built AI-driven content creation for faster, more consistent publishing." },
-      { title: "Multi-Channel Distribution", detail: "Automated delivery across email, LinkedIn posts, and internal playbook generation." },
+      { title: "Multi-Source API Data Extraction", detail: "Automated pipelines pull daily data from Shopify, Meta Ads, Google Ads, and Klaviyo at 6am every morning — no manual exports." },
+      { title: "Data Normalisation & Mapping", detail: "Raw API data is cleaned, normalised across different schemas, and mapped to a unified format for consistent cross-channel reporting." },
+      { title: "Live Dashboard Compilation", detail: "Processed data populates a live Looker Studio dashboard — revenue by channel, ROAS, CAC, returning customer rate, and margin — updated daily before the team starts work." },
+      { title: "Anomaly Alerts & Weekly Digest", detail: "Significant deviations from the 7-day average trigger instant Slack alerts. A formatted weekly summary is delivered to the founder every Monday morning automatically." },
     ],
-    tech: ["n8n Workflow Automation", "AI Content Generation", "Email Marketing APIs", "LinkedIn API", "CMS"],
+    tech: ["n8n Workflow Automation", "Shopify API", "Meta Marketing API", "Google Ads API", "Klaviyo API", "Looker Studio"],
     results: [
-      { value: "4 hrs", label: "Saved weekly" },
-      { value: "Auto", label: "Newsletter delivery" },
-      { value: "Multi", label: "Channel publishing" },
-      { value: "ICP", label: "Targeted content" },
+      { value: "6 hrs", label: "Saved every Monday" },
+      { value: "Daily", label: "Live dashboard refresh" },
+      { value: "Instant", label: "Anomaly alerts" },
+      { value: "Same-day", label: "Decision making" },
     ],
   },
 ];
 
 const STATS = [
-  { value: "5", label: "Shipped projects" },
+  { value: "5", label: "Ecommerce systems shipped" },
   { value: "30+ hrs", label: "Saved weekly, combined" },
-  { value: "3x", label: "Peak conversion lift" },
-  { value: "100%", label: "Autonomous workflows" },
+  { value: "£42k", label: "Revenue recovered in 60 days" },
+  { value: "Zero", label: "Oversells after inventory sync" },
 ];
 
 /* ------------------------------------------------------------------ *
@@ -200,13 +199,13 @@ function CaseCard({ c, index }) {
  * Page
  * ------------------------------------------------------------------ */
 export default function Work() {
-  useSEO({ title: "Our Work – AI Automation Case Studies", description: "Real automation systems we have shipped: voice AI agents, GEO-SEO content pipelines, LinkedIn automation, YC scraping agents, and newsletter systems.", canonical: "https://www.eajjy.com/work" });
+  useSEO({ title: "Our Work – Ecommerce Automation Case Studies", description: "Real automation systems we have shipped for ecommerce brands: order processing, inventory sync, abandoned cart recovery, AI support, and analytics pipelines.", canonical: "https://www.eajjy.com/work" });
   return (
     <>
       <PageHero
         eyebrow="Work"
-        title="AI Automation Success Stories"
-        lead="Real systems we've built for real firms. Each project replaced hours of manual work with autonomous, measurable automation."
+        title="Ecommerce Automation in Action"
+        lead="Real systems we've built for real stores. Each project replaced hours of manual ops work with autonomous, measurable automation."
       />
 
       {/* Stats band */}
