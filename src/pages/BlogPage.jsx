@@ -15,6 +15,7 @@ const COVER_MAP = {
   "setup-n8n-azure-docker": "/generated/blog-n8n-azure-docker.png",
   "reporting-9-hours-to-12-minutes": "/generated/blog-reporting-automation.png",
   "5-workflows-to-automate-first": "/generated/blog-placeholder.png",
+  "ecommerce-automation": "/generated/blog-placeholder.png",
 };
 
 function coverFor(post) {
