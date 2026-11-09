@@ -5,79 +5,79 @@ import Comparison from "../sections/Comparison.jsx";
 import ClosingCTA from "../sections/ClosingCTA.jsx";
 
 /* ------------------------------------------------------------------ *
- * Industry-specific use cases
+ * Ecommerce use case categories
  * ------------------------------------------------------------------ */
 const INDUSTRIES = [
   {
-    id: "agencies",
-    name: "Marketing & Creative Agencies",
-    icon: (<><path d="M4 5h16v14H4z" /><path d="M4 9h16M8 5v4" /></>),
-    line: "Win back billable hours lost to admin and reporting.",
+    id: "orders",
+    name: "Order Processing & Fulfilment",
+    icon: (<><path d="M20 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z" /><path d="M16 3H8l-2 4h12z" /></>),
+    line: "Process 30–40% more orders without adding headcount.",
     cases: [
-      ["Automated client reporting", "Pull live data from ad platforms and analytics into branded reports, generated and sent on schedule."],
-      ["Content production pipelines", "Turn briefs into drafts, route for approval, and publish across channels automatically."],
-      ["Client onboarding", "Spin up project spaces, folders, and access the moment a contract is signed."],
-      ["Lead capture & qualification", "Score and route inbound leads instantly so no opportunity goes cold."],
+      ["Automated order routing", "New orders are instantly checked, tagged, and routed to the right 3PL, warehouse, or fulfilment partner — no manual sorting."],
+      ["Fulfilment status updates", "Customers receive real-time shipping notifications triggered by carrier events, eliminating inbound 'where is my order?' queries."],
+      ["Backorder & out-of-stock handling", "When stock runs out, customers are automatically notified, waitlisted, and messaged when items are back — keeping demand alive."],
+      ["Cross-channel order aggregation", "Orders from Shopify, Amazon, eBay, and your own site flow into one queue automatically, with no manual consolidation."],
     ],
   },
   {
-    id: "consulting",
-    name: "Ecommerce & D2C",
-    icon: (<><circle cx="12" cy="8" r="4" /><path d="M4 20c0-4 4-6 8-6s8 2 8 6" /></>),
-    line: "Scale order volume without scaling headcount.",
+    id: "inventory",
+    name: "Inventory Management",
+    icon: (<><rect x="2" y="3" width="20" height="14" rx="2" /><path d="M8 21h8M12 17v4" /><path d="M7 8h10M7 12h6" /></>),
+    line: "Stock levels that update themselves across every channel.",
     cases: [
-      ["Proposal & SOW generation", "Assemble tailored proposals from a knowledge base in minutes, not hours."],
-      ["Research & data enrichment", "Automatically gather and structure company and contact intelligence for engagements."],
-      ["Engagement reporting", "Real-time dashboards keep clients informed without manual status updates."],
-      ["Knowledge copilots", "Let consultants query past projects and frameworks instantly with grounded AI."],
+      ["Multi-channel inventory sync", "Shopify, WooCommerce, Amazon, and your 3PL stay in agreement in real time — no overselling, no manual updates."],
+      ["Low-stock alerts & auto-reorder", "When stock dips below your threshold, suppliers are automatically notified and purchase orders are drafted for review."],
+      ["Demand forecasting", "AI analyses sales velocity, seasonality, and trend data to surface which SKUs need topping up before they run out."],
+      ["Supplier communication automation", "PO confirmations, delivery ETAs, and lead-time updates are exchanged with suppliers automatically, reducing back-and-forth."],
     ],
   },
   {
-    id: "legal",
-    name: "Legal & Compliance",
-    icon: (<><path d="M12 3v18M5 7h14M7 7l-3 7h6zM17 7l3 7h-6z" /></>),
-    line: "Cut document review from hours to minutes, safely.",
+    id: "lifecycle",
+    name: "Customer Lifecycle & Retention",
+    icon: (<><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" /></>),
+    line: "Recover abandoned carts and reduce churn automatically.",
     cases: [
-      ["Contract analysis", "Extract clauses, dates, and obligations from contracts automatically with citations."],
-      ["Document Q&A", "Ask plain-language questions across large document sets and get sourced answers."],
-      ["Deadline & renewal tracking", "Auto-capture key dates and trigger reminders well before they lapse."],
-      ["Intake automation", "Structure new-matter intake and route to the right team without manual entry."],
+      ["Abandoned cart recovery", "Multi-step SMS and email sequences fire automatically when a cart is abandoned — recovering 10–15% of lost revenue on autopilot."],
+      ["Post-purchase flows", "Review requests, upsell recommendations, loyalty point notifications, and repeat-purchase nudges trigger based on order behaviour."],
+      ["Win-back campaigns", "Customers who haven't purchased in 60–90 days enter a personalised re-engagement flow with tailored offers and messaging."],
+      ["VIP and loyalty tier management", "High-value customers are identified and moved into VIP tiers automatically, with perks and communications triggered by spend milestones."],
+    ],
+  },
+  {
+    id: "returns",
+    name: "Returns & Customer Support",
+    icon: (<><polyline points="1 4 1 10 7 10" /><path d="M3.51 15a9 9 0 1 0 .49-3.51" /></>),
+    line: "Handle returns in minutes, not hours.",
+    cases: [
+      ["Automated returns processing", "Customers submit returns via a self-serve portal; labels are generated, inventory updated, and refunds or exchanges initiated automatically."],
+      ["Support ticket triage & routing", "Incoming tickets are classified by intent (return, complaint, tracking, product query) and routed to the right queue instantly."],
+      ["AI-powered FAQ responses", "Common queries about shipping times, sizing, and policies are answered automatically from your knowledge base — 24/7."],
+      ["Refund & exchange workflows", "Once a return is received and scanned, refunds are triggered and exchange orders created without any manual steps."],
+    ],
+  },
+  {
+    id: "marketing",
+    name: "Marketing & Channel Automation",
+    icon: (<><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z" /></>),
+    line: "Launch campaigns and sync channels without the manual work.",
+    cases: [
+      ["Behavioural email & SMS triggers", "Flows fire based on browse behaviour, purchase history, and predictive models — the right message to the right customer at the right moment."],
+      ["Product feed updates to marketplaces", "New products, price changes, and stock updates sync to Amazon, eBay, Google Shopping, and other channels automatically."],
+      ["Review requests & social proof collection", "Post-delivery review requests go out at the optimal time, with follow-up reminders, to maximise review volume."],
+      ["Affiliate & influencer tracking", "Commission tracking, link generation, and payment workflows run automatically — giving partners a smooth experience without manual admin."],
     ],
   },
   {
     id: "finance",
-    name: "Accounting & Finance",
+    name: "Financial Operations & Reporting",
     icon: (<><path d="M3 6h18v12H3z" /><path d="M3 10h18M7 14h4" /></>),
-    line: "Near-zero errors on the work that has to be exact.",
+    line: "Reconcile payments and report revenue without spreadsheets.",
     cases: [
-      ["Invoice & payment processing", "Generate, send, and reconcile invoices automatically across your tools."],
-      ["Data sync across systems", "Keep accounting, CRM, and project tools in agreement with no manual copying."],
-      ["Automated reporting", "Compile financial summaries from live data on a set schedule."],
-      ["Document extraction", "Read receipts, invoices, and forms and route the data where it belongs."],
-    ],
-  },
-  {
-    id: "realestate",
-    name: "Real Estate & Property",
-    icon: (<><path d="M3 11l9-7 9 7" /><path d="M5 10v9h14v-9" /></>),
-    line: "Respond to every lead instantly, day or night.",
-    cases: [
-      ["Instant lead response", "AI engages and qualifies inbound leads the moment they arrive."],
-      ["Listing & document workflows", "Automate paperwork, disclosures, and status updates end to end."],
-      ["Appointment scheduling", "Coordinate viewings and calls automatically across calendars."],
-      ["Follow-up sequences", "Keep prospects warm with timely, personalized automated follow-ups."],
-    ],
-  },
-  {
-    id: "healthcare",
-    name: "Healthcare & Wellness",
-    icon: (<><path d="M12 5v14M5 12h14" /><circle cx="12" cy="12" r="9" /></>),
-    line: "Free clinical time from administrative load.",
-    cases: [
-      ["Patient intake automation", "Collect and structure intake information before the first appointment."],
-      ["Appointment & reminder flows", "Automate scheduling, confirmations, and reminders to cut no-shows."],
-      ["Records & document handling", "Extract and route information from forms securely and consistently."],
-      ["Support assistants", "Answer common patient questions from your own approved materials."],
+      ["Payment gateway reconciliation", "Stripe, PayPal, and Shopify Payments receipts are automatically matched against orders, with discrepancies flagged for review."],
+      ["Marketplace settlement reports", "Amazon and eBay settlement data is pulled automatically and mapped to your accounting system with no manual exports."],
+      ["Revenue & margin dashboards", "Live P&L, channel performance, and margin data are compiled automatically and refreshed daily — no manual report building."],
+      ["Supplier invoice processing", "Incoming invoices are read, categorised, matched to POs, and queued for approval without manual data entry."],
     ],
   },
 ];
@@ -114,7 +114,7 @@ function IndustryCard({ ind, open, onToggle }) {
 }
 
 export default function UseCasesPage() {
-  useSEO({ title: "Automation Use Cases by Industry", description: "Before-and-after automation examples for consulting, legal, accounting, real estate, marketing agencies, and healthcare practices.", canonical: "https://www.eajjy.com/use-cases" });
+  useSEO({ title: "Ecommerce Automation Use Cases", description: "Before-and-after automation examples for ecommerce brands: order processing, inventory management, customer lifecycle, returns, support triage, and reporting.", canonical: "https://www.eajjy.com/use-cases" });
   const [openId, setOpenId] = useState(null);
   return (
     <>
@@ -132,9 +132,9 @@ export default function UseCasesPage() {
       <section className="sec wrap" id="industries">
         <div className="glow-spot" style={{ width: 480, height: 480, background: "rgba(255,43,43,.08)", top: 0, right: -160 }} />
         <div className="reveal">
-          <span className="eyebrow">By Industry</span>
-          <h2>Automation, Tailored to Your Field</h2>
-          <p className="lead">Every industry has its own bottlenecks. Here's where automation and AI make the biggest difference across the sectors we work with. Tap any to expand.</p>
+          <span className="eyebrow">By Use Case</span>
+          <h2>Where Automation Makes the Biggest Difference</h2>
+          <p className="lead">Every ecommerce operation has the same bottlenecks in different proportions. Here's where we automate most often — and what changes when we do. Tap any to expand.</p>
         </div>
         <div className="ind-grid stagger">
           {INDUSTRIES.map((ind) => (

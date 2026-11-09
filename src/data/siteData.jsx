@@ -84,12 +84,12 @@ export const FAQS = [
 ];
 
 export const CMP = [
-  ["Client Onboarding", "4–6 hours of manual data entry, document collection, and system setup per client", "20 minutes. Automated forms, instant data sync, and system provisioning"],
-  ["Reporting", "8–10 hrs/week manually compiling data from multiple sources into client reports", "30 min/week. Auto-generated reports pulling real-time data from all platforms"],
-  ["Email Management", "2–3 hrs/day sorting, responding, and routing emails to the right people", "AI sorts, prioritizes, and drafts responses. Your team handles only what needs human input"],
-  ["Document Processing", "Hours scanning invoices, contracts, and forms, manually entering data", "AI extracts, categorizes, and routes all data instantly with 99% accuracy"],
-  ["Lead Qualification", "Sales team spends hours manually reviewing and scoring every lead", "AI instantly scores and routes qualified leads to the right person"],
-  ["Data Entry", "Team members spend 5–10 hrs/week copying data between systems", "Zero manual entry. Data flows automatically between all your tools"],
+  ["Order Processing", "Staff manually check, sort, and route each order to fulfilment — 5–10 min per order at volume", "Orders are automatically verified, tagged, and routed to the right 3PL in under 60 seconds"],
+  ["Inventory Sync", "Overselling happens because stock levels are updated manually across channels once or twice a day", "Inventory syncs in real time across Shopify, Amazon, and your 3PL — zero manual updates, zero oversells"],
+  ["Abandoned Cart Recovery", "Carts are abandoned and revenue is lost — no systematic follow-up beyond a single email", "Multi-step SMS and email sequences fire automatically, recovering 10–15% of abandoned revenue"],
+  ["Customer Support", "Team spends hours answering the same shipping, return, and product questions every day", "AI handles common queries instantly from your knowledge base. Staff only handle complex escalations"],
+  ["Returns Processing", "Returns are logged manually, labels issued one by one, refunds processed days later", "Self-serve returns portal issues labels automatically, updates inventory, and triggers refunds on receipt"],
+  ["Revenue Reporting", "P&L and channel performance reports compiled manually from multiple exports — weekly or monthly", "Live dashboards pull from all platforms automatically. Reports are always up to date, zero effort"],
 ];
 
 export const TOOLS = [
