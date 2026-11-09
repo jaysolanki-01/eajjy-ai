@@ -17,7 +17,7 @@ export default function ClientLogos() {
   return (
     <div className="logos reveal">
       <div className="wrap">
-        <p>Powering automation for modern professional services firms</p>
+        <p>Powering automation for modern ecommerce brands</p>
       </div>
       <div className="logo-marquee" aria-label="Client logos">
         <div className="logo-track">

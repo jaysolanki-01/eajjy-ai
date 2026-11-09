@@ -17,7 +17,7 @@ const FORM_ENDPOINT = "";
 /* ================================================================== *
  * Data + scoring model
  * ================================================================== */
-const INDUSTRIES = ["Marketing / Creative Agency", "Consulting / Professional Services", "Legal / Compliance", "Accounting / Finance", "Real Estate", "Healthcare / Wellness", "Other"];
+const INDUSTRIES = ["Ecommerce / D2C Brand", "Marketplace Seller", "Marketing / Creative Agency", "Consulting / Professional Services", "Other"];
 const TEAM_SIZES = ["Just me", "2–10", "11–25", "26–50", "50+"];
 
 // Each manual area: weekly team hours (mid estimate) + which services it maps to
@@ -144,7 +144,7 @@ function buildReportHTML(a, r) {
   </div>
 
   <p class="disclaim">*Estimates assume automation recovers ~${Math.round(RECOVERY * 100)}% of identified manual time at $${r.rate}/hour across ${WEEKS} working weeks. Figures are directional and refined during a full audit.</p>
-  <div class="foot">© ${new Date().getFullYear()} EAJJY AI · Automation systems for professional services firms</div>
+  <div class="foot">© ${new Date().getFullYear()} EAJJY AI · Ecommerce automation agency</div>
 </div></body></html>`;
 }
 

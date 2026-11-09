@@ -68,7 +68,7 @@ export default function Navbar({ onMenu }) {
               <div className="mega-inner">
                 <div className="mega-head">
                   <span className="eyebrow" style={{ marginBottom: 0 }}>Services</span>
-                  <p>End-to-end AI &amp; automation for professional services firms.</p>
+                  <p>End-to-end ecommerce automation for online brands.</p>
                 </div>
                 <div className="mega-grid">
                   {SERVICES.map((s) => (

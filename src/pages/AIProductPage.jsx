@@ -128,8 +128,8 @@ function UseCaseCard({ uc, index }) {
  * ------------------------------------------------------------------ */
 export default function AIProductPage() {
   useSEO({
-    title: "AI Product Development Agency for Professional Services",
-    description: "EAJJY AI is a specialist AI product development agency building custom chatbots, predictive analytics, and intelligent automation for professional services firms. Get a free audit.",
+    title: "AI Product Development for Ecommerce | EAJJY AI",
+    description: "EAJJY AI is a specialist AI product development agency building custom product recommendation engines, demand forecasting, and intelligent automation for ecommerce brands. Get a free audit.",
     canonical: "https://www.eajjy.com/services/ai-product-development",
   });
 
@@ -140,7 +140,7 @@ export default function AIProductPage() {
         {
           "@type": "Service",
           "name": "AI Product Development",
-          "description": "EAJJY AI is a specialist AI product development agency that builds custom AI solutions — chatbots, predictive analytics, recommendation engines, and document intelligence — for professional services firms.",
+          "description": "EAJJY AI is a specialist AI product development agency that builds custom AI solutions — product recommendation engines, demand forecasting, personalisation systems, and predictive analytics — for ecommerce brands.",
           "provider": { "@type": "Organization", "name": "EAJJY AI", "url": "https://www.eajjy.com" },
           "serviceType": "AI Product Development",
           "areaServed": "Worldwide",
@@ -168,7 +168,7 @@ export default function AIProductPage() {
     <>
       <PageHero
         eyebrow="AI Product Development Agency"
-        title="The AI Product Development Agency for Professional Services Firms"
+        title="The AI Product Development Agency for Ecommerce Brands"
         lead="From intelligent chatbots and recommendation engines to predictive analytics, we build proprietary AI capabilities that differentiate your services and create new revenue streams."
       />
 
@@ -203,7 +203,7 @@ export default function AIProductPage() {
         <div className="reveal">
           <span className="eyebrow">Use Cases</span>
           <h2>AI Products We Build Every Day</h2>
-          <p className="lead">Tap any to see how it works and the impact it delivers for professional services firms.</p>
+          <p className="lead">Tap any to see how it works and the impact it delivers for ecommerce brands.</p>
         </div>
         <div className="aipd-uc-list stagger">
           {USE_CASES.map((uc, i) => <UseCaseCard key={uc.id} uc={uc} index={i} />)}

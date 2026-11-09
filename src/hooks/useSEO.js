@@ -7,10 +7,10 @@ export default function useSEO({ title, description, canonical } = {}) {
     // Title
     document.title = title
       ? `${title} | EAJJY AI`
-      : "EAJJY AI | AI Agency for Professional Services";
+      : "EAJJY AI | Ecommerce Automation Agency";
 
     // Core meta
-    setMeta("name", "description", description || "EAJJY AI is a specialist AI agency helping professional services firms eliminate manual work and scale through intelligent automation.");
+    setMeta("name", "description", description || "EAJJY AI is a specialist ecommerce automation agency helping online brands eliminate manual operations and scale through intelligent automation.");
     setMeta("name", "robots", "index, follow");
 
     // Canonical

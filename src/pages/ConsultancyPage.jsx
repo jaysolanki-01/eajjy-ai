@@ -110,7 +110,7 @@ function DeliverableCard({ d, index }) {
  * Page
  * ------------------------------------------------------------------ */
 export default function ConsultancyPage() {
-  useSEO({ title: "AI Automation Consultancy", description: "Strategic automation audits, ROI analysis, and roadmaps for professional services firms. Get measurable results in 90 days without costly mistakes or vendor lock-in.", canonical: "https://www.eajjy.com/services/ai-automation-consultancy" });
+  useSEO({ title: "Ecommerce Automation Consultancy", description: "Strategic automation audits, ROI analysis, and roadmaps for ecommerce brands. Get measurable results in 90 days without costly mistakes or vendor lock-in.", canonical: "https://www.eajjy.com/services/ai-automation-consultancy" });
   return (
     <>
       <PageHero
