@@ -30,8 +30,8 @@ export default function Services() {
         {/* Sticky left column */}
         <div className="svc-sticky">
           <span className="eyebrow">Services</span>
-          <h2>How We Help You Automate and Scale</h2>
-          <p className="lead">Whether you need end-to-end process redesign or targeted automation for specific pain points, EAJJY AI delivers solutions that integrate seamlessly with your existing operations.</p>
+          <h2>Ecommerce Automation, Built for the Way You Operate</h2>
+          <p className="lead">Whether you need end-to-end operations automation or targeted fixes for specific bottlenecks, EAJJY AI delivers ecommerce automation systems that integrate seamlessly with your existing stack.</p>
 
           <ul className="svc-index">
             {SERVICES.map((s, i) => (
